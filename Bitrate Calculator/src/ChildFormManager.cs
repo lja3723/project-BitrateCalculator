@@ -23,7 +23,7 @@ namespace Bitrate_Calculator
             CreateChild(parent, new Form_프로그램_정보());
         }
 
-        public static void Show_소수점_설정(Form_Main parent)
+        public static void Show_소수점_설정(Main_Form parent)
         {
             if (_Form_SetDecimalPoint.IsCreated) return;
             CreateChild(parent, new _Form_SetDecimalPoint(parent));

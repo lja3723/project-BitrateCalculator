@@ -11,9 +11,9 @@ namespace Bitrate_Calculator
             get { return isCreated; }
         }
 
-        Form_Main formMain;
+        Main_Form formMain;
 
-        public _Form_SetDecimalPoint(Form_Main formMain)
+        public _Form_SetDecimalPoint(Main_Form formMain)
         {
             isCreated = true;
             InitializeComponent();
