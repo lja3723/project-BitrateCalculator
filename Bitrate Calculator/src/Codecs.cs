@@ -14,7 +14,7 @@ namespace Bitrate_Calculator
         MPEG4,  //MPEG-4
         MPEG2,  //MPEG-2
         Xvid,   //Xvid
-        DviX    //DviX
+        DivX    //DivX
     }
 
     public static class CodecsConvert
@@ -29,7 +29,7 @@ namespace Bitrate_Calculator
                 case Codecs.MPEG4: return "MPEG-4";
                 case Codecs.MPEG2: return "MPEG-2";
                 case Codecs.Xvid: return "Xvid";
-                case Codecs.DviX: return "Dvix";
+                case Codecs.DivX: return "DivX";
             }
             throw new ArgumentException();
         }
@@ -44,7 +44,7 @@ namespace Bitrate_Calculator
                 case "MPEG-4": return Codecs.MPEG4;
                 case "MPEG-2": return Codecs.MPEG2;
                 case "Xvid": return Codecs.Xvid;
-                case "Dvix": return Codecs.DviX;
+                case "DivX": return Codecs.DivX;
             }
             throw new ArgumentException();
         }
@@ -61,7 +61,7 @@ namespace Bitrate_Calculator
                     return 0.17m;
                 case Codecs.MPEG2:
                 case Codecs.Xvid:
-                case Codecs.DviX:
+                case Codecs.DivX:
                     return 0.27m;
             }
             throw new ArgumentException();
