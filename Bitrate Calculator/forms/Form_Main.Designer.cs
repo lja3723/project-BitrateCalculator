@@ -78,30 +78,30 @@
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
             this.CVBOC_label_예상_영상_비트레이트 = new System.Windows.Forms.Label();
             this.CVBOC_comboBox_Bitrate_단위 = new System.Windows.Forms.ComboBox();
-            this.CS_컨_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ConvertResolution_컨_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this._Form_Main_button_제작자 = new System.Windows.Forms.Button();
-            this.CS_컨_groupBox = new System.Windows.Forms.GroupBox();
-            this.CS_컨_tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.CS_label_현재_해상도 = new System.Windows.Forms.Label();
-            this.CS_button_적용 = new System.Windows.Forms.Button();
-            this.CS_컨flowLayoutPanel_기준 = new System.Windows.Forms.FlowLayoutPanel();
-            this.CS_comboBox_기준 = new System.Windows.Forms.ComboBox();
-            this.CS_textBox_기준_픽셀 = new System.Windows.Forms.TextBox();
-            this.CS_label_변환_예상_해상도 = new System.Windows.Forms.Label();
-            this.CS_컨flowLayoutPanel_변환_예상_해상도 = new System.Windows.Forms.FlowLayoutPanel();
-            this.CS_label__ShowValue_변환_예상_해상도_가로 = new System.Windows.Forms.Label();
-            this.CS_label_곱하기2 = new System.Windows.Forms.Label();
-            this.CS_label__ShowValue_변환_예상_해상도_세로 = new System.Windows.Forms.Label();
-            this.CS_label_변환_기준 = new System.Windows.Forms.Label();
-            this.CS_컨flowLayoutPanel_현재_해상도 = new System.Windows.Forms.FlowLayoutPanel();
-            this.CS_label__ShowValue_현재_해상도_가로 = new System.Windows.Forms.Label();
-            this.CS_label_곱하기1 = new System.Windows.Forms.Label();
-            this.CS_label__ShowValue_현재_해상도_세로 = new System.Windows.Forms.Label();
-            this.CS_label__ShowValue_변환_예상_파일_크기 = new System.Windows.Forms.Label();
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기 = new System.Windows.Forms.FlowLayoutPanel();
-            this.CS_label_변환_예상_영상_크기 = new System.Windows.Forms.Label();
-            this.CS_comboBox_변환_예상_크기_단위 = new System.Windows.Forms.ComboBox();
-            this.CS_label_doubleDot = new System.Windows.Forms.Label();
+            this.ConvertResolution_컨_groupBox = new System.Windows.Forms.GroupBox();
+            this.ConvertResolution_컨_tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ConvertResolution_label_현재해상도 = new System.Windows.Forms.Label();
+            this.ConvertResolution_button_적용 = new System.Windows.Forms.Button();
+            this.ConvertResolution_컨flowLayoutPanel_기준 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConvertResolution_comboBox_기준 = new System.Windows.Forms.ComboBox();
+            this.ConvertResolution_textBox_기준픽셀 = new System.Windows.Forms.TextBox();
+            this.ConvertResolution_label_변환예상해상도 = new System.Windows.Forms.Label();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_x_2 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_변환기준 = new System.Windows.Forms.Label();
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConvertResolution_label_ShowValue_현재해상도_가로 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_x_1 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_ShowValue_현재해상도_세로 = new System.Windows.Forms.Label();
+            this.ConvertResolution_label_ShowValue_변환예상크기 = new System.Windows.Forms.Label();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConvertResolution_label_변환예상영상크기 = new System.Windows.Forms.Label();
+            this.ConvertResolution_comboBox_변환예상크기단위 = new System.Windows.Forms.ComboBox();
+            this.ConvertResolution_label_colon = new System.Windows.Forms.Label();
             this._Form_Main_컨flowLayoutPanel_버튼 = new System.Windows.Forms.FlowLayoutPanel();
             this._Form_Main_button_모두_초기화 = new System.Windows.Forms.Button();
             this._Form_Main_button_종료 = new System.Windows.Forms.Button();
@@ -146,13 +146,13 @@
             this.CVBOC_컨_tableLayoutPanel.SuspendLayout();
             this.CVBOC_컨flowLayoutPanel_원하는_출력물_크기.SuspendLayout();
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.SuspendLayout();
-            this.CS_컨_tableLayoutPanel1.SuspendLayout();
-            this.CS_컨_groupBox.SuspendLayout();
-            this.CS_컨_tableLayoutPanel2.SuspendLayout();
-            this.CS_컨flowLayoutPanel_기준.SuspendLayout();
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.SuspendLayout();
-            this.CS_컨flowLayoutPanel_현재_해상도.SuspendLayout();
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.SuspendLayout();
+            this.ConvertResolution_컨_tableLayoutPanel1.SuspendLayout();
+            this.ConvertResolution_컨_groupBox.SuspendLayout();
+            this.ConvertResolution_컨_tableLayoutPanel2.SuspendLayout();
+            this.ConvertResolution_컨flowLayoutPanel_기준.SuspendLayout();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.SuspendLayout();
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.SuspendLayout();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.SuspendLayout();
             this._Form_Main_컨flowLayoutPanel_버튼.SuspendLayout();
             this._Form_Main_statusStrip.SuspendLayout();
             this._Form_Main_menuStrip.SuspendLayout();
@@ -166,7 +166,7 @@
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.OriginVidInfo_컨_groupBox, 0, 0);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.VideoBitrate_컨_groupBox_영상_비트레이트, 0, 2);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.CVBOC_컨_groupBox, 1, 0);
-            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.CS_컨_tableLayoutPanel1, 1, 1);
+            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.ConvertResolution_컨_tableLayoutPanel1, 1, 1);
             this._Form_Main_컨tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._Form_Main_컨tableLayoutPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this._Form_Main_컨tableLayoutPanel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -978,24 +978,24 @@
             this.CVBOC_comboBox_Bitrate_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
             this.CVBOC_comboBox_Bitrate_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
-            // CS_컨_tableLayoutPanel1
+            // ConvertResolution_컨_tableLayoutPanel1
             // 
-            this.CS_컨_tableLayoutPanel1.ColumnCount = 2;
-            this.CS_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.CS_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
-            this.CS_컨_tableLayoutPanel1.Controls.Add(this._Form_Main_button_제작자, 0, 1);
-            this.CS_컨_tableLayoutPanel1.Controls.Add(this.CS_컨_groupBox, 0, 0);
-            this.CS_컨_tableLayoutPanel1.Controls.Add(this._Form_Main_컨flowLayoutPanel_버튼, 1, 1);
-            this.CS_컨_tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CS_컨_tableLayoutPanel1.Location = new System.Drawing.Point(446, 114);
-            this.CS_컨_tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨_tableLayoutPanel1.Name = "CS_컨_tableLayoutPanel1";
-            this.CS_컨_tableLayoutPanel1.RowCount = 2;
-            this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.CS_컨_tableLayoutPanel1, 2);
-            this.CS_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.CS_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.CS_컨_tableLayoutPanel1.Size = new System.Drawing.Size(434, 258);
-            this.CS_컨_tableLayoutPanel1.TabIndex = 6;
+            this.ConvertResolution_컨_tableLayoutPanel1.ColumnCount = 2;
+            this.ConvertResolution_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ConvertResolution_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
+            this.ConvertResolution_컨_tableLayoutPanel1.Controls.Add(this._Form_Main_button_제작자, 0, 1);
+            this.ConvertResolution_컨_tableLayoutPanel1.Controls.Add(this.ConvertResolution_컨_groupBox, 0, 0);
+            this.ConvertResolution_컨_tableLayoutPanel1.Controls.Add(this._Form_Main_컨flowLayoutPanel_버튼, 1, 1);
+            this.ConvertResolution_컨_tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConvertResolution_컨_tableLayoutPanel1.Location = new System.Drawing.Point(446, 114);
+            this.ConvertResolution_컨_tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨_tableLayoutPanel1.Name = "ConvertResolution_컨_tableLayoutPanel1";
+            this.ConvertResolution_컨_tableLayoutPanel1.RowCount = 2;
+            this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.ConvertResolution_컨_tableLayoutPanel1, 2);
+            this.ConvertResolution_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ConvertResolution_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.ConvertResolution_컨_tableLayoutPanel1.Size = new System.Drawing.Size(434, 258);
+            this.ConvertResolution_컨_tableLayoutPanel1.TabIndex = 6;
             // 
             // _Form_Main_button_제작자
             // 
@@ -1011,353 +1011,353 @@
             this._Form_Main_button_제작자.UseVisualStyleBackColor = true;
             this._Form_Main_button_제작자.Click += new System.EventHandler(this._Form_Main_button_제작자_Click);
             // 
-            // CS_컨_groupBox
+            // ConvertResolution_컨_groupBox
             // 
-            this.CS_컨_tableLayoutPanel1.SetColumnSpan(this.CS_컨_groupBox, 2);
-            this.CS_컨_groupBox.Controls.Add(this.CS_컨_tableLayoutPanel2);
-            this.CS_컨_groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CS_컨_groupBox.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_컨_groupBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_컨_groupBox.Location = new System.Drawing.Point(2, 2);
-            this.CS_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨_groupBox.Name = "CS_컨_groupBox";
-            this.CS_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.CS_컨_groupBox.Size = new System.Drawing.Size(430, 208);
-            this.CS_컨_groupBox.TabIndex = 3;
-            this.CS_컨_groupBox.TabStop = false;
-            this.CS_컨_groupBox.Text = "해상도 변환";
-            this._Form_Main_toolTip.SetToolTip(this.CS_컨_groupBox, "원본 영상의 화면 해상도를 변환 기준을 토대로 하여 동일한 비율로 확대하거나 축소합니다.");
+            this.ConvertResolution_컨_tableLayoutPanel1.SetColumnSpan(this.ConvertResolution_컨_groupBox, 2);
+            this.ConvertResolution_컨_groupBox.Controls.Add(this.ConvertResolution_컨_tableLayoutPanel2);
+            this.ConvertResolution_컨_groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConvertResolution_컨_groupBox.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_컨_groupBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_컨_groupBox.Location = new System.Drawing.Point(2, 2);
+            this.ConvertResolution_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨_groupBox.Name = "ConvertResolution_컨_groupBox";
+            this.ConvertResolution_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨_groupBox.Size = new System.Drawing.Size(430, 208);
+            this.ConvertResolution_컨_groupBox.TabIndex = 3;
+            this.ConvertResolution_컨_groupBox.TabStop = false;
+            this.ConvertResolution_컨_groupBox.Text = "해상도 변환";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_컨_groupBox, "원본 영상의 화면 해상도를 변환 기준을 토대로 하여 동일한 비율로 확대하거나 축소합니다.");
             // 
-            // CS_컨_tableLayoutPanel2
+            // ConvertResolution_컨_tableLayoutPanel2
             // 
-            this.CS_컨_tableLayoutPanel2.ColumnCount = 2;
-            this.CS_컨_tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.97619F));
-            this.CS_컨_tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.02381F));
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_label_현재_해상도, 0, 0);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_button_적용, 1, 4);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_컨flowLayoutPanel_기준, 1, 1);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_label_변환_예상_해상도, 0, 2);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_컨flowLayoutPanel_변환_예상_해상도, 1, 2);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_label_변환_기준, 0, 1);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_컨flowLayoutPanel_현재_해상도, 1, 0);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_label__ShowValue_변환_예상_파일_크기, 1, 3);
-            this.CS_컨_tableLayoutPanel2.Controls.Add(this.CS_컨flowLayoutPanel_변환_예상_파일_크기, 0, 3);
-            this.CS_컨_tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CS_컨_tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_컨_tableLayoutPanel2.Location = new System.Drawing.Point(2, 24);
-            this.CS_컨_tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨_tableLayoutPanel2.Name = "CS_컨_tableLayoutPanel2";
-            this.CS_컨_tableLayoutPanel2.RowCount = 5;
-            this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
-            this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.5F));
-            this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
-            this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.5F));
-            this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.CS_컨_tableLayoutPanel2.Size = new System.Drawing.Size(426, 182);
-            this.CS_컨_tableLayoutPanel2.TabIndex = 0;
+            this.ConvertResolution_컨_tableLayoutPanel2.ColumnCount = 2;
+            this.ConvertResolution_컨_tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.97619F));
+            this.ConvertResolution_컨_tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.02381F));
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_label_현재해상도, 0, 0);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_button_적용, 1, 4);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_컨flowLayoutPanel_기준, 1, 1);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_label_변환예상해상도, 0, 2);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_컨flowLayoutPanel_변환예상해상도, 1, 2);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_label_변환기준, 0, 1);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_컨flowLayoutPanel_현재해상도, 1, 0);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_label_ShowValue_변환예상크기, 1, 3);
+            this.ConvertResolution_컨_tableLayoutPanel2.Controls.Add(this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기, 0, 3);
+            this.ConvertResolution_컨_tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConvertResolution_컨_tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_컨_tableLayoutPanel2.Location = new System.Drawing.Point(2, 24);
+            this.ConvertResolution_컨_tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨_tableLayoutPanel2.Name = "ConvertResolution_컨_tableLayoutPanel2";
+            this.ConvertResolution_컨_tableLayoutPanel2.RowCount = 5;
+            this.ConvertResolution_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
+            this.ConvertResolution_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.5F));
+            this.ConvertResolution_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
+            this.ConvertResolution_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.5F));
+            this.ConvertResolution_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.ConvertResolution_컨_tableLayoutPanel2.Size = new System.Drawing.Size(426, 182);
+            this.ConvertResolution_컨_tableLayoutPanel2.TabIndex = 0;
             // 
-            // CS_label_현재_해상도
+            // ConvertResolution_label_현재해상도
             // 
-            this.CS_label_현재_해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CS_label_현재_해상도.AutoSize = true;
-            this.CS_label_현재_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_현재_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_현재_해상도.Location = new System.Drawing.Point(90, 3);
-            this.CS_label_현재_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_현재_해상도.Name = "CS_label_현재_해상도";
-            this.CS_label_현재_해상도.Size = new System.Drawing.Size(133, 23);
-            this.CS_label_현재_해상도.TabIndex = 0;
-            this.CS_label_현재_해상도.Text = "현재 해상도(px):";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_현재_해상도, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
+            this.ConvertResolution_label_현재해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConvertResolution_label_현재해상도.AutoSize = true;
+            this.ConvertResolution_label_현재해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_현재해상도.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_현재해상도.Location = new System.Drawing.Point(90, 3);
+            this.ConvertResolution_label_현재해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_현재해상도.Name = "ConvertResolution_label_현재해상도";
+            this.ConvertResolution_label_현재해상도.Size = new System.Drawing.Size(133, 23);
+            this.ConvertResolution_label_현재해상도.TabIndex = 0;
+            this.ConvertResolution_label_현재해상도.Text = "현재 해상도(px):";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_현재해상도, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
             // 
-            // CS_button_적용
+            // ConvertResolution_button_적용
             // 
-            this.CS_button_적용.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CS_button_적용.AutoSize = true;
-            this.CS_button_적용.Enabled = false;
-            this.CS_button_적용.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_button_적용.ForeColor = System.Drawing.Color.Black;
-            this.CS_button_적용.Location = new System.Drawing.Point(346, 147);
-            this.CS_button_적용.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_button_적용.Name = "CS_button_적용";
-            this.CS_button_적용.Size = new System.Drawing.Size(78, 33);
-            this.CS_button_적용.TabIndex = 7;
-            this.CS_button_적용.Text = "적용";
-            this._Form_Main_toolTip.SetToolTip(this.CS_button_적용, "변환 예상 해상도를 원본 영상 파일 정보에 적용합니다. (단축키: Ctrl+S)");
-            this.CS_button_적용.UseVisualStyleBackColor = true;
-            this.CS_button_적용.Click += new System.EventHandler(this.CS_button_적용_Click);
+            this.ConvertResolution_button_적용.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConvertResolution_button_적용.AutoSize = true;
+            this.ConvertResolution_button_적용.Enabled = false;
+            this.ConvertResolution_button_적용.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_button_적용.ForeColor = System.Drawing.Color.Black;
+            this.ConvertResolution_button_적용.Location = new System.Drawing.Point(346, 147);
+            this.ConvertResolution_button_적용.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_button_적용.Name = "ConvertResolution_button_적용";
+            this.ConvertResolution_button_적용.Size = new System.Drawing.Size(78, 33);
+            this.ConvertResolution_button_적용.TabIndex = 7;
+            this.ConvertResolution_button_적용.Text = "적용";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_button_적용, "변환 예상 해상도를 원본 영상 파일 정보에 적용합니다. (단축키: Ctrl+S)");
+            this.ConvertResolution_button_적용.UseVisualStyleBackColor = true;
+            this.ConvertResolution_button_적용.Click += new System.EventHandler(this.ConvertResolution_button_적용_Click);
             // 
-            // CS_컨flowLayoutPanel_기준
+            // ConvertResolution_컨flowLayoutPanel_기준
             // 
-            this.CS_컨flowLayoutPanel_기준.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_컨flowLayoutPanel_기준.AutoSize = true;
-            this.CS_컨flowLayoutPanel_기준.Controls.Add(this.CS_comboBox_기준);
-            this.CS_컨flowLayoutPanel_기준.Controls.Add(this.CS_textBox_기준_픽셀);
-            this.CS_컨flowLayoutPanel_기준.Location = new System.Drawing.Point(227, 34);
-            this.CS_컨flowLayoutPanel_기준.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨flowLayoutPanel_기준.Name = "CS_컨flowLayoutPanel_기준";
-            this.CS_컨flowLayoutPanel_기준.Size = new System.Drawing.Size(105, 32);
-            this.CS_컨flowLayoutPanel_기준.TabIndex = 2;
-            this._Form_Main_toolTip.SetToolTip(this.CS_컨flowLayoutPanel_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
+            this.ConvertResolution_컨flowLayoutPanel_기준.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_컨flowLayoutPanel_기준.AutoSize = true;
+            this.ConvertResolution_컨flowLayoutPanel_기준.Controls.Add(this.ConvertResolution_comboBox_기준);
+            this.ConvertResolution_컨flowLayoutPanel_기준.Controls.Add(this.ConvertResolution_textBox_기준픽셀);
+            this.ConvertResolution_컨flowLayoutPanel_기준.Location = new System.Drawing.Point(227, 34);
+            this.ConvertResolution_컨flowLayoutPanel_기준.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨flowLayoutPanel_기준.Name = "ConvertResolution_컨flowLayoutPanel_기준";
+            this.ConvertResolution_컨flowLayoutPanel_기준.Size = new System.Drawing.Size(105, 32);
+            this.ConvertResolution_컨flowLayoutPanel_기준.TabIndex = 2;
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_컨flowLayoutPanel_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
             // 
-            // CS_comboBox_기준
+            // ConvertResolution_comboBox_기준
             // 
-            this.CS_comboBox_기준.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_comboBox_기준.BackColor = System.Drawing.SystemColors.Window;
-            this.CS_comboBox_기준.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.CS_comboBox_기준.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_comboBox_기준.FormattingEnabled = true;
-            this.CS_comboBox_기준.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CS_comboBox_기준.Items.AddRange(new object[] {
+            this.ConvertResolution_comboBox_기준.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_comboBox_기준.BackColor = System.Drawing.SystemColors.Window;
+            this.ConvertResolution_comboBox_기준.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.ConvertResolution_comboBox_기준.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_comboBox_기준.FormattingEnabled = true;
+            this.ConvertResolution_comboBox_기준.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ConvertResolution_comboBox_기준.Items.AddRange(new object[] {
             "가로",
             "세로"});
-            this.CS_comboBox_기준.Location = new System.Drawing.Point(2, 2);
-            this.CS_comboBox_기준.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_comboBox_기준.Name = "CS_comboBox_기준";
-            this.CS_comboBox_기준.Size = new System.Drawing.Size(58, 28);
-            this.CS_comboBox_기준.TabIndex = 1;
-            this.CS_comboBox_기준.Text = "가로";
-            this._Form_Main_toolTip.SetToolTip(this.CS_comboBox_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
-            this.CS_comboBox_기준.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.CS_comboBox_기준.Enter += new System.EventHandler(this.ControlEnter);
-            this.CS_comboBox_기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.CS_comboBox_기준.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.ConvertResolution_comboBox_기준.Location = new System.Drawing.Point(2, 2);
+            this.ConvertResolution_comboBox_기준.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_comboBox_기준.Name = "ConvertResolution_comboBox_기준";
+            this.ConvertResolution_comboBox_기준.Size = new System.Drawing.Size(58, 28);
+            this.ConvertResolution_comboBox_기준.TabIndex = 1;
+            this.ConvertResolution_comboBox_기준.Text = "가로";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_comboBox_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
+            this.ConvertResolution_comboBox_기준.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.ConvertResolution_comboBox_기준.Enter += new System.EventHandler(this.ControlEnter);
+            this.ConvertResolution_comboBox_기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.ConvertResolution_comboBox_기준.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
-            // CS_textBox_기준_픽셀
+            // ConvertResolution_textBox_기준픽셀
             // 
-            this.CS_textBox_기준_픽셀.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_textBox_기준_픽셀.BackColor = System.Drawing.SystemColors.Window;
-            this.CS_textBox_기준_픽셀.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.CS_textBox_기준_픽셀.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_textBox_기준_픽셀.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.CS_textBox_기준_픽셀.Location = new System.Drawing.Point(64, 2);
-            this.CS_textBox_기준_픽셀.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_textBox_기준_픽셀.MaxLength = 4;
-            this.CS_textBox_기준_픽셀.Name = "CS_textBox_기준_픽셀";
-            this.CS_textBox_기준_픽셀.Size = new System.Drawing.Size(39, 27);
-            this.CS_textBox_기준_픽셀.TabIndex = 2;
-            this.CS_textBox_기준_픽셀.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.CS_textBox_기준_픽셀, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
-            this.CS_textBox_기준_픽셀.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.CS_textBox_기준_픽셀.Enter += new System.EventHandler(this.ControlEnter);
-            this.CS_textBox_기준_픽셀.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.CS_textBox_기준_픽셀.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.ConvertResolution_textBox_기준픽셀.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_textBox_기준픽셀.BackColor = System.Drawing.SystemColors.Window;
+            this.ConvertResolution_textBox_기준픽셀.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.ConvertResolution_textBox_기준픽셀.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_textBox_기준픽셀.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.ConvertResolution_textBox_기준픽셀.Location = new System.Drawing.Point(64, 2);
+            this.ConvertResolution_textBox_기준픽셀.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_textBox_기준픽셀.MaxLength = 4;
+            this.ConvertResolution_textBox_기준픽셀.Name = "ConvertResolution_textBox_기준픽셀";
+            this.ConvertResolution_textBox_기준픽셀.Size = new System.Drawing.Size(39, 27);
+            this.ConvertResolution_textBox_기준픽셀.TabIndex = 2;
+            this.ConvertResolution_textBox_기준픽셀.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_textBox_기준픽셀, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
+            this.ConvertResolution_textBox_기준픽셀.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.ConvertResolution_textBox_기준픽셀.Enter += new System.EventHandler(this.ControlEnter);
+            this.ConvertResolution_textBox_기준픽셀.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.ConvertResolution_textBox_기준픽셀.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // CS_label_변환_예상_해상도
+            // ConvertResolution_label_변환예상해상도
             // 
-            this.CS_label_변환_예상_해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CS_label_변환_예상_해상도.AutoSize = true;
-            this.CS_label_변환_예상_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_변환_예상_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_변환_예상_해상도.Location = new System.Drawing.Point(50, 75);
-            this.CS_label_변환_예상_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_변환_예상_해상도.Name = "CS_label_변환_예상_해상도";
-            this.CS_label_변환_예상_해상도.Size = new System.Drawing.Size(173, 23);
-            this.CS_label_변환_예상_해상도.TabIndex = 3;
-            this.CS_label_변환_예상_해상도.Text = "변환 예상 해상도(px):";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_변환_예상_해상도, "변환 기준을 토대로 계산된 화면 해상도입니다.");
+            this.ConvertResolution_label_변환예상해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConvertResolution_label_변환예상해상도.AutoSize = true;
+            this.ConvertResolution_label_변환예상해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_변환예상해상도.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_변환예상해상도.Location = new System.Drawing.Point(50, 75);
+            this.ConvertResolution_label_변환예상해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_변환예상해상도.Name = "ConvertResolution_label_변환예상해상도";
+            this.ConvertResolution_label_변환예상해상도.Size = new System.Drawing.Size(173, 23);
+            this.ConvertResolution_label_변환예상해상도.TabIndex = 3;
+            this.ConvertResolution_label_변환예상해상도.Text = "변환 예상 해상도(px):";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_변환예상해상도, "변환 기준을 토대로 계산된 화면 해상도입니다.");
             // 
-            // CS_컨flowLayoutPanel_변환_예상_해상도
+            // ConvertResolution_컨flowLayoutPanel_변환예상해상도
             // 
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.AutoSize = true;
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label__ShowValue_변환_예상_해상도_가로);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label_곱하기2);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label__ShowValue_변환_예상_해상도_세로);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Location = new System.Drawing.Point(227, 75);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Name = "CS_컨flowLayoutPanel_변환_예상_해상도";
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Size = new System.Drawing.Size(72, 23);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.TabIndex = 4;
-            this._Form_Main_toolTip.SetToolTip(this.CS_컨flowLayoutPanel_변환_예상_해상도, "변환 기준을 토대로 계산된 화면 해상도입니다.");
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.AutoSize = true;
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Controls.Add(this.ConvertResolution_label_ShowValue_변환예상해상도_가로);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Controls.Add(this.ConvertResolution_label_x_2);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Controls.Add(this.ConvertResolution_label_ShowValue_변환예상해상도_세로);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Location = new System.Drawing.Point(227, 75);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Name = "ConvertResolution_컨flowLayoutPanel_변환예상해상도";
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.Size = new System.Drawing.Size(72, 23);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.TabIndex = 4;
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_컨flowLayoutPanel_변환예상해상도, "변환 기준을 토대로 계산된 화면 해상도입니다.");
             // 
-            // CS_label__ShowValue_변환_예상_해상도_가로
+            // ConvertResolution_label_ShowValue_변환예상해상도_가로
             // 
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label__ShowValue_변환_예상_해상도_가로.AutoSize = true;
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label__ShowValue_변환_예상_해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Location = new System.Drawing.Point(2, 0);
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Name = "CS_label__ShowValue_변환_예상_해상도_가로";
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Size = new System.Drawing.Size(19, 23);
-            this.CS_label__ShowValue_변환_예상_해상도_가로.TabIndex = 0;
-            this.CS_label__ShowValue_변환_예상_해상도_가로.Text = "0";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label__ShowValue_변환_예상_해상도_가로, "변환 기준을 토대로 계산된 화면 해상도입니다.");
-            this.CS_label__ShowValue_변환_예상_해상도_가로.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.AutoSize = true;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Location = new System.Drawing.Point(2, 0);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Name = "ConvertResolution_label_ShowValue_변환예상해상도_가로";
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Size = new System.Drawing.Size(19, 23);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.TabIndex = 0;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = "0";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_ShowValue_변환예상해상도_가로, "변환 기준을 토대로 계산된 화면 해상도입니다.");
+            this.ConvertResolution_label_ShowValue_변환예상해상도_가로.TextChanged += new System.EventHandler(this.ControlTextChanged);
             // 
-            // CS_label_곱하기2
+            // ConvertResolution_label_x_2
             // 
-            this.CS_label_곱하기2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label_곱하기2.AutoSize = true;
-            this.CS_label_곱하기2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_곱하기2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_곱하기2.Location = new System.Drawing.Point(25, 0);
-            this.CS_label_곱하기2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_곱하기2.Name = "CS_label_곱하기2";
-            this.CS_label_곱하기2.Size = new System.Drawing.Size(22, 23);
-            this.CS_label_곱하기2.TabIndex = 2;
-            this.CS_label_곱하기2.Text = "×";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_곱하기2, "변환 기준을 토대로 계산된 화면 해상도입니다.");
+            this.ConvertResolution_label_x_2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_x_2.AutoSize = true;
+            this.ConvertResolution_label_x_2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_x_2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_x_2.Location = new System.Drawing.Point(25, 0);
+            this.ConvertResolution_label_x_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_x_2.Name = "ConvertResolution_label_x_2";
+            this.ConvertResolution_label_x_2.Size = new System.Drawing.Size(22, 23);
+            this.ConvertResolution_label_x_2.TabIndex = 2;
+            this.ConvertResolution_label_x_2.Text = "×";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_x_2, "변환 기준을 토대로 계산된 화면 해상도입니다.");
             // 
-            // CS_label__ShowValue_변환_예상_해상도_세로
+            // ConvertResolution_label_ShowValue_변환예상해상도_세로
             // 
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label__ShowValue_변환_예상_해상도_세로.AutoSize = true;
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label__ShowValue_변환_예상_해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Location = new System.Drawing.Point(51, 0);
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Name = "CS_label__ShowValue_변환_예상_해상도_세로";
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Size = new System.Drawing.Size(19, 23);
-            this.CS_label__ShowValue_변환_예상_해상도_세로.TabIndex = 3;
-            this.CS_label__ShowValue_변환_예상_해상도_세로.Text = "0";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label__ShowValue_변환_예상_해상도_세로, "변환 기준을 토대로 계산된 화면 해상도입니다.");
-            this.CS_label__ShowValue_변환_예상_해상도_세로.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.AutoSize = true;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Location = new System.Drawing.Point(51, 0);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Name = "ConvertResolution_label_ShowValue_변환예상해상도_세로";
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Size = new System.Drawing.Size(19, 23);
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.TabIndex = 3;
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = "0";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_ShowValue_변환예상해상도_세로, "변환 기준을 토대로 계산된 화면 해상도입니다.");
+            this.ConvertResolution_label_ShowValue_변환예상해상도_세로.TextChanged += new System.EventHandler(this.ControlTextChanged);
             // 
-            // CS_label_변환_기준
+            // ConvertResolution_label_변환기준
             // 
-            this.CS_label_변환_기준.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CS_label_변환_기준.AutoSize = true;
-            this.CS_label_변환_기준.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_변환_기준.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_변환_기준.Location = new System.Drawing.Point(107, 39);
-            this.CS_label_변환_기준.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_변환_기준.Name = "CS_label_변환_기준";
-            this.CS_label_변환_기준.Size = new System.Drawing.Size(116, 23);
-            this.CS_label_변환_기준.TabIndex = 1;
-            this.CS_label_변환_기준.Text = "변환 기준(px):";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_변환_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
+            this.ConvertResolution_label_변환기준.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConvertResolution_label_변환기준.AutoSize = true;
+            this.ConvertResolution_label_변환기준.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_변환기준.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_변환기준.Location = new System.Drawing.Point(107, 39);
+            this.ConvertResolution_label_변환기준.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_변환기준.Name = "ConvertResolution_label_변환기준";
+            this.ConvertResolution_label_변환기준.Size = new System.Drawing.Size(116, 23);
+            this.ConvertResolution_label_변환기준.TabIndex = 1;
+            this.ConvertResolution_label_변환기준.Text = "변환 기준(px):";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_변환기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
             // 
-            // CS_컨flowLayoutPanel_현재_해상도
+            // ConvertResolution_컨flowLayoutPanel_현재해상도
             // 
-            this.CS_컨flowLayoutPanel_현재_해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_컨flowLayoutPanel_현재_해상도.AutoSize = true;
-            this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label__ShowValue_현재_해상도_가로);
-            this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label_곱하기1);
-            this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label__ShowValue_현재_해상도_세로);
-            this.CS_컨flowLayoutPanel_현재_해상도.Location = new System.Drawing.Point(227, 3);
-            this.CS_컨flowLayoutPanel_현재_해상도.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨flowLayoutPanel_현재_해상도.Name = "CS_컨flowLayoutPanel_현재_해상도";
-            this.CS_컨flowLayoutPanel_현재_해상도.Size = new System.Drawing.Size(72, 23);
-            this.CS_컨flowLayoutPanel_현재_해상도.TabIndex = 0;
-            this._Form_Main_toolTip.SetToolTip(this.CS_컨flowLayoutPanel_현재_해상도, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.AutoSize = true;
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Controls.Add(this.ConvertResolution_label_ShowValue_현재해상도_가로);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Controls.Add(this.ConvertResolution_label_x_1);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Controls.Add(this.ConvertResolution_label_ShowValue_현재해상도_세로);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Location = new System.Drawing.Point(227, 3);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Name = "ConvertResolution_컨flowLayoutPanel_현재해상도";
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.Size = new System.Drawing.Size(72, 23);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.TabIndex = 0;
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_컨flowLayoutPanel_현재해상도, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
             // 
-            // CS_label__ShowValue_현재_해상도_가로
+            // ConvertResolution_label_ShowValue_현재해상도_가로
             // 
-            this.CS_label__ShowValue_현재_해상도_가로.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label__ShowValue_현재_해상도_가로.AutoSize = true;
-            this.CS_label__ShowValue_현재_해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label__ShowValue_현재_해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_현재_해상도_가로.Location = new System.Drawing.Point(2, 0);
-            this.CS_label__ShowValue_현재_해상도_가로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label__ShowValue_현재_해상도_가로.Name = "CS_label__ShowValue_현재_해상도_가로";
-            this.CS_label__ShowValue_현재_해상도_가로.Size = new System.Drawing.Size(19, 23);
-            this.CS_label__ShowValue_현재_해상도_가로.TabIndex = 1;
-            this.CS_label__ShowValue_현재_해상도_가로.Text = "0";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label__ShowValue_현재_해상도_가로, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.AutoSize = true;
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Location = new System.Drawing.Point(2, 0);
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Name = "ConvertResolution_label_ShowValue_현재해상도_가로";
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Size = new System.Drawing.Size(19, 23);
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.TabIndex = 1;
+            this.ConvertResolution_label_ShowValue_현재해상도_가로.Text = "0";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_ShowValue_현재해상도_가로, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
             // 
-            // CS_label_곱하기1
+            // ConvertResolution_label_x_1
             // 
-            this.CS_label_곱하기1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label_곱하기1.AutoSize = true;
-            this.CS_label_곱하기1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_곱하기1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_곱하기1.Location = new System.Drawing.Point(25, 0);
-            this.CS_label_곱하기1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_곱하기1.Name = "CS_label_곱하기1";
-            this.CS_label_곱하기1.Size = new System.Drawing.Size(22, 23);
-            this.CS_label_곱하기1.TabIndex = 3;
-            this.CS_label_곱하기1.Text = "×";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_곱하기1, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
+            this.ConvertResolution_label_x_1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_x_1.AutoSize = true;
+            this.ConvertResolution_label_x_1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_x_1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_x_1.Location = new System.Drawing.Point(25, 0);
+            this.ConvertResolution_label_x_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_x_1.Name = "ConvertResolution_label_x_1";
+            this.ConvertResolution_label_x_1.Size = new System.Drawing.Size(22, 23);
+            this.ConvertResolution_label_x_1.TabIndex = 3;
+            this.ConvertResolution_label_x_1.Text = "×";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_x_1, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
             // 
-            // CS_label__ShowValue_현재_해상도_세로
+            // ConvertResolution_label_ShowValue_현재해상도_세로
             // 
-            this.CS_label__ShowValue_현재_해상도_세로.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label__ShowValue_현재_해상도_세로.AutoSize = true;
-            this.CS_label__ShowValue_현재_해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label__ShowValue_현재_해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_현재_해상도_세로.Location = new System.Drawing.Point(51, 0);
-            this.CS_label__ShowValue_현재_해상도_세로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label__ShowValue_현재_해상도_세로.Name = "CS_label__ShowValue_현재_해상도_세로";
-            this.CS_label__ShowValue_현재_해상도_세로.Size = new System.Drawing.Size(19, 23);
-            this.CS_label__ShowValue_현재_해상도_세로.TabIndex = 4;
-            this.CS_label__ShowValue_현재_해상도_세로.Text = "0";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label__ShowValue_현재_해상도_세로, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.AutoSize = true;
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Location = new System.Drawing.Point(51, 0);
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Name = "ConvertResolution_label_ShowValue_현재해상도_세로";
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Size = new System.Drawing.Size(19, 23);
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.TabIndex = 4;
+            this.ConvertResolution_label_ShowValue_현재해상도_세로.Text = "0";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_ShowValue_현재해상도_세로, "원본 영상 파일 정보에서 설정된 화면 해상도입니다.");
             // 
-            // CS_label__ShowValue_변환_예상_파일_크기
+            // ConvertResolution_label_ShowValue_변환예상크기
             // 
-            this.CS_label__ShowValue_변환_예상_파일_크기.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label__ShowValue_변환_예상_파일_크기.AutoSize = true;
-            this.CS_label__ShowValue_변환_예상_파일_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label__ShowValue_변환_예상_파일_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_변환_예상_파일_크기.Location = new System.Drawing.Point(227, 111);
-            this.CS_label__ShowValue_변환_예상_파일_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label__ShowValue_변환_예상_파일_크기.Name = "CS_label__ShowValue_변환_예상_파일_크기";
-            this.CS_label__ShowValue_변환_예상_파일_크기.Size = new System.Drawing.Size(16, 23);
-            this.CS_label__ShowValue_변환_예상_파일_크기.TabIndex = 0;
-            this.CS_label__ShowValue_변환_예상_파일_크기.Text = " ";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label__ShowValue_변환_예상_파일_크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
+            this.ConvertResolution_label_ShowValue_변환예상크기.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_ShowValue_변환예상크기.AutoSize = true;
+            this.ConvertResolution_label_ShowValue_변환예상크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_ShowValue_변환예상크기.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_ShowValue_변환예상크기.Location = new System.Drawing.Point(227, 111);
+            this.ConvertResolution_label_ShowValue_변환예상크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_ShowValue_변환예상크기.Name = "ConvertResolution_label_ShowValue_변환예상크기";
+            this.ConvertResolution_label_ShowValue_변환예상크기.Size = new System.Drawing.Size(16, 23);
+            this.ConvertResolution_label_ShowValue_변환예상크기.TabIndex = 0;
+            this.ConvertResolution_label_ShowValue_변환예상크기.Text = " ";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_ShowValue_변환예상크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
             // 
-            // CS_컨flowLayoutPanel_변환_예상_파일_크기
+            // ConvertResolution_컨flowLayoutPanel_변환예상파일크기
             // 
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.AutoSize = true;
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Controls.Add(this.CS_label_변환_예상_영상_크기);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Controls.Add(this.CS_comboBox_변환_예상_크기_단위);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Controls.Add(this.CS_label_doubleDot);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Location = new System.Drawing.Point(23, 106);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Name = "CS_컨flowLayoutPanel_변환_예상_파일_크기";
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Size = new System.Drawing.Size(200, 32);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.TabIndex = 6;
-            this._Form_Main_toolTip.SetToolTip(this.CS_컨flowLayoutPanel_변환_예상_파일_크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.AutoSize = true;
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Controls.Add(this.ConvertResolution_label_변환예상영상크기);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Controls.Add(this.ConvertResolution_comboBox_변환예상크기단위);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Controls.Add(this.ConvertResolution_label_colon);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Location = new System.Drawing.Point(23, 106);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Name = "ConvertResolution_컨flowLayoutPanel_변환예상파일크기";
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.Size = new System.Drawing.Size(200, 32);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.TabIndex = 6;
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
             // 
-            // CS_label_변환_예상_영상_크기
+            // ConvertResolution_label_변환예상영상크기
             // 
-            this.CS_label_변환_예상_영상_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CS_label_변환_예상_영상_크기.AutoSize = true;
-            this.CS_label_변환_예상_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CS_label_변환_예상_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_변환_예상_영상_크기.Location = new System.Drawing.Point(2, 4);
-            this.CS_label_변환_예상_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_변환_예상_영상_크기.Name = "CS_label_변환_예상_영상_크기";
-            this.CS_label_변환_예상_영상_크기.Size = new System.Drawing.Size(124, 23);
-            this.CS_label_변환_예상_영상_크기.TabIndex = 5;
-            this.CS_label_변환_예상_영상_크기.Text = "변환 예상 크기";
-            this._Form_Main_toolTip.SetToolTip(this.CS_label_변환_예상_영상_크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
+            this.ConvertResolution_label_변환예상영상크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConvertResolution_label_변환예상영상크기.AutoSize = true;
+            this.ConvertResolution_label_변환예상영상크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ConvertResolution_label_변환예상영상크기.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ConvertResolution_label_변환예상영상크기.Location = new System.Drawing.Point(2, 4);
+            this.ConvertResolution_label_변환예상영상크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_변환예상영상크기.Name = "ConvertResolution_label_변환예상영상크기";
+            this.ConvertResolution_label_변환예상영상크기.Size = new System.Drawing.Size(124, 23);
+            this.ConvertResolution_label_변환예상영상크기.TabIndex = 5;
+            this.ConvertResolution_label_변환예상영상크기.Text = "변환 예상 크기";
+            this._Form_Main_toolTip.SetToolTip(this.ConvertResolution_label_변환예상영상크기, "변환 예상 해상도로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
             // 
-            // CS_comboBox_변환_예상_크기_단위
+            // ConvertResolution_comboBox_변환예상크기단위
             // 
-            this.CS_comboBox_변환_예상_크기_단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.CS_comboBox_변환_예상_크기_단위.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CS_comboBox_변환_예상_크기_단위.FormattingEnabled = true;
-            this.CS_comboBox_변환_예상_크기_단위.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.CS_comboBox_변환_예상_크기_단위.Items.AddRange(new object[] {
+            this.ConvertResolution_comboBox_변환예상크기단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.ConvertResolution_comboBox_변환예상크기단위.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ConvertResolution_comboBox_변환예상크기단위.FormattingEnabled = true;
+            this.ConvertResolution_comboBox_변환예상크기단위.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.ConvertResolution_comboBox_변환예상크기단위.Items.AddRange(new object[] {
             "MB",
             "GB"});
-            this.CS_comboBox_변환_예상_크기_단위.Location = new System.Drawing.Point(130, 2);
-            this.CS_comboBox_변환_예상_크기_단위.Margin = new System.Windows.Forms.Padding(2);
-            this.CS_comboBox_변환_예상_크기_단위.Name = "CS_comboBox_변환_예상_크기_단위";
-            this.CS_comboBox_변환_예상_크기_단위.Size = new System.Drawing.Size(52, 28);
-            this.CS_comboBox_변환_예상_크기_단위.TabIndex = 1;
-            this.CS_comboBox_변환_예상_크기_단위.Text = "MB";
-            this.CS_comboBox_변환_예상_크기_단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.CS_comboBox_변환_예상_크기_단위.Enter += new System.EventHandler(this.ControlEnter);
-            this.CS_comboBox_변환_예상_크기_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.CS_comboBox_변환_예상_크기_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.ConvertResolution_comboBox_변환예상크기단위.Location = new System.Drawing.Point(130, 2);
+            this.ConvertResolution_comboBox_변환예상크기단위.Margin = new System.Windows.Forms.Padding(2);
+            this.ConvertResolution_comboBox_변환예상크기단위.Name = "ConvertResolution_comboBox_변환예상크기단위";
+            this.ConvertResolution_comboBox_변환예상크기단위.Size = new System.Drawing.Size(52, 28);
+            this.ConvertResolution_comboBox_변환예상크기단위.TabIndex = 1;
+            this.ConvertResolution_comboBox_변환예상크기단위.Text = "MB";
+            this.ConvertResolution_comboBox_변환예상크기단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.ConvertResolution_comboBox_변환예상크기단위.Enter += new System.EventHandler(this.ControlEnter);
+            this.ConvertResolution_comboBox_변환예상크기단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.ConvertResolution_comboBox_변환예상크기단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
-            // CS_label_doubleDot
+            // ConvertResolution_label_colon
             // 
-            this.CS_label_doubleDot.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CS_label_doubleDot.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
-            this.CS_label_doubleDot.Location = new System.Drawing.Point(186, 4);
-            this.CS_label_doubleDot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CS_label_doubleDot.Name = "CS_label_doubleDot";
-            this.CS_label_doubleDot.Size = new System.Drawing.Size(12, 24);
-            this.CS_label_doubleDot.TabIndex = 6;
-            this.CS_label_doubleDot.Text = ":";
+            this.ConvertResolution_label_colon.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConvertResolution_label_colon.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
+            this.ConvertResolution_label_colon.Location = new System.Drawing.Point(186, 4);
+            this.ConvertResolution_label_colon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConvertResolution_label_colon.Name = "ConvertResolution_label_colon";
+            this.ConvertResolution_label_colon.Size = new System.Drawing.Size(12, 24);
+            this.ConvertResolution_label_colon.TabIndex = 6;
+            this.ConvertResolution_label_colon.Text = ":";
             // 
             // _Form_Main_컨flowLayoutPanel_버튼
             // 
@@ -1523,19 +1523,19 @@
             // _Form_Main_제작자ToolStripMenuItem
             // 
             this._Form_Main_제작자ToolStripMenuItem.Name = "_Form_Main_제작자ToolStripMenuItem";
-            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this._Form_Main_제작자ToolStripMenuItem.Text = "제작자(&P)...";
             this._Form_Main_제작자ToolStripMenuItem.Click += new System.EventHandler(this.제작자ToolStripMenuItem_Click);
             // 
             // _Form_Main_toolStripSeparator2
             // 
             this._Form_Main_toolStripSeparator2.Name = "_Form_Main_toolStripSeparator2";
-            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
+            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
             // 
             // _Form_Main_프로그램_정보ToolStripMenuItem
             // 
             this._Form_Main_프로그램_정보ToolStripMenuItem.Name = "_Form_Main_프로그램_정보ToolStripMenuItem";
-            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this._Form_Main_프로그램_정보ToolStripMenuItem.Text = "프로그램 정보(&I)...";
             this._Form_Main_프로그램_정보ToolStripMenuItem.Click += new System.EventHandler(this.프로그램정보ToolStripMenuItem_Click);
             // 
@@ -1645,19 +1645,19 @@
             this.CVBOC_컨flowLayoutPanel_원하는_출력물_크기.PerformLayout();
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.ResumeLayout(false);
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.PerformLayout();
-            this.CS_컨_tableLayoutPanel1.ResumeLayout(false);
-            this.CS_컨_tableLayoutPanel1.PerformLayout();
-            this.CS_컨_groupBox.ResumeLayout(false);
-            this.CS_컨_tableLayoutPanel2.ResumeLayout(false);
-            this.CS_컨_tableLayoutPanel2.PerformLayout();
-            this.CS_컨flowLayoutPanel_기준.ResumeLayout(false);
-            this.CS_컨flowLayoutPanel_기준.PerformLayout();
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.ResumeLayout(false);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.PerformLayout();
-            this.CS_컨flowLayoutPanel_현재_해상도.ResumeLayout(false);
-            this.CS_컨flowLayoutPanel_현재_해상도.PerformLayout();
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.ResumeLayout(false);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.PerformLayout();
+            this.ConvertResolution_컨_tableLayoutPanel1.ResumeLayout(false);
+            this.ConvertResolution_컨_tableLayoutPanel1.PerformLayout();
+            this.ConvertResolution_컨_groupBox.ResumeLayout(false);
+            this.ConvertResolution_컨_tableLayoutPanel2.ResumeLayout(false);
+            this.ConvertResolution_컨_tableLayoutPanel2.PerformLayout();
+            this.ConvertResolution_컨flowLayoutPanel_기준.ResumeLayout(false);
+            this.ConvertResolution_컨flowLayoutPanel_기준.PerformLayout();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.ResumeLayout(false);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상해상도.PerformLayout();
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.ResumeLayout(false);
+            this.ConvertResolution_컨flowLayoutPanel_현재해상도.PerformLayout();
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.ResumeLayout(false);
+            this.ConvertResolution_컨flowLayoutPanel_변환예상파일크기.PerformLayout();
             this._Form_Main_컨flowLayoutPanel_버튼.ResumeLayout(false);
             this._Form_Main_statusStrip.ResumeLayout(false);
             this._Form_Main_statusStrip.PerformLayout();
@@ -1711,34 +1711,34 @@
         private System.Windows.Forms.Label CVBOC_label_예상_영상_비트레이트;
         private System.Windows.Forms.FlowLayoutPanel CVBOC_컨flowLayoutPanel_최적_영상_비트레이트;
         private System.Windows.Forms.Label CVBOC_label__ShowValue_영상_비트레이트;
-        private System.Windows.Forms.GroupBox CS_컨_groupBox;
-        private System.Windows.Forms.TableLayoutPanel CS_컨_tableLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel CS_컨flowLayoutPanel_기준;
-        private System.Windows.Forms.ComboBox CS_comboBox_기준;
-        private System.Windows.Forms.TextBox CS_textBox_기준_픽셀;
-        private System.Windows.Forms.Label CS_label_변환_예상_해상도;
-        private System.Windows.Forms.FlowLayoutPanel CS_컨flowLayoutPanel_변환_예상_해상도;
-        private System.Windows.Forms.Label CS_label__ShowValue_변환_예상_해상도_가로;
-        private System.Windows.Forms.Label CS_label_곱하기2;
-        private System.Windows.Forms.Label CS_label__ShowValue_변환_예상_해상도_세로;
-        private System.Windows.Forms.Label CS_label_변환_예상_영상_크기;
-        private System.Windows.Forms.FlowLayoutPanel CS_컨flowLayoutPanel_변환_예상_파일_크기;
-        private System.Windows.Forms.Label CS_label__ShowValue_변환_예상_파일_크기;
-        private System.Windows.Forms.Button CS_button_적용;
-        private System.Windows.Forms.FlowLayoutPanel CS_컨flowLayoutPanel_현재_해상도;
-        private System.Windows.Forms.Label CS_label_현재_해상도;
-        private System.Windows.Forms.Label CS_label__ShowValue_현재_해상도_가로;
-        private System.Windows.Forms.Label CS_label_곱하기1;
-        private System.Windows.Forms.Label CS_label__ShowValue_현재_해상도_세로;
-        private System.Windows.Forms.Label CS_label_변환_기준;
+        private System.Windows.Forms.GroupBox ConvertResolution_컨_groupBox;
+        private System.Windows.Forms.TableLayoutPanel ConvertResolution_컨_tableLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel ConvertResolution_컨flowLayoutPanel_기준;
+        private System.Windows.Forms.ComboBox ConvertResolution_comboBox_기준;
+        private System.Windows.Forms.TextBox ConvertResolution_textBox_기준픽셀;
+        private System.Windows.Forms.Label ConvertResolution_label_변환예상해상도;
+        private System.Windows.Forms.FlowLayoutPanel ConvertResolution_컨flowLayoutPanel_변환예상해상도;
+        private System.Windows.Forms.Label ConvertResolution_label_ShowValue_변환예상해상도_가로;
+        private System.Windows.Forms.Label ConvertResolution_label_x_2;
+        private System.Windows.Forms.Label ConvertResolution_label_ShowValue_변환예상해상도_세로;
+        private System.Windows.Forms.Label ConvertResolution_label_변환예상영상크기;
+        private System.Windows.Forms.FlowLayoutPanel ConvertResolution_컨flowLayoutPanel_변환예상파일크기;
+        private System.Windows.Forms.Label ConvertResolution_label_ShowValue_변환예상크기;
+        private System.Windows.Forms.Button ConvertResolution_button_적용;
+        private System.Windows.Forms.FlowLayoutPanel ConvertResolution_컨flowLayoutPanel_현재해상도;
+        private System.Windows.Forms.Label ConvertResolution_label_현재해상도;
+        private System.Windows.Forms.Label ConvertResolution_label_ShowValue_현재해상도_가로;
+        private System.Windows.Forms.Label ConvertResolution_label_x_1;
+        private System.Windows.Forms.Label ConvertResolution_label_ShowValue_현재해상도_세로;
+        private System.Windows.Forms.Label ConvertResolution_label_변환기준;
         private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_적용_코덱;
         private System.Windows.Forms.ComboBox OriginVidInfo_comboBox_적용_코덱;
-        private System.Windows.Forms.TableLayoutPanel CS_컨_tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ConvertResolution_컨_tableLayoutPanel1;
         private System.Windows.Forms.StatusStrip _Form_Main_statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel _Form_Main_toolStripStatusLabel;
         private System.Windows.Forms.Timer _Form_Main_timer;
         private System.Windows.Forms.ComboBox VideoBitrate_comboBox_예상_출력_영상_크기_단위;
-        private System.Windows.Forms.ComboBox CS_comboBox_변환_예상_크기_단위;
+        private System.Windows.Forms.ComboBox ConvertResolution_comboBox_변환예상크기단위;
         private System.Windows.Forms.ToolStripMenuItem _Form_Main_파일ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _Form_Main_해상도변환적용ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _Form_Main_원본영상파일정보초기화ToolStripMenuItem;
@@ -1759,7 +1759,7 @@
         private System.Windows.Forms.ToolStripMenuItem 잘라내기XToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 복사CToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 붙여넣기VToolStripMenuItem;
-        private System.Windows.Forms.Label CS_label_doubleDot;
+        private System.Windows.Forms.Label ConvertResolution_label_colon;
         private System.Windows.Forms.ComboBox VideoBitrate_comboBox_Bitrate_단위;
         private System.Windows.Forms.ComboBox CVBOC_comboBox_Bitrate_단위;
         private System.Windows.Forms.ToolStripMenuItem 영상비트레이트소수점설정ToolStripMenuItem;

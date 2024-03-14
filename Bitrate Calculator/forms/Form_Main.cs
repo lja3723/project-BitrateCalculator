@@ -7,7 +7,7 @@ using System.Windows.Forms;
  * VB: Video Bitrate //변경됨
  * AB: Audio Bitrate
  * 
- * CS:
+ * CS: ConvertResolution
  * CVBOC: C Video Bitrate O C
  * 
  * ~Str: String
@@ -40,14 +40,14 @@ namespace Bitrate_Calculator
             VideoBitrate_label__ShowValue_예상_출력_영상_크기.Text = CapacityDecimalPointStr;
             VideoBitrate_label__ShowValue_최대_영상_비트레이트.Text = VideoBitrateDecimalPointStr;
             CVBOC_label__ShowValue_영상_비트레이트.Text = VideoBitrateDecimalPointStr;
-            CS_label__ShowValue_변환_예상_파일_크기.Text = CapacityDecimalPointStr;
+            ConvertResolution_label_ShowValue_변환예상크기.Text = CapacityDecimalPointStr;
 
             //텍스트박스 크기 초기화
             int textBoxHeight = 30;
             double textBoxWidth = 9.8;
             double textBoxWidthAdd = 10;
 
-            CS_textBox_기준_픽셀.Height = textBoxHeight;
+            ConvertResolution_textBox_기준픽셀.Height = textBoxHeight;
             CVBOC_textBox_원하는_출력_영상_크기.Height = textBoxHeight;
             OriginVidInfo_textBox_FPS.Height = textBoxHeight;
             OriginVidInfo_textBox_분.Height = textBoxHeight;
@@ -57,7 +57,7 @@ namespace Bitrate_Calculator
             OriginVidInfo_textBox_화면_해상도_가로.Height = textBoxHeight;
             OriginVidInfo_textBox_화면_해상도_세로.Height = textBoxHeight;
 
-            CS_textBox_기준_픽셀.Width = (int)Math.Round(CS_textBox_기준_픽셀.MaxLength * textBoxWidth + textBoxWidthAdd);
+            ConvertResolution_textBox_기준픽셀.Width = (int)Math.Round(ConvertResolution_textBox_기준픽셀.MaxLength * textBoxWidth + textBoxWidthAdd);
             CVBOC_textBox_원하는_출력_영상_크기.Width = (int)Math.Round(CVBOC_textBox_원하는_출력_영상_크기.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_FPS.Width = (int)Math.Round(OriginVidInfo_textBox_FPS.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_분.Width = (int)Math.Round(OriginVidInfo_textBox_분.MaxLength * textBoxWidth + textBoxWidthAdd);
@@ -184,16 +184,16 @@ namespace Bitrate_Calculator
         private void CalcVideoBitrateWithConvertedResolution()
         {
             if (
-                !CS_label__ShowValue_변환_예상_해상도_가로.Text.Equals("0") && !CS_label__ShowValue_변환_예상_해상도_세로.Text.Equals("0") &&
-                !CS_label__ShowValue_변환_예상_해상도_가로.Text.Equals("MAX") && !CS_label__ShowValue_변환_예상_해상도_세로.Text.Equals("MAX")
+                !ConvertResolution_label_ShowValue_변환예상해상도_가로.Text.Equals("0") && !ConvertResolution_label_ShowValue_변환예상해상도_세로.Text.Equals("0") &&
+                !ConvertResolution_label_ShowValue_변환예상해상도_가로.Text.Equals("MAX") && !ConvertResolution_label_ShowValue_변환예상해상도_세로.Text.Equals("MAX")
                 )
             {
-                decimal newVideoBitrate = CalcVideoBitrate(CS_label__ShowValue_변환_예상_해상도_가로.Text, CS_label__ShowValue_변환_예상_해상도_세로.Text, VideoBitrate_comboBox_Bitrate_단위.Text);
-                decimal newCapacity = CalcCapacity(newVideoBitrate, CS_comboBox_변환_예상_크기_단위.Text, VideoBitrate_comboBox_Bitrate_단위.Text);
-                CS_label__ShowValue_변환_예상_파일_크기.Text = GetUnitSeparatedDigit(Convert.ToString(newCapacity.ToString(CapacityDecimalPointStr)));
+                decimal newVideoBitrate = CalcVideoBitrate(ConvertResolution_label_ShowValue_변환예상해상도_가로.Text, ConvertResolution_label_ShowValue_변환예상해상도_세로.Text, VideoBitrate_comboBox_Bitrate_단위.Text);
+                decimal newCapacity = CalcCapacity(newVideoBitrate, ConvertResolution_comboBox_변환예상크기단위.Text, VideoBitrate_comboBox_Bitrate_단위.Text);
+                ConvertResolution_label_ShowValue_변환예상크기.Text = GetUnitSeparatedDigit(Convert.ToString(newCapacity.ToString(CapacityDecimalPointStr)));
             }
             else
-                CS_label__ShowValue_변환_예상_파일_크기.Text = GetUnitSeparatedDigit(CapacityDecimalPointStr);
+                ConvertResolution_label_ShowValue_변환예상크기.Text = GetUnitSeparatedDigit(CapacityDecimalPointStr);
         }
 
         //영상 비트레이트 계산
@@ -265,67 +265,67 @@ namespace Bitrate_Calculator
         private void ConvertResolution()
         {
             //비어있지 않을 경우 계산
-            if (!CS_textBox_기준_픽셀.Text.Equals(""))
+            if (!ConvertResolution_textBox_기준픽셀.Text.Equals(""))
             {
-                long currentWidth = Convert.ToInt64(CS_label__ShowValue_현재_해상도_가로.Text);
-                long currentHeight = Convert.ToInt64(CS_label__ShowValue_현재_해상도_세로.Text);
+                long currentWidth = Convert.ToInt64(ConvertResolution_label_ShowValue_현재해상도_가로.Text);
+                long currentHeight = Convert.ToInt64(ConvertResolution_label_ShowValue_현재해상도_세로.Text);
                 const int MAXRANGE = 9999;
 
                 //가로 기준 해상도 변환
-                if (CS_comboBox_기준.Text.Equals("가로"))
+                if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
                 {
 
                     if (currentWidth == 0)
                         return;
-                    long newWidth = Convert.ToInt64(CS_textBox_기준_픽셀.Text);
+                    long newWidth = Convert.ToInt64(ConvertResolution_textBox_기준픽셀.Text);
                     decimal newHeight = newWidth / (decimal)currentWidth * currentHeight;
 
                     //변환된 세로가 최대 범위 초과시
                     if (newHeight > MAXRANGE)
                     {
-                        CS_label__ShowValue_변환_예상_해상도_가로.Text = Convert.ToString(newWidth);
-                        CS_label__ShowValue_변환_예상_해상도_세로.Text = "MAX";
+                        ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = Convert.ToString(newWidth);
+                        ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = "MAX";
                         _Form_Main_toolStripStatusLabel.Text = "변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
                         _Form_Main_해상도변환적용ToolStripMenuItem.Enabled = false;
-                        CS_button_적용.Enabled = false;
+                        ConvertResolution_button_적용.Enabled = false;
                         System.Media.SystemSounds.Asterisk.Play(); ;
                         TimerStart();
                         return;
                     }
 
-                    CS_label__ShowValue_변환_예상_해상도_가로.Text = Convert.ToString(newWidth);
-                    CS_label__ShowValue_변환_예상_해상도_세로.Text = Convert.ToString(Math.Round(newHeight));
+                    ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = Convert.ToString(newWidth);
+                    ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = Convert.ToString(Math.Round(newHeight));
                 }
 
                 //세로 기준 해상도 변환
-                if (CS_comboBox_기준.Text.Equals("세로"))
+                if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
                 {
                     if (currentHeight == 0)
                         return;
-                    long newHeight = Convert.ToInt64(CS_textBox_기준_픽셀.Text);
+                    long newHeight = Convert.ToInt64(ConvertResolution_textBox_기준픽셀.Text);
                     decimal newWidth = currentWidth / (decimal)currentHeight * newHeight;
 
                     //변환된 가로가 최대 범위 초과시
                     if (newWidth > MAXRANGE)
                     {
-                        CS_label__ShowValue_변환_예상_해상도_가로.Text = "MAX";
-                        CS_label__ShowValue_변환_예상_해상도_세로.Text = Convert.ToString(newHeight);
+                        ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = "MAX";
+                        ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = Convert.ToString(newHeight);
                         _Form_Main_toolStripStatusLabel.Text = "변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
                         _Form_Main_해상도변환적용ToolStripMenuItem.Enabled = false;
-                        CS_button_적용.Enabled = false;
+                        ConvertResolution_button_적용.Enabled = false;
                         System.Media.SystemSounds.Asterisk.Play(); ;
                         TimerStart();
                         return;
                     }
 
-                    CS_label__ShowValue_변환_예상_해상도_가로.Text = Convert.ToString(Math.Round(newWidth));
-                    CS_label__ShowValue_변환_예상_해상도_세로.Text = Convert.ToString(newHeight);
+                    ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = Convert.ToString(Math.Round(newWidth));
+                    ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = Convert.ToString(newHeight);
                 }
             }
             else
             {
-                CS_label__ShowValue_변환_예상_해상도_가로.Text = "0";
-                CS_label__ShowValue_변환_예상_해상도_세로.Text = "0";
+                ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = "0";
+                ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = "0";
             }
         }
 
@@ -431,8 +431,8 @@ namespace Bitrate_Calculator
                     do
                         SelectNextControl(ActiveControl, true, true, true, true);
                     while (ActiveControl is Button);
-                else if (ActiveControl == CS_button_적용)
-                    CS_button_적용_Click(sender, e);
+                else if (ActiveControl == ConvertResolution_button_적용)
+                    ConvertResolution_button_적용_Click(sender, e);
                 else if (ActiveControl == OriginVidInfo_button_초기화)
                     OriginVidInfo_button_초기화_Click(sender, e);
                 else if (ActiveControl == _Form_Main_button_모두_초기화)
@@ -803,47 +803,47 @@ namespace Bitrate_Calculator
 
             //OriginVidInfo 화면 해상도 컨트롤리 변경되었는 지 확인
             bool isOriginVidInfo화면해상도 = control == OriginVidInfo_textBox_화면_해상도_가로 || control == OriginVidInfo_textBox_화면_해상도_세로;
-            //OriginVidInfo 화면 해상도 컨트롤이 변경되었으면 CS 현재 해상도를 같게 맞춤
+            //OriginVidInfo 화면 해상도 컨트롤이 변경되었으면 ConvertResolution 현재 해상도를 같게 맞춤
             if (isOriginVidInfo화면해상도)
             {
                 if (control == OriginVidInfo_textBox_화면_해상도_가로)
                 {
                     if (!control.Text.Equals(""))
-                        CS_label__ShowValue_현재_해상도_가로.Text = control.Text;
+                        ConvertResolution_label_ShowValue_현재해상도_가로.Text = control.Text;
                     else if (control.Text.Equals(""))
-                        CS_label__ShowValue_현재_해상도_가로.Text = "0";
+                        ConvertResolution_label_ShowValue_현재해상도_가로.Text = "0";
                 }
 
                 if (control == OriginVidInfo_textBox_화면_해상도_세로)
                 {
                     if (!control.Text.Equals(""))
-                        CS_label__ShowValue_현재_해상도_세로.Text = control.Text;
+                        ConvertResolution_label_ShowValue_현재해상도_세로.Text = control.Text;
                     else if (control.Text.Equals(""))
-                        CS_label__ShowValue_현재_해상도_세로.Text = "0";
+                        ConvertResolution_label_ShowValue_현재해상도_세로.Text = "0";
                 }
             }
-            //CS 컨트롤의 편집 가능한 컨트롤이 변경되었는 지 확인
-            bool isCSWritableCtrl = control == CS_comboBox_기준 || control == CS_textBox_기준_픽셀 || control == CS_comboBox_변환_예상_크기_단위;
-            //CS 변환예상해상도 Label이 변경되었는 지 확인
-            bool isCS변환예상해상도Label = control == CS_label__ShowValue_변환_예상_해상도_가로 || control == CS_label__ShowValue_변환_예상_해상도_세로;
-            //CS 컨트롤이 변경되었는 지 확인
-            bool isCSCtrl = isCSWritableCtrl || isCS변환예상해상도Label;
-            if (isCSCtrl || isOriginVidInfo화면해상도)
+            //ConvertResolution 컨트롤의 편집 가능한 컨트롤이 변경되었는 지 확인
+            bool isConvertResolutionWritableCtrl = control == ConvertResolution_comboBox_기준 || control == ConvertResolution_textBox_기준픽셀 || control == ConvertResolution_comboBox_변환예상크기단위;
+            //ConvertResolution 변환예상해상도 Label이 변경되었는 지 확인
+            bool isConvertResolution변환예상해상도Label = control == ConvertResolution_label_ShowValue_변환예상해상도_가로 || control == ConvertResolution_label_ShowValue_변환예상해상도_세로;
+            //ConvertResolution 컨트롤이 변경되었는 지 확인
+            bool isConvertResolutionCtrl = isConvertResolutionWritableCtrl || isConvertResolution변환예상해상도Label;
+            if (isConvertResolutionCtrl || isOriginVidInfo화면해상도)
             {
                 if (!isOriginVidInfo화면해상도)
                     CalcVideoBitrateWithConvertedResolution();
-                if (!isCS변환예상해상도Label)
+                if (!isConvertResolution변환예상해상도Label)
                     ConvertResolution();
-                if (isCS변환예상해상도Label)
+                if (isConvertResolution변환예상해상도Label)
                 {
                     _Form_Main_해상도변환적용ToolStripMenuItem.Enabled = true;
-                    CS_button_적용.Enabled = true;
-                    if (control == CS_label__ShowValue_현재_해상도_가로)
-                        if (CS_label__ShowValue_현재_해상도_가로.Text.Equals("0"))
-                            CS_label__ShowValue_변환_예상_해상도_가로.Text = "0";
-                    if (control == CS_label__ShowValue_현재_해상도_세로)
-                        if (CS_label__ShowValue_현재_해상도_세로.Text.Equals("0"))
-                            CS_label__ShowValue_변환_예상_해상도_세로.Text = "0";
+                    ConvertResolution_button_적용.Enabled = true;
+                    if (control == ConvertResolution_label_ShowValue_현재해상도_가로)
+                        if (ConvertResolution_label_ShowValue_현재해상도_가로.Text.Equals("0"))
+                            ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = "0";
+                    if (control == ConvertResolution_label_ShowValue_현재해상도_세로)
+                        if (ConvertResolution_label_ShowValue_현재해상도_세로.Text.Equals("0"))
+                            ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = "0";
                 }
             }
         }
@@ -863,7 +863,7 @@ namespace Bitrate_Calculator
         /*
          * 버튼
          */
-        private void CS_button_적용_Click(object sender, EventArgs e)
+        private void ConvertResolution_button_적용_Click(object sender, EventArgs e)
         {
             해상도변환적용ToolStripMenuItem_Click(sender, e);
         }
@@ -917,39 +917,39 @@ namespace Bitrate_Calculator
             CVBOC_comboBox_원하는_출력물_크기_단위.Text = "MB";
             CVBOC_textBox_원하는_출력_영상_크기.Text = "";
             CVBOC_comboBox_Bitrate_단위.Text = "Kbps";
-            CS_comboBox_기준.Text = "가로";
-            CS_textBox_기준_픽셀.Text = "";
-            CS_label__ShowValue_현재_해상도_가로.Text = "0";
-            CS_label__ShowValue_현재_해상도_세로.Text = "0";
-            CS_label__ShowValue_변환_예상_해상도_가로.Text = "0";
-            CS_label__ShowValue_변환_예상_해상도_세로.Text = "0";
-            CS_comboBox_변환_예상_크기_단위.Text = "MB";
+            ConvertResolution_comboBox_기준.Text = "가로";
+            ConvertResolution_textBox_기준픽셀.Text = "";
+            ConvertResolution_label_ShowValue_현재해상도_가로.Text = "0";
+            ConvertResolution_label_ShowValue_현재해상도_세로.Text = "0";
+            ConvertResolution_label_ShowValue_변환예상해상도_가로.Text = "0";
+            ConvertResolution_label_ShowValue_변환예상해상도_세로.Text = "0";
+            ConvertResolution_comboBox_변환예상크기단위.Text = "MB";
             _Form_Main_toolStripStatusLabel.Text = "모두 초기화되었습니다.";
             TimerStart();
             _Form_Main_모두초기화ToolStripMenuItem.Enabled = false;
             _Form_Main_button_모두_초기화.Enabled = false;
-            CS_button_적용.Enabled = false;
+            ConvertResolution_button_적용.Enabled = false;
             _Form_Main_해상도변환적용ToolStripMenuItem.Enabled = false;
         }
 
         private void 해상도변환적용ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (CS_comboBox_기준.Text.Equals("가로"))
+            if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
             {
-                OriginVidInfo_textBox_화면_해상도_세로.Text = CS_label__ShowValue_변환_예상_해상도_세로.Text;
-                OriginVidInfo_textBox_화면_해상도_가로.Text = CS_label__ShowValue_변환_예상_해상도_가로.Text;
+                OriginVidInfo_textBox_화면_해상도_세로.Text = ConvertResolution_label_ShowValue_변환예상해상도_세로.Text;
+                OriginVidInfo_textBox_화면_해상도_가로.Text = ConvertResolution_label_ShowValue_변환예상해상도_가로.Text;
 
             }
-            else if (CS_comboBox_기준.Text.Equals("세로"))
+            else if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
             {
-                OriginVidInfo_textBox_화면_해상도_가로.Text = CS_label__ShowValue_변환_예상_해상도_가로.Text;
-                OriginVidInfo_textBox_화면_해상도_세로.Text = CS_label__ShowValue_변환_예상_해상도_세로.Text;
+                OriginVidInfo_textBox_화면_해상도_가로.Text = ConvertResolution_label_ShowValue_변환예상해상도_가로.Text;
+                OriginVidInfo_textBox_화면_해상도_세로.Text = ConvertResolution_label_ShowValue_변환예상해상도_세로.Text;
             }
             _Form_Main_toolStripStatusLabel.Text = "변환된 해상도가 적용되었습니다.";
-            CS_textBox_기준_픽셀.Text = "";
+            ConvertResolution_textBox_기준픽셀.Text = "";
             TimerStart();
             _Form_Main_해상도변환적용ToolStripMenuItem.Enabled = false;
-            CS_button_적용.Enabled = false;
+            ConvertResolution_button_적용.Enabled = false;
         }
 
         private void 종료ToolStripMenuItem_Click(object sender, EventArgs e)
