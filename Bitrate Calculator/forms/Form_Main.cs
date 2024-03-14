@@ -49,7 +49,7 @@ namespace Bitrate_Calculator
 
             ConvertResolution_textBox_변환기준.Height = textBoxHeight;
             OutSizeBasedBitrate_textBox_원하는출력영상크기.Height = textBoxHeight;
-            OriginVidInfo_textBox_FPS.Height = textBoxHeight;
+            OriginVidInfo_textBox_초당프레임.Height = textBoxHeight;
             OriginVidInfo_textBox_분.Height = textBoxHeight;
             OriginVidInfo_textBox_시간.Height = textBoxHeight;
             OriginVidInfo_textBox_오디오비트레이트.Height = textBoxHeight;
@@ -59,7 +59,7 @@ namespace Bitrate_Calculator
 
             ConvertResolution_textBox_변환기준.Width = (int)Math.Round(ConvertResolution_textBox_변환기준.MaxLength * textBoxWidth + textBoxWidthAdd);
             OutSizeBasedBitrate_textBox_원하는출력영상크기.Width = (int)Math.Round(OutSizeBasedBitrate_textBox_원하는출력영상크기.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_FPS.Width = (int)Math.Round(OriginVidInfo_textBox_FPS.MaxLength * textBoxWidth + textBoxWidthAdd);
+            OriginVidInfo_textBox_초당프레임.Width = (int)Math.Round(OriginVidInfo_textBox_초당프레임.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_분.Width = (int)Math.Round(OriginVidInfo_textBox_분.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_시간.Width = (int)Math.Round(OriginVidInfo_textBox_시간.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_오디오비트레이트.Width = (int)Math.Round(OriginVidInfo_textBox_오디오비트레이트.MaxLength * textBoxWidth + textBoxWidthAdd);
@@ -203,7 +203,7 @@ namespace Bitrate_Calculator
             //모두 비어있지 않으면 계산
             if (
                 strWidth != "" && strHeight != "" &&
-                OriginVidInfo_textBox_FPS.Text != ""
+                OriginVidInfo_textBox_초당프레임.Text != ""
                 )
             {
                 //CodecValue를 할당
@@ -211,7 +211,7 @@ namespace Bitrate_Calculator
 
                 long width = Convert.ToInt64(strWidth);
                 long height = Convert.ToInt64(strHeight);
-                long FPS = Convert.ToInt64(OriginVidInfo_textBox_FPS.Text);
+                long FPS = Convert.ToInt64(OriginVidInfo_textBox_초당프레임.Text);
                 if (bitrateCapacity.Equals("Kbps"))
                     bitrate = CodecValue / 1024 * width * height * FPS;
                 else if (bitrateCapacity.Equals("Mbps"))
@@ -781,7 +781,7 @@ namespace Bitrate_Calculator
 
 
             //최대 영상 비트레이트를 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
-            bool isCtrlToClcMVB = control == OriginVidInfo_textBox_화면해상도_가로 || control == OriginVidInfo_textBox_화면해상도_세로 || control == OriginVidInfo_textBox_FPS || control == OriginVidInfo_comboBox_적용코덱 || control == Bitrate_comboBox_최대영상비트레이트_단위;
+            bool isCtrlToClcMVB = control == OriginVidInfo_textBox_화면해상도_가로 || control == OriginVidInfo_textBox_화면해상도_세로 || control == OriginVidInfo_textBox_초당프레임 || control == OriginVidInfo_comboBox_적용코덱 || control == Bitrate_comboBox_최대영상비트레이트_단위;
             //최대 영상 비트레이트에 해당하는 영상 용량을 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
             bool isCtrlToClcCapacityOfMaxVB = control == OriginVidInfo_textBox_시간 || control == OriginVidInfo_textBox_분 || control == OriginVidInfo_textBox_초 || control == OriginVidInfo_textBox_오디오비트레이트 || control == Bitrate_comboBox_예상출력영상크기_단위 || control == OutSizeBasedBitrate_comboBox_예상영상비트레이트_단위;
             //OutSizeBasedBitrate 컨트롤이 변경되었는 지 확인
@@ -893,7 +893,7 @@ namespace Bitrate_Calculator
          */
         private void 원본영상파일정보초기화ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OriginVidInfo_textBox_FPS.Text = "";
+            OriginVidInfo_textBox_초당프레임.Text = "";
             OriginVidInfo_textBox_시간.Text = "";
             OriginVidInfo_textBox_분.Text = "";
             OriginVidInfo_textBox_초.Text = "";
