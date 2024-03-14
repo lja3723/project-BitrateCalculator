@@ -31,33 +31,33 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this._Form_Main_컨tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.DFI_컨_groupBox = new System.Windows.Forms.GroupBox();
-            this.DFI_컨_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.DFI_button_초기화 = new System.Windows.Forms.Button();
-            this.DFI_label_코덱_값 = new System.Windows.Forms.Label();
-            this.DFI_컨flowLayoutPanel_적용_코덱 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DFI_comboBox_적용_코덱 = new System.Windows.Forms.ComboBox();
-            this.DFI_label_오디오_비트레이트 = new System.Windows.Forms.Label();
-            this.DFI_label_초당_프레임 = new System.Windows.Forms.Label();
-            this.DFI_label_영상_길이 = new System.Windows.Forms.Label();
-            this.DFI_label_화면_해상도 = new System.Windows.Forms.Label();
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DFI_textBox_오디오_비트레이트 = new System.Windows.Forms.TextBox();
-            this.DFI_label_Kbps = new System.Windows.Forms.Label();
-            this.DFI_컨flowLayoutPanel_영상_길이 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DFI_textBox_시간 = new System.Windows.Forms.TextBox();
-            this.DFI_label_시간 = new System.Windows.Forms.Label();
-            this.DFI_textBox_분 = new System.Windows.Forms.TextBox();
-            this.DFI_label_분 = new System.Windows.Forms.Label();
-            this.DFI_textBox_초 = new System.Windows.Forms.TextBox();
-            this.DFI_label_초 = new System.Windows.Forms.Label();
-            this.DFI_컨flowLayoutPanel_초당_프레임 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DFI_textBox_FPS = new System.Windows.Forms.TextBox();
-            this.DFI_label_FPS = new System.Windows.Forms.Label();
-            this.DFI_컨flowLayoutPanel_화면_해상도 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DFI_textBox_화면_해상도_가로 = new System.Windows.Forms.TextBox();
-            this.DFI_label_곱하기 = new System.Windows.Forms.Label();
-            this.DFI_textBox_화면_해상도_세로 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_컨_groupBox = new System.Windows.Forms.GroupBox();
+            this.OriginVidInfo_컨_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.OriginVidInfo_button_초기화 = new System.Windows.Forms.Button();
+            this.OriginVidInfo_label_코덱_값 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OriginVidInfo_comboBox_적용_코덱 = new System.Windows.Forms.ComboBox();
+            this.OriginVidInfo_label_오디오_비트레이트 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_label_초당_프레임 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_label_영상_길이 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_label_화면_해상도 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OriginVidInfo_textBox_오디오_비트레이트 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_Kbps = new System.Windows.Forms.Label();
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OriginVidInfo_textBox_시간 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_시간 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_textBox_분 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_분 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_textBox_초 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_초 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OriginVidInfo_textBox_FPS = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_FPS = new System.Windows.Forms.Label();
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OriginVidInfo_textBox_화면_해상도_가로 = new System.Windows.Forms.TextBox();
+            this.OriginVidInfo_label_곱하기 = new System.Windows.Forms.Label();
+            this.OriginVidInfo_textBox_화면_해상도_세로 = new System.Windows.Forms.TextBox();
             this.VideoBitrate_컨_groupBox_영상_비트레이트 = new System.Windows.Forms.GroupBox();
             this.VideoBitrate_컨_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.VideoBitrate_label__ShowValue_예상_출력_영상_크기 = new System.Windows.Forms.Label();
@@ -131,13 +131,13 @@
             this.복사CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.붙여넣기VToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._Form_Main_컨tableLayoutPanel.SuspendLayout();
-            this.DFI_컨_groupBox.SuspendLayout();
-            this.DFI_컨_tableLayoutPanel1.SuspendLayout();
-            this.DFI_컨flowLayoutPanel_적용_코덱.SuspendLayout();
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.SuspendLayout();
-            this.DFI_컨flowLayoutPanel_영상_길이.SuspendLayout();
-            this.DFI_컨flowLayoutPanel_초당_프레임.SuspendLayout();
-            this.DFI_컨flowLayoutPanel_화면_해상도.SuspendLayout();
+            this.OriginVidInfo_컨_groupBox.SuspendLayout();
+            this.OriginVidInfo_컨_tableLayoutPanel1.SuspendLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.SuspendLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.SuspendLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.SuspendLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.SuspendLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.SuspendLayout();
             this.VideoBitrate_컨_groupBox_영상_비트레이트.SuspendLayout();
             this.VideoBitrate_컨_tableLayoutPanel.SuspendLayout();
             this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.SuspendLayout();
@@ -163,7 +163,7 @@
             this._Form_Main_컨tableLayoutPanel.ColumnCount = 2;
             this._Form_Main_컨tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.4298F));
             this._Form_Main_컨tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.5702F));
-            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.DFI_컨_groupBox, 0, 0);
+            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.OriginVidInfo_컨_groupBox, 0, 0);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.VideoBitrate_컨_groupBox_영상_비트레이트, 0, 2);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.CVBOC_컨_groupBox, 1, 0);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.CS_컨_tableLayoutPanel1, 1, 1);
@@ -180,107 +180,107 @@
             this._Form_Main_컨tableLayoutPanel.Size = new System.Drawing.Size(882, 374);
             this._Form_Main_컨tableLayoutPanel.TabIndex = 0;
             // 
-            // DFI_컨_groupBox
+            // OriginVidInfo_컨_groupBox
             // 
-            this.DFI_컨_groupBox.Controls.Add(this.DFI_컨_tableLayoutPanel1);
-            this.DFI_컨_groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DFI_컨_groupBox.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_컨_groupBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_컨_groupBox.Location = new System.Drawing.Point(2, 2);
-            this.DFI_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨_groupBox.Name = "DFI_컨_groupBox";
-            this.DFI_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.DFI_컨_groupBox, 2);
-            this.DFI_컨_groupBox.Size = new System.Drawing.Size(440, 259);
-            this.DFI_컨_groupBox.TabIndex = 0;
-            this.DFI_컨_groupBox.TabStop = false;
-            this.DFI_컨_groupBox.Text = "원본 영상 파일 정보";
-            this._Form_Main_toolTip.SetToolTip(this.DFI_컨_groupBox, "원본 영상 파일의 정보를 적습니다.");
+            this.OriginVidInfo_컨_groupBox.Controls.Add(this.OriginVidInfo_컨_tableLayoutPanel1);
+            this.OriginVidInfo_컨_groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OriginVidInfo_컨_groupBox.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_컨_groupBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_컨_groupBox.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨_groupBox.Name = "OriginVidInfo_컨_groupBox";
+            this.OriginVidInfo_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.OriginVidInfo_컨_groupBox, 2);
+            this.OriginVidInfo_컨_groupBox.Size = new System.Drawing.Size(440, 259);
+            this.OriginVidInfo_컨_groupBox.TabIndex = 0;
+            this.OriginVidInfo_컨_groupBox.TabStop = false;
+            this.OriginVidInfo_컨_groupBox.Text = "원본 영상 파일 정보";
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_컨_groupBox, "원본 영상 파일의 정보를 적습니다.");
             // 
-            // DFI_컨_tableLayoutPanel1
+            // OriginVidInfo_컨_tableLayoutPanel1
             // 
-            this.DFI_컨_tableLayoutPanel1.ColumnCount = 2;
-            this.DFI_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.88761F));
-            this.DFI_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.11239F));
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_button_초기화, 1, 5);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_label_코덱_값, 0, 4);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_컨flowLayoutPanel_적용_코덱, 1, 4);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_label_오디오_비트레이트, 0, 3);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_label_초당_프레임, 0, 2);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_label_영상_길이, 0, 0);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_label_화면_해상도, 0, 1);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_컨flowLayoutPanel_오디오_비트레이트, 1, 3);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_컨flowLayoutPanel_영상_길이, 1, 0);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_컨flowLayoutPanel_초당_프레임, 1, 2);
-            this.DFI_컨_tableLayoutPanel1.Controls.Add(this.DFI_컨flowLayoutPanel_화면_해상도, 1, 1);
-            this.DFI_컨_tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DFI_컨_tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_컨_tableLayoutPanel1.Location = new System.Drawing.Point(2, 24);
-            this.DFI_컨_tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨_tableLayoutPanel1.Name = "DFI_컨_tableLayoutPanel1";
-            this.DFI_컨_tableLayoutPanel1.RowCount = 6;
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.DFI_컨_tableLayoutPanel1.Size = new System.Drawing.Size(436, 233);
-            this.DFI_컨_tableLayoutPanel1.TabIndex = 0;
+            this.OriginVidInfo_컨_tableLayoutPanel1.ColumnCount = 2;
+            this.OriginVidInfo_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.88761F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.11239F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_button_초기화, 1, 5);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_label_코덱_값, 0, 4);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_컨flowLayoutPanel_적용_코덱, 1, 4);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_label_오디오_비트레이트, 0, 3);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_label_초당_프레임, 0, 2);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_label_영상_길이, 0, 0);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_label_화면_해상도, 0, 1);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트, 1, 3);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_컨flowLayoutPanel_영상_길이, 1, 0);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_컨flowLayoutPanel_초당_프레임, 1, 2);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Controls.Add(this.OriginVidInfo_컨flowLayoutPanel_화면_해상도, 1, 1);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OriginVidInfo_컨_tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_컨_tableLayoutPanel1.Location = new System.Drawing.Point(2, 24);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨_tableLayoutPanel1.Name = "OriginVidInfo_컨_tableLayoutPanel1";
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowCount = 6;
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.OriginVidInfo_컨_tableLayoutPanel1.Size = new System.Drawing.Size(436, 233);
+            this.OriginVidInfo_컨_tableLayoutPanel1.TabIndex = 0;
             // 
-            // DFI_button_초기화
+            // OriginVidInfo_button_초기화
             // 
-            this.DFI_button_초기화.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_button_초기화.AutoSize = true;
-            this.DFI_button_초기화.Enabled = false;
-            this.DFI_button_초기화.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_button_초기화.ForeColor = System.Drawing.Color.Black;
-            this.DFI_button_초기화.Location = new System.Drawing.Point(332, 197);
-            this.DFI_button_초기화.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_button_초기화.Name = "DFI_button_초기화";
-            this.DFI_button_초기화.Size = new System.Drawing.Size(102, 33);
-            this.DFI_button_초기화.TabIndex = 10;
-            this.DFI_button_초기화.Text = "초기화";
-            this._Form_Main_toolTip.SetToolTip(this.DFI_button_초기화, "설정된 원본 영상 파일 정보를 초기화합니다. (단축키: Ctrl+W)");
-            this.DFI_button_초기화.UseVisualStyleBackColor = true;
-            this.DFI_button_초기화.Click += new System.EventHandler(this.DFI_button_초기화_Click);
+            this.OriginVidInfo_button_초기화.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_button_초기화.AutoSize = true;
+            this.OriginVidInfo_button_초기화.Enabled = false;
+            this.OriginVidInfo_button_초기화.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_button_초기화.ForeColor = System.Drawing.Color.Black;
+            this.OriginVidInfo_button_초기화.Location = new System.Drawing.Point(332, 197);
+            this.OriginVidInfo_button_초기화.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_button_초기화.Name = "OriginVidInfo_button_초기화";
+            this.OriginVidInfo_button_초기화.Size = new System.Drawing.Size(102, 33);
+            this.OriginVidInfo_button_초기화.TabIndex = 10;
+            this.OriginVidInfo_button_초기화.Text = "초기화";
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_button_초기화, "설정된 원본 영상 파일 정보를 초기화합니다. (단축키: Ctrl+W)");
+            this.OriginVidInfo_button_초기화.UseVisualStyleBackColor = true;
+            this.OriginVidInfo_button_초기화.Click += new System.EventHandler(this.OriginVidInfo_button_초기화_Click);
             // 
-            // DFI_label_코덱_값
+            // OriginVidInfo_label_코덱_값
             // 
-            this.DFI_label_코덱_값.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_label_코덱_값.AutoSize = true;
-            this.DFI_label_코덱_값.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_코덱_값.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_코덱_값.Location = new System.Drawing.Point(70, 162);
-            this.DFI_label_코덱_값.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_코덱_값.Name = "DFI_label_코덱_값";
-            this.DFI_label_코덱_값.Size = new System.Drawing.Size(88, 23);
-            this.DFI_label_코덱_값.TabIndex = 8;
-            this.DFI_label_코덱_값.Text = "적용 코덱:";
-            this.DFI_label_코덱_값.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_코덱_값, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
+            this.OriginVidInfo_label_코덱_값.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_label_코덱_값.AutoSize = true;
+            this.OriginVidInfo_label_코덱_값.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_코덱_값.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_코덱_값.Location = new System.Drawing.Point(70, 162);
+            this.OriginVidInfo_label_코덱_값.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_코덱_값.Name = "OriginVidInfo_label_코덱_값";
+            this.OriginVidInfo_label_코덱_값.Size = new System.Drawing.Size(88, 23);
+            this.OriginVidInfo_label_코덱_값.TabIndex = 8;
+            this.OriginVidInfo_label_코덱_값.Text = "적용 코덱:";
+            this.OriginVidInfo_label_코덱_값.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_코덱_값, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
             // 
-            // DFI_컨flowLayoutPanel_적용_코덱
+            // OriginVidInfo_컨flowLayoutPanel_적용_코덱
             // 
-            this.DFI_컨flowLayoutPanel_적용_코덱.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_컨flowLayoutPanel_적용_코덱.AutoSize = true;
-            this.DFI_컨flowLayoutPanel_적용_코덱.Controls.Add(this.DFI_comboBox_적용_코덱);
-            this.DFI_컨flowLayoutPanel_적용_코덱.Location = new System.Drawing.Point(162, 157);
-            this.DFI_컨flowLayoutPanel_적용_코덱.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨flowLayoutPanel_적용_코덱.Name = "DFI_컨flowLayoutPanel_적용_코덱";
-            this.DFI_컨flowLayoutPanel_적용_코덱.Size = new System.Drawing.Size(87, 32);
-            this.DFI_컨flowLayoutPanel_적용_코덱.TabIndex = 9;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_컨flowLayoutPanel_적용_코덱, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.AutoSize = true;
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Controls.Add(this.OriginVidInfo_comboBox_적용_코덱);
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Location = new System.Drawing.Point(162, 157);
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Name = "OriginVidInfo_컨flowLayoutPanel_적용_코덱";
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.Size = new System.Drawing.Size(87, 32);
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.TabIndex = 9;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_컨flowLayoutPanel_적용_코덱, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
             // 
-            // DFI_comboBox_적용_코덱
+            // OriginVidInfo_comboBox_적용_코덱
             // 
-            this.DFI_comboBox_적용_코덱.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_comboBox_적용_코덱.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_comboBox_적용_코덱.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_comboBox_적용_코덱.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_comboBox_적용_코덱.FormattingEnabled = true;
-            this.DFI_comboBox_적용_코덱.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_comboBox_적용_코덱.Items.AddRange(new object[] {
+            this.OriginVidInfo_comboBox_적용_코덱.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_comboBox_적용_코덱.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_comboBox_적용_코덱.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_comboBox_적용_코덱.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_comboBox_적용_코덱.FormattingEnabled = true;
+            this.OriginVidInfo_comboBox_적용_코덱.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_comboBox_적용_코덱.Items.AddRange(new object[] {
             "H.263",
             "H.264",
             "X264",
@@ -288,357 +288,357 @@
             "DviX",
             "MPEG-2",
             "MPEG-4"});
-            this.DFI_comboBox_적용_코덱.Location = new System.Drawing.Point(2, 2);
-            this.DFI_comboBox_적용_코덱.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_comboBox_적용_코덱.Name = "DFI_comboBox_적용_코덱";
-            this.DFI_comboBox_적용_코덱.Size = new System.Drawing.Size(83, 28);
-            this.DFI_comboBox_적용_코덱.TabIndex = 9;
-            this.DFI_comboBox_적용_코덱.Text = "H.264";
-            this._Form_Main_toolTip.SetToolTip(this.DFI_comboBox_적용_코덱, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
-            this.DFI_comboBox_적용_코덱.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_comboBox_적용_코덱.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_comboBox_적용_코덱.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_comboBox_적용_코덱.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.OriginVidInfo_comboBox_적용_코덱.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_comboBox_적용_코덱.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_comboBox_적용_코덱.Name = "OriginVidInfo_comboBox_적용_코덱";
+            this.OriginVidInfo_comboBox_적용_코덱.Size = new System.Drawing.Size(83, 28);
+            this.OriginVidInfo_comboBox_적용_코덱.TabIndex = 9;
+            this.OriginVidInfo_comboBox_적용_코덱.Text = "H.264";
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_comboBox_적용_코덱, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
+            this.OriginVidInfo_comboBox_적용_코덱.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_comboBox_적용_코덱.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_comboBox_적용_코덱.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_comboBox_적용_코덱.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
-            // DFI_label_오디오_비트레이트
+            // OriginVidInfo_label_오디오_비트레이트
             // 
-            this.DFI_label_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_label_오디오_비트레이트.AutoSize = true;
-            this.DFI_label_오디오_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_오디오_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_오디오_비트레이트.Location = new System.Drawing.Point(2, 121);
-            this.DFI_label_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_오디오_비트레이트.Name = "DFI_label_오디오_비트레이트";
-            this.DFI_label_오디오_비트레이트.Size = new System.Drawing.Size(156, 23);
-            this.DFI_label_오디오_비트레이트.TabIndex = 6;
-            this.DFI_label_오디오_비트레이트.Text = "오디오 비트레이트:";
-            this.DFI_label_오디오_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
+            this.OriginVidInfo_label_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_label_오디오_비트레이트.AutoSize = true;
+            this.OriginVidInfo_label_오디오_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_오디오_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_오디오_비트레이트.Location = new System.Drawing.Point(2, 121);
+            this.OriginVidInfo_label_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_오디오_비트레이트.Name = "OriginVidInfo_label_오디오_비트레이트";
+            this.OriginVidInfo_label_오디오_비트레이트.Size = new System.Drawing.Size(156, 23);
+            this.OriginVidInfo_label_오디오_비트레이트.TabIndex = 6;
+            this.OriginVidInfo_label_오디오_비트레이트.Text = "오디오 비트레이트:";
+            this.OriginVidInfo_label_오디오_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
             // 
-            // DFI_label_초당_프레임
+            // OriginVidInfo_label_초당_프레임
             // 
-            this.DFI_label_초당_프레임.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_label_초당_프레임.AutoSize = true;
-            this.DFI_label_초당_프레임.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_초당_프레임.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_초당_프레임.Location = new System.Drawing.Point(53, 83);
-            this.DFI_label_초당_프레임.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_초당_프레임.Name = "DFI_label_초당_프레임";
-            this.DFI_label_초당_프레임.Size = new System.Drawing.Size(105, 23);
-            this.DFI_label_초당_프레임.TabIndex = 4;
-            this.DFI_label_초당_프레임.Text = "초당 프레임:";
-            this.DFI_label_초당_프레임.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_초당_프레임, "원본 영상의 초당 프레임입니다.");
+            this.OriginVidInfo_label_초당_프레임.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_label_초당_프레임.AutoSize = true;
+            this.OriginVidInfo_label_초당_프레임.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_초당_프레임.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_초당_프레임.Location = new System.Drawing.Point(53, 83);
+            this.OriginVidInfo_label_초당_프레임.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_초당_프레임.Name = "OriginVidInfo_label_초당_프레임";
+            this.OriginVidInfo_label_초당_프레임.Size = new System.Drawing.Size(105, 23);
+            this.OriginVidInfo_label_초당_프레임.TabIndex = 4;
+            this.OriginVidInfo_label_초당_프레임.Text = "초당 프레임:";
+            this.OriginVidInfo_label_초당_프레임.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_초당_프레임, "원본 영상의 초당 프레임입니다.");
             // 
-            // DFI_label_영상_길이
+            // OriginVidInfo_label_영상_길이
             // 
-            this.DFI_label_영상_길이.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_label_영상_길이.AutoSize = true;
-            this.DFI_label_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_영상_길이.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_영상_길이.Location = new System.Drawing.Point(70, 7);
-            this.DFI_label_영상_길이.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_영상_길이.Name = "DFI_label_영상_길이";
-            this.DFI_label_영상_길이.Size = new System.Drawing.Size(88, 23);
-            this.DFI_label_영상_길이.TabIndex = 0;
-            this.DFI_label_영상_길이.Text = "영상 길이:";
-            this.DFI_label_영상_길이.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_영상_길이, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_label_영상_길이.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_label_영상_길이.AutoSize = true;
+            this.OriginVidInfo_label_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_영상_길이.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_영상_길이.Location = new System.Drawing.Point(70, 7);
+            this.OriginVidInfo_label_영상_길이.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_영상_길이.Name = "OriginVidInfo_label_영상_길이";
+            this.OriginVidInfo_label_영상_길이.Size = new System.Drawing.Size(88, 23);
+            this.OriginVidInfo_label_영상_길이.TabIndex = 0;
+            this.OriginVidInfo_label_영상_길이.Text = "영상 길이:";
+            this.OriginVidInfo_label_영상_길이.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_영상_길이, "원본 영상의 런타임 시간입니다.");
             // 
-            // DFI_label_화면_해상도
+            // OriginVidInfo_label_화면_해상도
             // 
-            this.DFI_label_화면_해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DFI_label_화면_해상도.AutoSize = true;
-            this.DFI_label_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_화면_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_화면_해상도.Location = new System.Drawing.Point(25, 45);
-            this.DFI_label_화면_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_화면_해상도.Name = "DFI_label_화면_해상도";
-            this.DFI_label_화면_해상도.Size = new System.Drawing.Size(133, 23);
-            this.DFI_label_화면_해상도.TabIndex = 2;
-            this.DFI_label_화면_해상도.Text = "화면 해상도(px):";
-            this.DFI_label_화면_해상도.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_화면_해상도, "원본 영상의 화면 해상도입니다.");
+            this.OriginVidInfo_label_화면_해상도.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.OriginVidInfo_label_화면_해상도.AutoSize = true;
+            this.OriginVidInfo_label_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_화면_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_화면_해상도.Location = new System.Drawing.Point(25, 45);
+            this.OriginVidInfo_label_화면_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_화면_해상도.Name = "OriginVidInfo_label_화면_해상도";
+            this.OriginVidInfo_label_화면_해상도.Size = new System.Drawing.Size(133, 23);
+            this.OriginVidInfo_label_화면_해상도.TabIndex = 2;
+            this.OriginVidInfo_label_화면_해상도.Text = "화면 해상도(px):";
+            this.OriginVidInfo_label_화면_해상도.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_화면_해상도, "원본 영상의 화면 해상도입니다.");
             // 
-            // DFI_컨flowLayoutPanel_오디오_비트레이트
+            // OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트
             // 
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.AutoSize = true;
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.DFI_textBox_오디오_비트레이트);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.DFI_label_Kbps);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Location = new System.Drawing.Point(162, 117);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Name = "DFI_컨flowLayoutPanel_오디오_비트레이트";
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Size = new System.Drawing.Size(85, 31);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.TabIndex = 7;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_컨flowLayoutPanel_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.AutoSize = true;
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.OriginVidInfo_textBox_오디오_비트레이트);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.OriginVidInfo_label_Kbps);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Location = new System.Drawing.Point(162, 117);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Name = "OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트";
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.Size = new System.Drawing.Size(85, 31);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.TabIndex = 7;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
             // 
-            // DFI_textBox_오디오_비트레이트
+            // OriginVidInfo_textBox_오디오_비트레이트
             // 
-            this.DFI_textBox_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_textBox_오디오_비트레이트.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_오디오_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_오디오_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_오디오_비트레이트.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_오디오_비트레이트.Location = new System.Drawing.Point(2, 2);
-            this.DFI_textBox_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_오디오_비트레이트.MaxLength = 3;
-            this.DFI_textBox_오디오_비트레이트.Name = "DFI_textBox_오디오_비트레이트";
-            this.DFI_textBox_오디오_비트레이트.Size = new System.Drawing.Size(30, 27);
-            this.DFI_textBox_오디오_비트레이트.TabIndex = 0;
-            this.DFI_textBox_오디오_비트레이트.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
-            this.DFI_textBox_오디오_비트레이트.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_오디오_비트레이트.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_오디오_비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_오디오_비트레이트.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_오디오_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_textBox_오디오_비트레이트.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_오디오_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_오디오_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_오디오_비트레이트.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_오디오_비트레이트.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_textBox_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_오디오_비트레이트.MaxLength = 3;
+            this.OriginVidInfo_textBox_오디오_비트레이트.Name = "OriginVidInfo_textBox_오디오_비트레이트";
+            this.OriginVidInfo_textBox_오디오_비트레이트.Size = new System.Drawing.Size(30, 27);
+            this.OriginVidInfo_textBox_오디오_비트레이트.TabIndex = 0;
+            this.OriginVidInfo_textBox_오디오_비트레이트.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_오디오_비트레이트, "원본 영상의 오디오 비트레이트입니다.");
+            this.OriginVidInfo_textBox_오디오_비트레이트.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_오디오_비트레이트.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_오디오_비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_오디오_비트레이트.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_Kbps
+            // OriginVidInfo_label_Kbps
             // 
-            this.DFI_label_Kbps.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_Kbps.AutoSize = true;
-            this.DFI_label_Kbps.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_Kbps.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_Kbps.Location = new System.Drawing.Point(36, 4);
-            this.DFI_label_Kbps.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_Kbps.Name = "DFI_label_Kbps";
-            this.DFI_label_Kbps.Size = new System.Drawing.Size(47, 23);
-            this.DFI_label_Kbps.TabIndex = 1;
-            this.DFI_label_Kbps.Text = "Kbps";
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_Kbps, "원본 영상의 오디오 비트레이트입니다.");
+            this.OriginVidInfo_label_Kbps.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_Kbps.AutoSize = true;
+            this.OriginVidInfo_label_Kbps.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_Kbps.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_Kbps.Location = new System.Drawing.Point(36, 4);
+            this.OriginVidInfo_label_Kbps.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_Kbps.Name = "OriginVidInfo_label_Kbps";
+            this.OriginVidInfo_label_Kbps.Size = new System.Drawing.Size(47, 23);
+            this.OriginVidInfo_label_Kbps.TabIndex = 1;
+            this.OriginVidInfo_label_Kbps.Text = "Kbps";
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_Kbps, "원본 영상의 오디오 비트레이트입니다.");
             // 
-            // DFI_컨flowLayoutPanel_영상_길이
+            // OriginVidInfo_컨flowLayoutPanel_영상_길이
             // 
-            this.DFI_컨flowLayoutPanel_영상_길이.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_컨flowLayoutPanel_영상_길이.AutoSize = true;
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_textBox_시간);
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_label_시간);
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_textBox_분);
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_label_분);
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_textBox_초);
-            this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_label_초);
-            this.DFI_컨flowLayoutPanel_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_컨flowLayoutPanel_영상_길이.Location = new System.Drawing.Point(162, 3);
-            this.DFI_컨flowLayoutPanel_영상_길이.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨flowLayoutPanel_영상_길이.Name = "DFI_컨flowLayoutPanel_영상_길이";
-            this.DFI_컨flowLayoutPanel_영상_길이.Size = new System.Drawing.Size(210, 31);
-            this.DFI_컨flowLayoutPanel_영상_길이.TabIndex = 1;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_컨flowLayoutPanel_영상_길이, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.AutoSize = true;
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_textBox_시간);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_label_시간);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_textBox_분);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_label_분);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_textBox_초);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Controls.Add(this.OriginVidInfo_label_초);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Location = new System.Drawing.Point(162, 3);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Name = "OriginVidInfo_컨flowLayoutPanel_영상_길이";
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.Size = new System.Drawing.Size(210, 31);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.TabIndex = 1;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_컨flowLayoutPanel_영상_길이, "원본 영상의 런타임 시간입니다.");
             // 
-            // DFI_textBox_시간
+            // OriginVidInfo_textBox_시간
             // 
-            this.DFI_textBox_시간.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_시간.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_시간.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_시간.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_시간.Location = new System.Drawing.Point(2, 2);
-            this.DFI_textBox_시간.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_시간.MaxLength = 3;
-            this.DFI_textBox_시간.Name = "DFI_textBox_시간";
-            this.DFI_textBox_시간.Size = new System.Drawing.Size(30, 27);
-            this.DFI_textBox_시간.TabIndex = 0;
-            this.DFI_textBox_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_시간, "원본 영상의 런타임 시간입니다.");
-            this.DFI_textBox_시간.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_시간.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_시간.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_시간.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_시간.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_시간.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_시간.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_시간.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_시간.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_textBox_시간.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_시간.MaxLength = 3;
+            this.OriginVidInfo_textBox_시간.Name = "OriginVidInfo_textBox_시간";
+            this.OriginVidInfo_textBox_시간.Size = new System.Drawing.Size(30, 27);
+            this.OriginVidInfo_textBox_시간.TabIndex = 0;
+            this.OriginVidInfo_textBox_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_시간, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_textBox_시간.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_시간.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_시간.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_시간.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_시간
+            // OriginVidInfo_label_시간
             // 
-            this.DFI_label_시간.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_시간.AutoSize = true;
-            this.DFI_label_시간.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_시간.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_시간.Location = new System.Drawing.Point(36, 4);
-            this.DFI_label_시간.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_시간.Name = "DFI_label_시간";
-            this.DFI_label_시간.Size = new System.Drawing.Size(50, 23);
-            this.DFI_label_시간.TabIndex = 1;
-            this.DFI_label_시간.Text = "시간 ";
-            this.DFI_label_시간.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_시간, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_label_시간.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_시간.AutoSize = true;
+            this.OriginVidInfo_label_시간.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_시간.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_시간.Location = new System.Drawing.Point(36, 4);
+            this.OriginVidInfo_label_시간.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_시간.Name = "OriginVidInfo_label_시간";
+            this.OriginVidInfo_label_시간.Size = new System.Drawing.Size(50, 23);
+            this.OriginVidInfo_label_시간.TabIndex = 1;
+            this.OriginVidInfo_label_시간.Text = "시간 ";
+            this.OriginVidInfo_label_시간.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_시간, "원본 영상의 런타임 시간입니다.");
             // 
-            // DFI_textBox_분
+            // OriginVidInfo_textBox_분
             // 
-            this.DFI_textBox_분.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_분.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_분.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_분.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_분.Location = new System.Drawing.Point(90, 2);
-            this.DFI_textBox_분.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_분.MaxLength = 2;
-            this.DFI_textBox_분.Name = "DFI_textBox_분";
-            this.DFI_textBox_분.Size = new System.Drawing.Size(23, 27);
-            this.DFI_textBox_분.TabIndex = 2;
-            this.DFI_textBox_분.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_분, "원본 영상의 런타임 시간입니다.");
-            this.DFI_textBox_분.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_분.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_분.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_분.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_분.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_분.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_분.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_분.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_분.Location = new System.Drawing.Point(90, 2);
+            this.OriginVidInfo_textBox_분.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_분.MaxLength = 2;
+            this.OriginVidInfo_textBox_분.Name = "OriginVidInfo_textBox_분";
+            this.OriginVidInfo_textBox_분.Size = new System.Drawing.Size(23, 27);
+            this.OriginVidInfo_textBox_분.TabIndex = 2;
+            this.OriginVidInfo_textBox_분.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_분, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_textBox_분.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_분.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_분.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_분.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_분
+            // OriginVidInfo_label_분
             // 
-            this.DFI_label_분.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_분.AutoSize = true;
-            this.DFI_label_분.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_분.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_분.Location = new System.Drawing.Point(117, 4);
-            this.DFI_label_분.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_분.Name = "DFI_label_분";
-            this.DFI_label_분.Size = new System.Drawing.Size(33, 23);
-            this.DFI_label_분.TabIndex = 3;
-            this.DFI_label_분.Text = "분 ";
-            this.DFI_label_분.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_분, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_label_분.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_분.AutoSize = true;
+            this.OriginVidInfo_label_분.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_분.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_분.Location = new System.Drawing.Point(117, 4);
+            this.OriginVidInfo_label_분.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_분.Name = "OriginVidInfo_label_분";
+            this.OriginVidInfo_label_분.Size = new System.Drawing.Size(33, 23);
+            this.OriginVidInfo_label_분.TabIndex = 3;
+            this.OriginVidInfo_label_분.Text = "분 ";
+            this.OriginVidInfo_label_분.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_분, "원본 영상의 런타임 시간입니다.");
             // 
-            // DFI_textBox_초
+            // OriginVidInfo_textBox_초
             // 
-            this.DFI_textBox_초.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_초.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_초.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_초.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_초.Location = new System.Drawing.Point(154, 2);
-            this.DFI_textBox_초.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_초.MaxLength = 2;
-            this.DFI_textBox_초.Name = "DFI_textBox_초";
-            this.DFI_textBox_초.Size = new System.Drawing.Size(23, 27);
-            this.DFI_textBox_초.TabIndex = 4;
-            this.DFI_textBox_초.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_초, "원본 영상의 런타임 시간입니다.");
-            this.DFI_textBox_초.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_초.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_초.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_초.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_초.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_초.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_초.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_초.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_초.Location = new System.Drawing.Point(154, 2);
+            this.OriginVidInfo_textBox_초.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_초.MaxLength = 2;
+            this.OriginVidInfo_textBox_초.Name = "OriginVidInfo_textBox_초";
+            this.OriginVidInfo_textBox_초.Size = new System.Drawing.Size(23, 27);
+            this.OriginVidInfo_textBox_초.TabIndex = 4;
+            this.OriginVidInfo_textBox_초.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_초, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_textBox_초.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_초.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_초.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_초.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_초
+            // OriginVidInfo_label_초
             // 
-            this.DFI_label_초.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_초.AutoSize = true;
-            this.DFI_label_초.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_초.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_초.Location = new System.Drawing.Point(181, 4);
-            this.DFI_label_초.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_초.Name = "DFI_label_초";
-            this.DFI_label_초.Size = new System.Drawing.Size(27, 23);
-            this.DFI_label_초.TabIndex = 5;
-            this.DFI_label_초.Text = "초";
-            this.DFI_label_초.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_초, "원본 영상의 런타임 시간입니다.");
+            this.OriginVidInfo_label_초.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_초.AutoSize = true;
+            this.OriginVidInfo_label_초.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_초.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_초.Location = new System.Drawing.Point(181, 4);
+            this.OriginVidInfo_label_초.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_초.Name = "OriginVidInfo_label_초";
+            this.OriginVidInfo_label_초.Size = new System.Drawing.Size(27, 23);
+            this.OriginVidInfo_label_초.TabIndex = 5;
+            this.OriginVidInfo_label_초.Text = "초";
+            this.OriginVidInfo_label_초.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_초, "원본 영상의 런타임 시간입니다.");
             // 
-            // DFI_컨flowLayoutPanel_초당_프레임
+            // OriginVidInfo_컨flowLayoutPanel_초당_프레임
             // 
-            this.DFI_컨flowLayoutPanel_초당_프레임.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_컨flowLayoutPanel_초당_프레임.AutoSize = true;
-            this.DFI_컨flowLayoutPanel_초당_프레임.Controls.Add(this.DFI_textBox_FPS);
-            this.DFI_컨flowLayoutPanel_초당_프레임.Controls.Add(this.DFI_label_FPS);
-            this.DFI_컨flowLayoutPanel_초당_프레임.Location = new System.Drawing.Point(162, 79);
-            this.DFI_컨flowLayoutPanel_초당_프레임.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨flowLayoutPanel_초당_프레임.Name = "DFI_컨flowLayoutPanel_초당_프레임";
-            this.DFI_컨flowLayoutPanel_초당_프레임.Size = new System.Drawing.Size(84, 31);
-            this.DFI_컨flowLayoutPanel_초당_프레임.TabIndex = 5;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_컨flowLayoutPanel_초당_프레임, "원본 영상의 초당 프레임입니다.");
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.AutoSize = true;
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Controls.Add(this.OriginVidInfo_textBox_FPS);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Controls.Add(this.OriginVidInfo_label_FPS);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Location = new System.Drawing.Point(162, 79);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Name = "OriginVidInfo_컨flowLayoutPanel_초당_프레임";
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.Size = new System.Drawing.Size(84, 31);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.TabIndex = 5;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_컨flowLayoutPanel_초당_프레임, "원본 영상의 초당 프레임입니다.");
             // 
-            // DFI_textBox_FPS
+            // OriginVidInfo_textBox_FPS
             // 
-            this.DFI_textBox_FPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_textBox_FPS.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_FPS.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_FPS.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_FPS.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_FPS.Location = new System.Drawing.Point(2, 2);
-            this.DFI_textBox_FPS.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_FPS.MaxLength = 4;
-            this.DFI_textBox_FPS.Name = "DFI_textBox_FPS";
-            this.DFI_textBox_FPS.Size = new System.Drawing.Size(39, 27);
-            this.DFI_textBox_FPS.TabIndex = 0;
-            this.DFI_textBox_FPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_FPS, "원본 영상의 초당 프레임입니다.");
-            this.DFI_textBox_FPS.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_FPS.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_FPS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_FPS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_FPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_textBox_FPS.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_FPS.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_FPS.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_FPS.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_FPS.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_textBox_FPS.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_FPS.MaxLength = 4;
+            this.OriginVidInfo_textBox_FPS.Name = "OriginVidInfo_textBox_FPS";
+            this.OriginVidInfo_textBox_FPS.Size = new System.Drawing.Size(39, 27);
+            this.OriginVidInfo_textBox_FPS.TabIndex = 0;
+            this.OriginVidInfo_textBox_FPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_FPS, "원본 영상의 초당 프레임입니다.");
+            this.OriginVidInfo_textBox_FPS.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_FPS.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_FPS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_FPS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_FPS
+            // OriginVidInfo_label_FPS
             // 
-            this.DFI_label_FPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_FPS.AutoSize = true;
-            this.DFI_label_FPS.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_FPS.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_FPS.Location = new System.Drawing.Point(45, 4);
-            this.DFI_label_FPS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_FPS.Name = "DFI_label_FPS";
-            this.DFI_label_FPS.Size = new System.Drawing.Size(37, 23);
-            this.DFI_label_FPS.TabIndex = 1;
-            this.DFI_label_FPS.Text = "FPS";
-            this._Form_Main_toolTip.SetToolTip(this.DFI_label_FPS, "원본 영상의 초당 프레임입니다.");
+            this.OriginVidInfo_label_FPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_FPS.AutoSize = true;
+            this.OriginVidInfo_label_FPS.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_FPS.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_FPS.Location = new System.Drawing.Point(45, 4);
+            this.OriginVidInfo_label_FPS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_FPS.Name = "OriginVidInfo_label_FPS";
+            this.OriginVidInfo_label_FPS.Size = new System.Drawing.Size(37, 23);
+            this.OriginVidInfo_label_FPS.TabIndex = 1;
+            this.OriginVidInfo_label_FPS.Text = "FPS";
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_label_FPS, "원본 영상의 초당 프레임입니다.");
             // 
-            // DFI_컨flowLayoutPanel_화면_해상도
+            // OriginVidInfo_컨flowLayoutPanel_화면_해상도
             // 
-            this.DFI_컨flowLayoutPanel_화면_해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_컨flowLayoutPanel_화면_해상도.AutoSize = true;
-            this.DFI_컨flowLayoutPanel_화면_해상도.Controls.Add(this.DFI_textBox_화면_해상도_가로);
-            this.DFI_컨flowLayoutPanel_화면_해상도.Controls.Add(this.DFI_label_곱하기);
-            this.DFI_컨flowLayoutPanel_화면_해상도.Controls.Add(this.DFI_textBox_화면_해상도_세로);
-            this.DFI_컨flowLayoutPanel_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_컨flowLayoutPanel_화면_해상도.Location = new System.Drawing.Point(162, 41);
-            this.DFI_컨flowLayoutPanel_화면_해상도.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_컨flowLayoutPanel_화면_해상도.Name = "DFI_컨flowLayoutPanel_화면_해상도";
-            this.DFI_컨flowLayoutPanel_화면_해상도.Size = new System.Drawing.Size(112, 31);
-            this.DFI_컨flowLayoutPanel_화면_해상도.TabIndex = 3;
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.AutoSize = true;
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Controls.Add(this.OriginVidInfo_textBox_화면_해상도_가로);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Controls.Add(this.OriginVidInfo_label_곱하기);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Controls.Add(this.OriginVidInfo_textBox_화면_해상도_세로);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Location = new System.Drawing.Point(162, 41);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Name = "OriginVidInfo_컨flowLayoutPanel_화면_해상도";
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.Size = new System.Drawing.Size(112, 31);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.TabIndex = 3;
             // 
-            // DFI_textBox_화면_해상도_가로
+            // OriginVidInfo_textBox_화면_해상도_가로
             // 
-            this.DFI_textBox_화면_해상도_가로.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_화면_해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_화면_해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_화면_해상도_가로.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_화면_해상도_가로.Location = new System.Drawing.Point(2, 2);
-            this.DFI_textBox_화면_해상도_가로.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_화면_해상도_가로.MaxLength = 4;
-            this.DFI_textBox_화면_해상도_가로.Name = "DFI_textBox_화면_해상도_가로";
-            this.DFI_textBox_화면_해상도_가로.Size = new System.Drawing.Size(39, 27);
-            this.DFI_textBox_화면_해상도_가로.TabIndex = 0;
-            this.DFI_textBox_화면_해상도_가로.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_화면_해상도_가로, "원본 영상 화면 해상도의 가로 길이입니다.");
-            this.DFI_textBox_화면_해상도_가로.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_화면_해상도_가로.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_화면_해상도_가로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_화면_해상도_가로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_화면_해상도_가로.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_화면_해상도_가로.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_화면_해상도_가로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_화면_해상도_가로.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_화면_해상도_가로.Location = new System.Drawing.Point(2, 2);
+            this.OriginVidInfo_textBox_화면_해상도_가로.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_화면_해상도_가로.MaxLength = 4;
+            this.OriginVidInfo_textBox_화면_해상도_가로.Name = "OriginVidInfo_textBox_화면_해상도_가로";
+            this.OriginVidInfo_textBox_화면_해상도_가로.Size = new System.Drawing.Size(39, 27);
+            this.OriginVidInfo_textBox_화면_해상도_가로.TabIndex = 0;
+            this.OriginVidInfo_textBox_화면_해상도_가로.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_화면_해상도_가로, "원본 영상 화면 해상도의 가로 길이입니다.");
+            this.OriginVidInfo_textBox_화면_해상도_가로.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_화면_해상도_가로.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_화면_해상도_가로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_화면_해상도_가로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // DFI_label_곱하기
+            // OriginVidInfo_label_곱하기
             // 
-            this.DFI_label_곱하기.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DFI_label_곱하기.AutoSize = true;
-            this.DFI_label_곱하기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_label_곱하기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_곱하기.Location = new System.Drawing.Point(45, 4);
-            this.DFI_label_곱하기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DFI_label_곱하기.Name = "DFI_label_곱하기";
-            this.DFI_label_곱하기.Size = new System.Drawing.Size(22, 23);
-            this.DFI_label_곱하기.TabIndex = 2;
-            this.DFI_label_곱하기.Text = "×";
-            this.DFI_label_곱하기.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.OriginVidInfo_label_곱하기.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OriginVidInfo_label_곱하기.AutoSize = true;
+            this.OriginVidInfo_label_곱하기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OriginVidInfo_label_곱하기.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_label_곱하기.Location = new System.Drawing.Point(45, 4);
+            this.OriginVidInfo_label_곱하기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OriginVidInfo_label_곱하기.Name = "OriginVidInfo_label_곱하기";
+            this.OriginVidInfo_label_곱하기.Size = new System.Drawing.Size(22, 23);
+            this.OriginVidInfo_label_곱하기.TabIndex = 2;
+            this.OriginVidInfo_label_곱하기.Text = "×";
+            this.OriginVidInfo_label_곱하기.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DFI_textBox_화면_해상도_세로
+            // OriginVidInfo_textBox_화면_해상도_세로
             // 
-            this.DFI_textBox_화면_해상도_세로.BackColor = System.Drawing.SystemColors.Window;
-            this.DFI_textBox_화면_해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.DFI_textBox_화면_해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_textBox_화면_해상도_세로.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.DFI_textBox_화면_해상도_세로.Location = new System.Drawing.Point(71, 2);
-            this.DFI_textBox_화면_해상도_세로.Margin = new System.Windows.Forms.Padding(2);
-            this.DFI_textBox_화면_해상도_세로.MaxLength = 4;
-            this.DFI_textBox_화면_해상도_세로.Name = "DFI_textBox_화면_해상도_세로";
-            this.DFI_textBox_화면_해상도_세로.Size = new System.Drawing.Size(39, 27);
-            this.DFI_textBox_화면_해상도_세로.TabIndex = 3;
-            this.DFI_textBox_화면_해상도_세로.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._Form_Main_toolTip.SetToolTip(this.DFI_textBox_화면_해상도_세로, "원본 영상 화면 해상도의 세로 길이입니다.");
-            this.DFI_textBox_화면_해상도_세로.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.DFI_textBox_화면_해상도_세로.Enter += new System.EventHandler(this.ControlEnter);
-            this.DFI_textBox_화면_해상도_세로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.DFI_textBox_화면_해상도_세로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            this.OriginVidInfo_textBox_화면_해상도_세로.BackColor = System.Drawing.SystemColors.Window;
+            this.OriginVidInfo_textBox_화면_해상도_세로.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.OriginVidInfo_textBox_화면_해상도_세로.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OriginVidInfo_textBox_화면_해상도_세로.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.OriginVidInfo_textBox_화면_해상도_세로.Location = new System.Drawing.Point(71, 2);
+            this.OriginVidInfo_textBox_화면_해상도_세로.Margin = new System.Windows.Forms.Padding(2);
+            this.OriginVidInfo_textBox_화면_해상도_세로.MaxLength = 4;
+            this.OriginVidInfo_textBox_화면_해상도_세로.Name = "OriginVidInfo_textBox_화면_해상도_세로";
+            this.OriginVidInfo_textBox_화면_해상도_세로.Size = new System.Drawing.Size(39, 27);
+            this.OriginVidInfo_textBox_화면_해상도_세로.TabIndex = 3;
+            this.OriginVidInfo_textBox_화면_해상도_세로.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._Form_Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_화면_해상도_세로, "원본 영상 화면 해상도의 세로 길이입니다.");
+            this.OriginVidInfo_textBox_화면_해상도_세로.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.OriginVidInfo_textBox_화면_해상도_세로.Enter += new System.EventHandler(this.ControlEnter);
+            this.OriginVidInfo_textBox_화면_해상도_세로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_화면_해상도_세로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // VideoBitrate_컨_groupBox_영상_비트레이트
             // 
@@ -755,7 +755,7 @@
             this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label__ShowValue_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
         "영상 품질에 영향을 끼치지 않습니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+D)");
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Click += new System.EventHandler(this.VB_label__ShowValue_최대_영상_비트레이트_Click);
+            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Click += new System.EventHandler(this.VideoBitrate_label_ShowValue_최대_영상_비트레이트_Click);
             // 
             // VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트
             // 
@@ -786,7 +786,7 @@
             this.VideoBitrate_label_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
         "영상 품질에 영향을 끼치지 않습니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+D)");
-            this.VideoBitrate_label_최대_영상_비트레이트.Click += new System.EventHandler(this.VB_label_최대_영상_비트레이트_Click);
+            this.VideoBitrate_label_최대_영상_비트레이트.Click += new System.EventHandler(this.VideoBitrate_label_최대_영상_비트레이트_Click);
             // 
             // VideoBitrate_comboBox_Bitrate_단위
             // 
@@ -1619,18 +1619,18 @@
             this.Text = "비트레이트 계산기";
             this.Load += new System.EventHandler(this._Form_Main_Load);
             this._Form_Main_컨tableLayoutPanel.ResumeLayout(false);
-            this.DFI_컨_groupBox.ResumeLayout(false);
-            this.DFI_컨_tableLayoutPanel1.ResumeLayout(false);
-            this.DFI_컨_tableLayoutPanel1.PerformLayout();
-            this.DFI_컨flowLayoutPanel_적용_코덱.ResumeLayout(false);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.ResumeLayout(false);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.PerformLayout();
-            this.DFI_컨flowLayoutPanel_영상_길이.ResumeLayout(false);
-            this.DFI_컨flowLayoutPanel_영상_길이.PerformLayout();
-            this.DFI_컨flowLayoutPanel_초당_프레임.ResumeLayout(false);
-            this.DFI_컨flowLayoutPanel_초당_프레임.PerformLayout();
-            this.DFI_컨flowLayoutPanel_화면_해상도.ResumeLayout(false);
-            this.DFI_컨flowLayoutPanel_화면_해상도.PerformLayout();
+            this.OriginVidInfo_컨_groupBox.ResumeLayout(false);
+            this.OriginVidInfo_컨_tableLayoutPanel1.ResumeLayout(false);
+            this.OriginVidInfo_컨_tableLayoutPanel1.PerformLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_적용_코덱.ResumeLayout(false);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.ResumeLayout(false);
+            this.OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트.PerformLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.ResumeLayout(false);
+            this.OriginVidInfo_컨flowLayoutPanel_영상_길이.PerformLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.ResumeLayout(false);
+            this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.PerformLayout();
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.ResumeLayout(false);
+            this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.PerformLayout();
             this.VideoBitrate_컨_groupBox_영상_비트레이트.ResumeLayout(false);
             this.VideoBitrate_컨_tableLayoutPanel.ResumeLayout(false);
             this.VideoBitrate_컨_tableLayoutPanel.PerformLayout();
@@ -1671,32 +1671,32 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel _Form_Main_컨tableLayoutPanel;
-        private System.Windows.Forms.GroupBox DFI_컨_groupBox;
-        private System.Windows.Forms.FlowLayoutPanel DFI_컨flowLayoutPanel_화면_해상도;
-        private System.Windows.Forms.Label DFI_label_화면_해상도;
-        private System.Windows.Forms.Label DFI_label_곱하기;
-        private System.Windows.Forms.Label DFI_label_영상_길이;
-        private System.Windows.Forms.Label DFI_label_초당_프레임;
-        private System.Windows.Forms.TextBox DFI_textBox_FPS;
-        private System.Windows.Forms.Label DFI_label_오디오_비트레이트;
-        private System.Windows.Forms.TextBox DFI_textBox_오디오_비트레이트;
-        private System.Windows.Forms.Label DFI_label_코덱_값;
+        private System.Windows.Forms.GroupBox OriginVidInfo_컨_groupBox;
+        private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_화면_해상도;
+        private System.Windows.Forms.Label OriginVidInfo_label_화면_해상도;
+        private System.Windows.Forms.Label OriginVidInfo_label_곱하기;
+        private System.Windows.Forms.Label OriginVidInfo_label_영상_길이;
+        private System.Windows.Forms.Label OriginVidInfo_label_초당_프레임;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_FPS;
+        private System.Windows.Forms.Label OriginVidInfo_label_오디오_비트레이트;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_오디오_비트레이트;
+        private System.Windows.Forms.Label OriginVidInfo_label_코덱_값;
         private System.Windows.Forms.GroupBox VideoBitrate_컨_groupBox_영상_비트레이트;
         private System.Windows.Forms.TableLayoutPanel VideoBitrate_컨_tableLayoutPanel;
         private System.Windows.Forms.Label VideoBitrate_label_최대_영상_비트레이트;
         private System.Windows.Forms.Label VideoBitrate_label__ShowValue_최대_영상_비트레이트;
         private System.Windows.Forms.Label VideoBitrate_label_예상_출력_영상_크기;
         private System.Windows.Forms.Label VideoBitrate_label__ShowValue_예상_출력_영상_크기;
-        private System.Windows.Forms.TextBox DFI_textBox_화면_해상도_가로;
-        private System.Windows.Forms.TextBox DFI_textBox_화면_해상도_세로;
-        private System.Windows.Forms.FlowLayoutPanel DFI_컨flowLayoutPanel_오디오_비트레이트;
-        private System.Windows.Forms.Label DFI_label_Kbps;
-        private System.Windows.Forms.FlowLayoutPanel DFI_컨flowLayoutPanel_초당_프레임;
-        private System.Windows.Forms.Label DFI_label_FPS;
-        private System.Windows.Forms.Button DFI_button_초기화;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_화면_해상도_가로;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_화면_해상도_세로;
+        private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트;
+        private System.Windows.Forms.Label OriginVidInfo_label_Kbps;
+        private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_초당_프레임;
+        private System.Windows.Forms.Label OriginVidInfo_label_FPS;
+        private System.Windows.Forms.Button OriginVidInfo_button_초기화;
         private System.Windows.Forms.FlowLayoutPanel VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트;
         private System.Windows.Forms.FlowLayoutPanel VideoBitrate_컨flowLayoutPanel_예상_출력물_크기;
-        private System.Windows.Forms.TableLayoutPanel DFI_컨_tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel OriginVidInfo_컨_tableLayoutPanel1;
         private System.Windows.Forms.Button _Form_Main_button_제작자;
         private System.Windows.Forms.ToolTip _Form_Main_toolTip;
         private System.Windows.Forms.FlowLayoutPanel _Form_Main_컨flowLayoutPanel_버튼;
@@ -1731,8 +1731,8 @@
         private System.Windows.Forms.Label CS_label_곱하기1;
         private System.Windows.Forms.Label CS_label__ShowValue_현재_해상도_세로;
         private System.Windows.Forms.Label CS_label_변환_기준;
-        private System.Windows.Forms.FlowLayoutPanel DFI_컨flowLayoutPanel_적용_코덱;
-        private System.Windows.Forms.ComboBox DFI_comboBox_적용_코덱;
+        private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_적용_코덱;
+        private System.Windows.Forms.ComboBox OriginVidInfo_comboBox_적용_코덱;
         private System.Windows.Forms.TableLayoutPanel CS_컨_tableLayoutPanel1;
         private System.Windows.Forms.StatusStrip _Form_Main_statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel _Form_Main_toolStripStatusLabel;
@@ -1763,13 +1763,13 @@
         private System.Windows.Forms.ComboBox VideoBitrate_comboBox_Bitrate_단위;
         private System.Windows.Forms.ComboBox CVBOC_comboBox_Bitrate_단위;
         private System.Windows.Forms.ToolStripMenuItem 영상비트레이트소수점설정ToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel DFI_컨flowLayoutPanel_영상_길이;
-        private System.Windows.Forms.TextBox DFI_textBox_시간;
-        private System.Windows.Forms.Label DFI_label_시간;
-        private System.Windows.Forms.TextBox DFI_textBox_분;
-        private System.Windows.Forms.Label DFI_label_분;
-        private System.Windows.Forms.TextBox DFI_textBox_초;
-        private System.Windows.Forms.Label DFI_label_초;
+        private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_영상_길이;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_시간;
+        private System.Windows.Forms.Label OriginVidInfo_label_시간;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_분;
+        private System.Windows.Forms.Label OriginVidInfo_label_분;
+        private System.Windows.Forms.TextBox OriginVidInfo_textBox_초;
+        private System.Windows.Forms.Label OriginVidInfo_label_초;
     }
 }
 
