@@ -19,7 +19,7 @@ namespace Bitrate_Calculator
             InitializeComponent();
             this.formMain = formMain;
             numericUpDown_영상_비트레이트_소수점.Value = formMain.GetVBDecimalPoint();
-            numericUpDown_용량_소수점.Value = formMain.GetCpctDecimalPoint();
+            numericUpDown_용량_소수점.Value = formMain.GetCapacityDecimalPoint();
         }
 
         private void button_OK_Click(object sender, EventArgs e)

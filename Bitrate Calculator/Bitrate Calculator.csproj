@@ -69,7 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\ChildFormManager.cs" />
+    <Compile Include="src\ChildFormManager.cs" />
     <Compile Include="forms\Form_소수점_설정.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +96,7 @@
     <Compile Include="forms\Form_프로그램_정보.Designer.cs">
       <DependentUpon>Form_프로그램_정보.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Codecs.cs" />
     <EmbeddedResource Include="forms\Form_소수점_설정.resx">
       <DependentUpon>Form_소수점_설정.cs</DependentUpon>
     </EmbeddedResource>

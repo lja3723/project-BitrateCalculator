@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace Bitrate_Calculator
 {
 
-    internal class ChildFormManager
+    public class ChildFormManager
     {
         public static void Show_제작자_및_도움(Form parent)
         {

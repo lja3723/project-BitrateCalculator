@@ -170,14 +170,14 @@
             this._Form_Main_컨tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._Form_Main_컨tableLayoutPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this._Form_Main_컨tableLayoutPanel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this._Form_Main_컨tableLayoutPanel.Location = new System.Drawing.Point(0, 26);
+            this._Form_Main_컨tableLayoutPanel.Location = new System.Drawing.Point(0, 30);
             this._Form_Main_컨tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this._Form_Main_컨tableLayoutPanel.Name = "_Form_Main_컨tableLayoutPanel";
             this._Form_Main_컨tableLayoutPanel.RowCount = 3;
             this._Form_Main_컨tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.97543F));
             this._Form_Main_컨tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.54055F));
             this._Form_Main_컨tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.48403F));
-            this._Form_Main_컨tableLayoutPanel.Size = new System.Drawing.Size(881, 383);
+            this._Form_Main_컨tableLayoutPanel.Size = new System.Drawing.Size(882, 374);
             this._Form_Main_컨tableLayoutPanel.TabIndex = 0;
             // 
             // DFI_컨_groupBox
@@ -191,7 +191,7 @@
             this.DFI_컨_groupBox.Name = "DFI_컨_groupBox";
             this.DFI_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
             this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.DFI_컨_groupBox, 2);
-            this.DFI_컨_groupBox.Size = new System.Drawing.Size(440, 265);
+            this.DFI_컨_groupBox.Size = new System.Drawing.Size(440, 259);
             this.DFI_컨_groupBox.TabIndex = 0;
             this.DFI_컨_groupBox.TabStop = false;
             this.DFI_컨_groupBox.Text = "원본 영상 파일 정보";
@@ -225,7 +225,7 @@
             this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.5F));
             this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.DFI_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.DFI_컨_tableLayoutPanel1.Size = new System.Drawing.Size(436, 239);
+            this.DFI_컨_tableLayoutPanel1.Size = new System.Drawing.Size(436, 233);
             this.DFI_컨_tableLayoutPanel1.TabIndex = 0;
             // 
             // DFI_button_초기화
@@ -235,10 +235,10 @@
             this.DFI_button_초기화.Enabled = false;
             this.DFI_button_초기화.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_button_초기화.ForeColor = System.Drawing.Color.Black;
-            this.DFI_button_초기화.Location = new System.Drawing.Point(332, 202);
+            this.DFI_button_초기화.Location = new System.Drawing.Point(332, 197);
             this.DFI_button_초기화.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_button_초기화.Name = "DFI_button_초기화";
-            this.DFI_button_초기화.Size = new System.Drawing.Size(102, 35);
+            this.DFI_button_초기화.Size = new System.Drawing.Size(102, 33);
             this.DFI_button_초기화.TabIndex = 10;
             this.DFI_button_초기화.Text = "초기화";
             this._Form_Main_toolTip.SetToolTip(this.DFI_button_초기화, "설정된 원본 영상 파일 정보를 초기화합니다. (단축키: Ctrl+W)");
@@ -251,7 +251,7 @@
             this.DFI_label_코덱_값.AutoSize = true;
             this.DFI_label_코덱_값.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_label_코덱_값.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_코덱_값.Location = new System.Drawing.Point(70, 166);
+            this.DFI_label_코덱_값.Location = new System.Drawing.Point(70, 162);
             this.DFI_label_코덱_값.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DFI_label_코덱_값.Name = "DFI_label_코덱_값";
             this.DFI_label_코덱_값.Size = new System.Drawing.Size(88, 23);
@@ -265,7 +265,7 @@
             this.DFI_컨flowLayoutPanel_적용_코덱.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DFI_컨flowLayoutPanel_적용_코덱.AutoSize = true;
             this.DFI_컨flowLayoutPanel_적용_코덱.Controls.Add(this.DFI_comboBox_적용_코덱);
-            this.DFI_컨flowLayoutPanel_적용_코덱.Location = new System.Drawing.Point(162, 162);
+            this.DFI_컨flowLayoutPanel_적용_코덱.Location = new System.Drawing.Point(162, 157);
             this.DFI_컨flowLayoutPanel_적용_코덱.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_컨flowLayoutPanel_적용_코덱.Name = "DFI_컨flowLayoutPanel_적용_코덱";
             this.DFI_컨flowLayoutPanel_적용_코덱.Size = new System.Drawing.Size(87, 32);
@@ -306,7 +306,7 @@
             this.DFI_label_오디오_비트레이트.AutoSize = true;
             this.DFI_label_오디오_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_label_오디오_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_오디오_비트레이트.Location = new System.Drawing.Point(2, 125);
+            this.DFI_label_오디오_비트레이트.Location = new System.Drawing.Point(2, 121);
             this.DFI_label_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DFI_label_오디오_비트레이트.Name = "DFI_label_오디오_비트레이트";
             this.DFI_label_오디오_비트레이트.Size = new System.Drawing.Size(156, 23);
@@ -321,7 +321,7 @@
             this.DFI_label_초당_프레임.AutoSize = true;
             this.DFI_label_초당_프레임.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_label_초당_프레임.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_초당_프레임.Location = new System.Drawing.Point(53, 86);
+            this.DFI_label_초당_프레임.Location = new System.Drawing.Point(53, 83);
             this.DFI_label_초당_프레임.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DFI_label_초당_프레임.Name = "DFI_label_초당_프레임";
             this.DFI_label_초당_프레임.Size = new System.Drawing.Size(105, 23);
@@ -336,7 +336,7 @@
             this.DFI_label_영상_길이.AutoSize = true;
             this.DFI_label_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_label_영상_길이.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_영상_길이.Location = new System.Drawing.Point(70, 8);
+            this.DFI_label_영상_길이.Location = new System.Drawing.Point(70, 7);
             this.DFI_label_영상_길이.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DFI_label_영상_길이.Name = "DFI_label_영상_길이";
             this.DFI_label_영상_길이.Size = new System.Drawing.Size(88, 23);
@@ -351,7 +351,7 @@
             this.DFI_label_화면_해상도.AutoSize = true;
             this.DFI_label_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DFI_label_화면_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DFI_label_화면_해상도.Location = new System.Drawing.Point(25, 47);
+            this.DFI_label_화면_해상도.Location = new System.Drawing.Point(25, 45);
             this.DFI_label_화면_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DFI_label_화면_해상도.Name = "DFI_label_화면_해상도";
             this.DFI_label_화면_해상도.Size = new System.Drawing.Size(133, 23);
@@ -366,7 +366,7 @@
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.AutoSize = true;
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.DFI_textBox_오디오_비트레이트);
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.Controls.Add(this.DFI_label_Kbps);
-            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Location = new System.Drawing.Point(162, 121);
+            this.DFI_컨flowLayoutPanel_오디오_비트레이트.Location = new System.Drawing.Point(162, 117);
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.Name = "DFI_컨flowLayoutPanel_오디오_비트레이트";
             this.DFI_컨flowLayoutPanel_오디오_비트레이트.Size = new System.Drawing.Size(85, 31);
@@ -418,7 +418,7 @@
             this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_textBox_초);
             this.DFI_컨flowLayoutPanel_영상_길이.Controls.Add(this.DFI_label_초);
             this.DFI_컨flowLayoutPanel_영상_길이.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_컨flowLayoutPanel_영상_길이.Location = new System.Drawing.Point(162, 4);
+            this.DFI_컨flowLayoutPanel_영상_길이.Location = new System.Drawing.Point(162, 3);
             this.DFI_컨flowLayoutPanel_영상_길이.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_컨flowLayoutPanel_영상_길이.Name = "DFI_컨flowLayoutPanel_영상_길이";
             this.DFI_컨flowLayoutPanel_영상_길이.Size = new System.Drawing.Size(210, 31);
@@ -533,7 +533,7 @@
             this.DFI_컨flowLayoutPanel_초당_프레임.AutoSize = true;
             this.DFI_컨flowLayoutPanel_초당_프레임.Controls.Add(this.DFI_textBox_FPS);
             this.DFI_컨flowLayoutPanel_초당_프레임.Controls.Add(this.DFI_label_FPS);
-            this.DFI_컨flowLayoutPanel_초당_프레임.Location = new System.Drawing.Point(162, 82);
+            this.DFI_컨flowLayoutPanel_초당_프레임.Location = new System.Drawing.Point(162, 79);
             this.DFI_컨flowLayoutPanel_초당_프레임.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_컨flowLayoutPanel_초당_프레임.Name = "DFI_컨flowLayoutPanel_초당_프레임";
             this.DFI_컨flowLayoutPanel_초당_프레임.Size = new System.Drawing.Size(84, 31);
@@ -582,7 +582,7 @@
             this.DFI_컨flowLayoutPanel_화면_해상도.Controls.Add(this.DFI_label_곱하기);
             this.DFI_컨flowLayoutPanel_화면_해상도.Controls.Add(this.DFI_textBox_화면_해상도_세로);
             this.DFI_컨flowLayoutPanel_화면_해상도.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DFI_컨flowLayoutPanel_화면_해상도.Location = new System.Drawing.Point(162, 43);
+            this.DFI_컨flowLayoutPanel_화면_해상도.Location = new System.Drawing.Point(162, 41);
             this.DFI_컨flowLayoutPanel_화면_해상도.Margin = new System.Windows.Forms.Padding(2);
             this.DFI_컨flowLayoutPanel_화면_해상도.Name = "DFI_컨flowLayoutPanel_화면_해상도";
             this.DFI_컨flowLayoutPanel_화면_해상도.Size = new System.Drawing.Size(112, 31);
@@ -646,11 +646,11 @@
             this.VB_컨_groupBox_영상_비트레이트.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VB_컨_groupBox_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.VB_컨_groupBox_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VB_컨_groupBox_영상_비트레이트.Location = new System.Drawing.Point(2, 271);
+            this.VB_컨_groupBox_영상_비트레이트.Location = new System.Drawing.Point(2, 265);
             this.VB_컨_groupBox_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
             this.VB_컨_groupBox_영상_비트레이트.Name = "VB_컨_groupBox_영상_비트레이트";
             this.VB_컨_groupBox_영상_비트레이트.Padding = new System.Windows.Forms.Padding(2);
-            this.VB_컨_groupBox_영상_비트레이트.Size = new System.Drawing.Size(440, 110);
+            this.VB_컨_groupBox_영상_비트레이트.Size = new System.Drawing.Size(440, 107);
             this.VB_컨_groupBox_영상_비트레이트.TabIndex = 1;
             this.VB_컨_groupBox_영상_비트레이트.TabStop = false;
             this.VB_컨_groupBox_영상_비트레이트.Text = "영상 비트레이트";
@@ -674,7 +674,7 @@
             this.VB_컨_tableLayoutPanel.RowCount = 2;
             this.VB_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.VB_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.VB_컨_tableLayoutPanel.Size = new System.Drawing.Size(436, 84);
+            this.VB_컨_tableLayoutPanel.Size = new System.Drawing.Size(436, 81);
             this.VB_컨_tableLayoutPanel.TabIndex = 0;
             // 
             // VB_label__ShowValue_예상_출력_영상_크기
@@ -683,7 +683,7 @@
             this.VB_label__ShowValue_예상_출력_영상_크기.AutoSize = true;
             this.VB_label__ShowValue_예상_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.VB_label__ShowValue_예상_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VB_label__ShowValue_예상_출력_영상_크기.Location = new System.Drawing.Point(270, 51);
+            this.VB_label__ShowValue_예상_출력_영상_크기.Location = new System.Drawing.Point(270, 49);
             this.VB_label__ShowValue_예상_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VB_label__ShowValue_예상_출력_영상_크기.Name = "VB_label__ShowValue_예상_출력_영상_크기";
             this.VB_label__ShowValue_예상_출력_영상_크기.Size = new System.Drawing.Size(16, 23);
@@ -698,7 +698,7 @@
             this.VB_컨flowLayoutPanel_예상_출력물_크기.AutoSize = true;
             this.VB_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.VB_label_예상_출력_영상_크기);
             this.VB_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.VB_comboBox_예상_출력_영상_크기_단위);
-            this.VB_컨flowLayoutPanel_예상_출력물_크기.Location = new System.Drawing.Point(38, 47);
+            this.VB_컨flowLayoutPanel_예상_출력물_크기.Location = new System.Drawing.Point(38, 44);
             this.VB_컨flowLayoutPanel_예상_출력물_크기.Margin = new System.Windows.Forms.Padding(2);
             this.VB_컨flowLayoutPanel_예상_출력물_크기.Name = "VB_컨flowLayoutPanel_예상_출력물_크기";
             this.VB_컨flowLayoutPanel_예상_출력물_크기.Size = new System.Drawing.Size(228, 32);
@@ -746,7 +746,7 @@
             this.VB_label__ShowValue_최대_영상_비트레이트.AutoSize = true;
             this.VB_label__ShowValue_최대_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.VB_label__ShowValue_최대_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VB_label__ShowValue_최대_영상_비트레이트.Location = new System.Drawing.Point(270, 9);
+            this.VB_label__ShowValue_최대_영상_비트레이트.Location = new System.Drawing.Point(270, 8);
             this.VB_label__ShowValue_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VB_label__ShowValue_최대_영상_비트레이트.Name = "VB_label__ShowValue_최대_영상_비트레이트";
             this.VB_label__ShowValue_최대_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
@@ -763,7 +763,7 @@
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.AutoSize = true;
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.VB_label_최대_영상_비트레이트);
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.VB_comboBox_Bitrate_단위);
-            this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Location = new System.Drawing.Point(5, 5);
+            this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Location = new System.Drawing.Point(5, 4);
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Name = "VB_컨flowLayoutPanel_최대_영상_비트레이트";
             this.VB_컨flowLayoutPanel_최대_영상_비트레이트.Size = new System.Drawing.Size(261, 32);
@@ -816,7 +816,7 @@
             this.CVBOC_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.CVBOC_컨_groupBox.Name = "CVBOC_컨_groupBox";
             this.CVBOC_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.CVBOC_컨_groupBox.Size = new System.Drawing.Size(433, 110);
+            this.CVBOC_컨_groupBox.Size = new System.Drawing.Size(434, 108);
             this.CVBOC_컨_groupBox.TabIndex = 2;
             this.CVBOC_컨_groupBox.TabStop = false;
             this.CVBOC_컨_groupBox.Text = "출력 영상 크기 기준 영상 비트레이트 계산";
@@ -840,7 +840,7 @@
             this.CVBOC_컨_tableLayoutPanel.RowCount = 2;
             this.CVBOC_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52F));
             this.CVBOC_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
-            this.CVBOC_컨_tableLayoutPanel.Size = new System.Drawing.Size(429, 84);
+            this.CVBOC_컨_tableLayoutPanel.Size = new System.Drawing.Size(430, 82);
             this.CVBOC_컨_tableLayoutPanel.TabIndex = 0;
             // 
             // CVBOC_textBox_원하는_출력_영상_크기
@@ -850,7 +850,7 @@
             this.CVBOC_textBox_원하는_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.CVBOC_textBox_원하는_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CVBOC_textBox_원하는_출력_영상_크기.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.CVBOC_textBox_원하는_출력_영상_크기.Location = new System.Drawing.Point(268, 8);
+            this.CVBOC_textBox_원하는_출력_영상_크기.Location = new System.Drawing.Point(268, 7);
             this.CVBOC_textBox_원하는_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2);
             this.CVBOC_textBox_원하는_출력_영상_크기.MaxLength = 10;
             this.CVBOC_textBox_원하는_출력_영상_크기.Name = "CVBOC_textBox_원하는_출력_영상_크기";
@@ -919,7 +919,7 @@
             this.CVBOC_label__ShowValue_영상_비트레이트.AutoSize = true;
             this.CVBOC_label__ShowValue_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CVBOC_label__ShowValue_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CVBOC_label__ShowValue_영상_비트레이트.Location = new System.Drawing.Point(268, 52);
+            this.CVBOC_label__ShowValue_영상_비트레이트.Location = new System.Drawing.Point(268, 50);
             this.CVBOC_label__ShowValue_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CVBOC_label__ShowValue_영상_비트레이트.Name = "CVBOC_label__ShowValue_영상_비트레이트";
             this.CVBOC_label__ShowValue_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
@@ -936,7 +936,7 @@
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.AutoSize = true;
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Controls.Add(this.CVBOC_label_예상_영상_비트레이트);
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Controls.Add(this.CVBOC_comboBox_Bitrate_단위);
-            this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Location = new System.Drawing.Point(3, 47);
+            this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Location = new System.Drawing.Point(3, 46);
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Name = "CVBOC_컨flowLayoutPanel_최적_영상_비트레이트";
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트.Size = new System.Drawing.Size(261, 32);
@@ -987,14 +987,14 @@
             this.CS_컨_tableLayoutPanel1.Controls.Add(this.CS_컨_groupBox, 0, 0);
             this.CS_컨_tableLayoutPanel1.Controls.Add(this._Form_Main_컨flowLayoutPanel_버튼, 1, 1);
             this.CS_컨_tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CS_컨_tableLayoutPanel1.Location = new System.Drawing.Point(446, 116);
+            this.CS_컨_tableLayoutPanel1.Location = new System.Drawing.Point(446, 114);
             this.CS_컨_tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨_tableLayoutPanel1.Name = "CS_컨_tableLayoutPanel1";
             this.CS_컨_tableLayoutPanel1.RowCount = 2;
             this._Form_Main_컨tableLayoutPanel.SetRowSpan(this.CS_컨_tableLayoutPanel1, 2);
             this.CS_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.CS_컨_tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.CS_컨_tableLayoutPanel1.Size = new System.Drawing.Size(433, 265);
+            this.CS_컨_tableLayoutPanel1.Size = new System.Drawing.Size(434, 258);
             this.CS_컨_tableLayoutPanel1.TabIndex = 6;
             // 
             // _Form_Main_button_제작자
@@ -1002,7 +1002,7 @@
             this._Form_Main_button_제작자.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this._Form_Main_button_제작자.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this._Form_Main_button_제작자.ForeColor = System.Drawing.Color.RoyalBlue;
-            this._Form_Main_button_제작자.Location = new System.Drawing.Point(2, 225);
+            this._Form_Main_button_제작자.Location = new System.Drawing.Point(2, 218);
             this._Form_Main_button_제작자.Margin = new System.Windows.Forms.Padding(2);
             this._Form_Main_button_제작자.Name = "_Form_Main_button_제작자";
             this._Form_Main_button_제작자.Size = new System.Drawing.Size(99, 34);
@@ -1022,7 +1022,7 @@
             this.CS_컨_groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨_groupBox.Name = "CS_컨_groupBox";
             this.CS_컨_groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.CS_컨_groupBox.Size = new System.Drawing.Size(429, 215);
+            this.CS_컨_groupBox.Size = new System.Drawing.Size(430, 208);
             this.CS_컨_groupBox.TabIndex = 3;
             this.CS_컨_groupBox.TabStop = false;
             this.CS_컨_groupBox.Text = "해상도 변환";
@@ -1053,7 +1053,7 @@
             this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
             this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.5F));
             this.CS_컨_tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.CS_컨_tableLayoutPanel2.Size = new System.Drawing.Size(425, 189);
+            this.CS_컨_tableLayoutPanel2.Size = new System.Drawing.Size(426, 182);
             this.CS_컨_tableLayoutPanel2.TabIndex = 0;
             // 
             // CS_label_현재_해상도
@@ -1062,7 +1062,7 @@
             this.CS_label_현재_해상도.AutoSize = true;
             this.CS_label_현재_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CS_label_현재_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_현재_해상도.Location = new System.Drawing.Point(90, 4);
+            this.CS_label_현재_해상도.Location = new System.Drawing.Point(90, 3);
             this.CS_label_현재_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CS_label_현재_해상도.Name = "CS_label_현재_해상도";
             this.CS_label_현재_해상도.Size = new System.Drawing.Size(133, 23);
@@ -1077,7 +1077,7 @@
             this.CS_button_적용.Enabled = false;
             this.CS_button_적용.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CS_button_적용.ForeColor = System.Drawing.Color.Black;
-            this.CS_button_적용.Location = new System.Drawing.Point(345, 154);
+            this.CS_button_적용.Location = new System.Drawing.Point(346, 147);
             this.CS_button_적용.Margin = new System.Windows.Forms.Padding(2);
             this.CS_button_적용.Name = "CS_button_적용";
             this.CS_button_적용.Size = new System.Drawing.Size(78, 33);
@@ -1093,7 +1093,7 @@
             this.CS_컨flowLayoutPanel_기준.AutoSize = true;
             this.CS_컨flowLayoutPanel_기준.Controls.Add(this.CS_comboBox_기준);
             this.CS_컨flowLayoutPanel_기준.Controls.Add(this.CS_textBox_기준_픽셀);
-            this.CS_컨flowLayoutPanel_기준.Location = new System.Drawing.Point(227, 37);
+            this.CS_컨flowLayoutPanel_기준.Location = new System.Drawing.Point(227, 34);
             this.CS_컨flowLayoutPanel_기준.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨flowLayoutPanel_기준.Name = "CS_컨flowLayoutPanel_기준";
             this.CS_컨flowLayoutPanel_기준.Size = new System.Drawing.Size(105, 32);
@@ -1149,7 +1149,7 @@
             this.CS_label_변환_예상_해상도.AutoSize = true;
             this.CS_label_변환_예상_해상도.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CS_label_변환_예상_해상도.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_변환_예상_해상도.Location = new System.Drawing.Point(50, 80);
+            this.CS_label_변환_예상_해상도.Location = new System.Drawing.Point(50, 75);
             this.CS_label_변환_예상_해상도.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CS_label_변환_예상_해상도.Name = "CS_label_변환_예상_해상도";
             this.CS_label_변환_예상_해상도.Size = new System.Drawing.Size(173, 23);
@@ -1164,7 +1164,7 @@
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label__ShowValue_변환_예상_해상도_가로);
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label_곱하기2);
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Controls.Add(this.CS_label__ShowValue_변환_예상_해상도_세로);
-            this.CS_컨flowLayoutPanel_변환_예상_해상도.Location = new System.Drawing.Point(227, 80);
+            this.CS_컨flowLayoutPanel_변환_예상_해상도.Location = new System.Drawing.Point(227, 75);
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Name = "CS_컨flowLayoutPanel_변환_예상_해상도";
             this.CS_컨flowLayoutPanel_변환_예상_해상도.Size = new System.Drawing.Size(72, 23);
@@ -1221,7 +1221,7 @@
             this.CS_label_변환_기준.AutoSize = true;
             this.CS_label_변환_기준.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CS_label_변환_기준.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label_변환_기준.Location = new System.Drawing.Point(107, 42);
+            this.CS_label_변환_기준.Location = new System.Drawing.Point(107, 39);
             this.CS_label_변환_기준.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CS_label_변환_기준.Name = "CS_label_변환_기준";
             this.CS_label_변환_기준.Size = new System.Drawing.Size(116, 23);
@@ -1236,7 +1236,7 @@
             this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label__ShowValue_현재_해상도_가로);
             this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label_곱하기1);
             this.CS_컨flowLayoutPanel_현재_해상도.Controls.Add(this.CS_label__ShowValue_현재_해상도_세로);
-            this.CS_컨flowLayoutPanel_현재_해상도.Location = new System.Drawing.Point(227, 4);
+            this.CS_컨flowLayoutPanel_현재_해상도.Location = new System.Drawing.Point(227, 3);
             this.CS_컨flowLayoutPanel_현재_해상도.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨flowLayoutPanel_현재_해상도.Name = "CS_컨flowLayoutPanel_현재_해상도";
             this.CS_컨flowLayoutPanel_현재_해상도.Size = new System.Drawing.Size(72, 23);
@@ -1291,7 +1291,7 @@
             this.CS_label__ShowValue_변환_예상_파일_크기.AutoSize = true;
             this.CS_label__ShowValue_변환_예상_파일_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CS_label__ShowValue_변환_예상_파일_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CS_label__ShowValue_변환_예상_파일_크기.Location = new System.Drawing.Point(227, 118);
+            this.CS_label__ShowValue_변환_예상_파일_크기.Location = new System.Drawing.Point(227, 111);
             this.CS_label__ShowValue_변환_예상_파일_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CS_label__ShowValue_변환_예상_파일_크기.Name = "CS_label__ShowValue_변환_예상_파일_크기";
             this.CS_label__ShowValue_변환_예상_파일_크기.Size = new System.Drawing.Size(16, 23);
@@ -1307,7 +1307,7 @@
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Controls.Add(this.CS_comboBox_변환_예상_크기_단위);
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Controls.Add(this.CS_label_doubleDot);
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Location = new System.Drawing.Point(23, 113);
+            this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Location = new System.Drawing.Point(23, 106);
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Margin = new System.Windows.Forms.Padding(2);
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Name = "CS_컨flowLayoutPanel_변환_예상_파일_크기";
             this.CS_컨flowLayoutPanel_변환_예상_파일_크기.Size = new System.Drawing.Size(200, 32);
@@ -1365,7 +1365,7 @@
             this._Form_Main_컨flowLayoutPanel_버튼.AutoSize = true;
             this._Form_Main_컨flowLayoutPanel_버튼.Controls.Add(this._Form_Main_button_모두_초기화);
             this._Form_Main_컨flowLayoutPanel_버튼.Controls.Add(this._Form_Main_button_종료);
-            this._Form_Main_컨flowLayoutPanel_버튼.Location = new System.Drawing.Point(184, 223);
+            this._Form_Main_컨flowLayoutPanel_버튼.Location = new System.Drawing.Point(185, 216);
             this._Form_Main_컨flowLayoutPanel_버튼.Margin = new System.Windows.Forms.Padding(2);
             this._Form_Main_컨flowLayoutPanel_버튼.Name = "_Form_Main_컨flowLayoutPanel_버튼";
             this._Form_Main_컨flowLayoutPanel_버튼.Size = new System.Drawing.Size(247, 38);
@@ -1413,10 +1413,10 @@
             this._Form_Main_statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this._Form_Main_statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._Form_Main_toolStripStatusLabel});
-            this._Form_Main_statusStrip.Location = new System.Drawing.Point(0, 409);
+            this._Form_Main_statusStrip.Location = new System.Drawing.Point(0, 404);
             this._Form_Main_statusStrip.Name = "_Form_Main_statusStrip";
             this._Form_Main_statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 11, 0);
-            this._Form_Main_statusStrip.Size = new System.Drawing.Size(881, 29);
+            this._Form_Main_statusStrip.Size = new System.Drawing.Size(882, 29);
             this._Form_Main_statusStrip.SizingGrip = false;
             this._Form_Main_statusStrip.TabIndex = 2;
             this._Form_Main_statusStrip.Text = "statusStrip";
@@ -1444,7 +1444,7 @@
             this._Form_Main_toolStripSeparator3,
             this._Form_Main_종료ToolStripMenuItem});
             this._Form_Main_파일ToolStripMenuItem.Name = "_Form_Main_파일ToolStripMenuItem";
-            this._Form_Main_파일ToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this._Form_Main_파일ToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
             this._Form_Main_파일ToolStripMenuItem.Text = "메뉴(&M)";
             // 
             // _Form_Main_해상도변환적용ToolStripMenuItem
@@ -1517,25 +1517,25 @@
             this._Form_Main_toolStripSeparator2,
             this._Form_Main_프로그램_정보ToolStripMenuItem});
             this._Form_Main_도움말ToolStripMenuItem.Name = "_Form_Main_도움말ToolStripMenuItem";
-            this._Form_Main_도움말ToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this._Form_Main_도움말ToolStripMenuItem.Size = new System.Drawing.Size(89, 28);
             this._Form_Main_도움말ToolStripMenuItem.Text = "도움말(&H)";
             // 
             // _Form_Main_제작자ToolStripMenuItem
             // 
             this._Form_Main_제작자ToolStripMenuItem.Name = "_Form_Main_제작자ToolStripMenuItem";
-            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this._Form_Main_제작자ToolStripMenuItem.Text = "제작자(&P)...";
             this._Form_Main_제작자ToolStripMenuItem.Click += new System.EventHandler(this.제작자ToolStripMenuItem_Click);
             // 
             // _Form_Main_toolStripSeparator2
             // 
             this._Form_Main_toolStripSeparator2.Name = "_Form_Main_toolStripSeparator2";
-            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
+            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
             // 
             // _Form_Main_프로그램_정보ToolStripMenuItem
             // 
             this._Form_Main_프로그램_정보ToolStripMenuItem.Name = "_Form_Main_프로그램_정보ToolStripMenuItem";
-            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this._Form_Main_프로그램_정보ToolStripMenuItem.Text = "프로그램 정보(&I)...";
             this._Form_Main_프로그램_정보ToolStripMenuItem.Click += new System.EventHandler(this.프로그램정보ToolStripMenuItem_Click);
             // 
@@ -1551,7 +1551,7 @@
             this._Form_Main_menuStrip.Name = "_Form_Main_menuStrip";
             this._Form_Main_menuStrip.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
             this._Form_Main_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this._Form_Main_menuStrip.Size = new System.Drawing.Size(881, 26);
+            this._Form_Main_menuStrip.Size = new System.Drawing.Size(882, 30);
             this._Form_Main_menuStrip.TabIndex = 1;
             this._Form_Main_menuStrip.Text = "menuStrip";
             // 
@@ -1564,7 +1564,7 @@
             this.복사CToolStripMenuItem,
             this.붙여넣기VToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 28);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
             // 전체선택AToolStripMenuItem
@@ -1600,23 +1600,22 @@
             this.붙여넣기VToolStripMenuItem.Text = "붙여넣기(&V)       Ctrl+V";
             this.붙여넣기VToolStripMenuItem.Click += new System.EventHandler(this.붙여넣기VToolStripMenuItem_Click);
             // 
-            // _Form_Main
+            // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(881, 438);
+            this.ClientSize = new System.Drawing.Size(882, 433);
             this.Controls.Add(this._Form_Main_컨tableLayoutPanel);
             this.Controls.Add(this._Form_Main_menuStrip);
             this.Controls.Add(this._Form_Main_statusStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this._Form_Main_menuStrip;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "_Form_Main";
+            this.Name = "Form_Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "비트레이트 계산기";
             this.Load += new System.EventHandler(this._Form_Main_Load);
             this._Form_Main_컨tableLayoutPanel.ResumeLayout(false);

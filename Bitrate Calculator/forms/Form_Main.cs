@@ -1,6 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
+/*
+ * 용어정리
+ * VB: Video Bitrate
+ * AB: Audio Bitrate
+ * 
+ * CS:
+ * DFI:
+ * CVBOC: C Video Bitrate O C
+ * 
+ * ~Str: String
+ * ~Int: int
+ */
+
 namespace Bitrate_Calculator
 {
     public partial class Form_Main : Form
@@ -18,16 +32,16 @@ namespace Bitrate_Calculator
         private int VBDecimalPointInt = 0;
 
         //용량 소수점 정밀도
-        private string CpctDecimalPointStr = "0";
-        private int CpctDecimalPointInt = 0;
+        private string CapacityDecimalPointStr = "0";
+        private int CapacityDecimalPointInt = 0;
 
         private void _Form_Main_Load(object sender, EventArgs e)
         {
             //용량 소수점 정밀도 초기화
-            VB_label__ShowValue_예상_출력_영상_크기.Text = CpctDecimalPointStr;
+            VB_label__ShowValue_예상_출력_영상_크기.Text = CapacityDecimalPointStr;
             VB_label__ShowValue_최대_영상_비트레이트.Text = VBDecimalPointStr;
             CVBOC_label__ShowValue_영상_비트레이트.Text = VBDecimalPointStr;
-            CS_label__ShowValue_변환_예상_파일_크기.Text = CpctDecimalPointStr;
+            CS_label__ShowValue_변환_예상_파일_크기.Text = CapacityDecimalPointStr;
 
             //텍스트박스 크기 초기화
             int textBoxHeight = 30;
@@ -58,13 +72,11 @@ namespace Bitrate_Calculator
             TimerStart(5800);
         }
 
-
-
         /*
          * SetDecimalPoint 관련 메서드
          */
         //DecimalPoint 값을 설정한다.
-        public void SetDecimalPoint(int VBDecimalPointInt, int CpctDecimalPointInt)
+        public void SetDecimalPoint(int VBDecimalPointInt, int CapacityDecimalPointInt)
         {
             this.VBDecimalPointInt = VBDecimalPointInt;
             VBDecimalPointStr = "0";
@@ -75,13 +87,13 @@ namespace Bitrate_Calculator
                     VBDecimalPointStr += "0";
             }
 
-            this.CpctDecimalPointInt = CpctDecimalPointInt;
-            CpctDecimalPointStr = "0";
-            if (this.CpctDecimalPointInt > 0)
+            this.CapacityDecimalPointInt = CapacityDecimalPointInt;
+            CapacityDecimalPointStr = "0";
+            if (this.CapacityDecimalPointInt > 0)
             {
-                CpctDecimalPointStr += ".";
-                for (int i = 0; i < this.CpctDecimalPointInt; i++)
-                    CpctDecimalPointStr += "0";
+                CapacityDecimalPointStr += ".";
+                for (int i = 0; i < this.CapacityDecimalPointInt; i++)
+                    CapacityDecimalPointStr += "0";
             }
         }
 
@@ -91,10 +103,10 @@ namespace Bitrate_Calculator
             return VBDecimalPointInt;
         }
 
-        //CpctDecimalPoint 값을 얻음
-        public int GetCpctDecimalPoint()
+        //CapacityDecimalPoint 값을 얻음
+        public int GetCapacityDecimalPoint()
         {
-            return CpctDecimalPointInt;
+            return CapacityDecimalPointInt;
         }
 
         //표시 상태 업데이트
@@ -179,10 +191,10 @@ namespace Bitrate_Calculator
             {
                 decimal newVB = CalcVB(CS_label__ShowValue_변환_예상_해상도_가로.Text, CS_label__ShowValue_변환_예상_해상도_세로.Text, VB_comboBox_Bitrate_단위.Text);
                 decimal newCapacity = CalcCapacity(newVB, CS_comboBox_변환_예상_크기_단위.Text, VB_comboBox_Bitrate_단위.Text);
-                CS_label__ShowValue_변환_예상_파일_크기.Text = AddCmaInNum(Convert.ToString(newCapacity.ToString(CpctDecimalPointStr)));
+                CS_label__ShowValue_변환_예상_파일_크기.Text = GetUnitSeparatedDigit(Convert.ToString(newCapacity.ToString(CapacityDecimalPointStr)));
             }
             else
-                CS_label__ShowValue_변환_예상_파일_크기.Text = AddCmaInNum(CpctDecimalPointStr);
+                CS_label__ShowValue_변환_예상_파일_크기.Text = GetUnitSeparatedDigit(CapacityDecimalPointStr);
         }
 
         //영상 비트레이트 계산
@@ -196,22 +208,8 @@ namespace Bitrate_Calculator
                 DFI_textBox_FPS.Text != ""
                 )
             {
-                decimal CodecValue = 0;
-
                 //CodecValue를 할당
-                if (
-                    DFI_comboBox_적용_코덱.Text.Equals("MPEG-2") ||
-                    DFI_comboBox_적용_코덱.Text.Equals("Xvid") ||
-                    DFI_comboBox_적용_코덱.Text.Equals("DviX")
-                    )
-                    CodecValue = 0.27m;
-                else if (
-                    DFI_comboBox_적용_코덱.Text.Equals("H.263") ||
-                    DFI_comboBox_적용_코덱.Text.Equals("H.264") ||
-                    DFI_comboBox_적용_코덱.Text.Equals("X264") ||
-                    DFI_comboBox_적용_코덱.Text.Equals("MPEG-4")
-                    )
-                    CodecValue = 0.17m;
+                decimal CodecValue = CodecsConvert.ToValue(DFI_comboBox_적용_코덱.Text);                
 
                 long width = Convert.ToInt64(strWidth);
                 long height = Convert.ToInt64(strHeight);
@@ -336,20 +334,20 @@ namespace Bitrate_Calculator
         private void UpdateVBState()
         {
             decimal VB = CalcVB(DFI_textBox_화면_해상도_가로.Text, DFI_textBox_화면_해상도_세로.Text, VB_comboBox_Bitrate_단위.Text);
-            VB_label__ShowValue_최대_영상_비트레이트.Text = AddCmaInNum(Convert.ToString(VB.ToString(VBDecimalPointStr)));
-            decimal capacity = CalcCapacity(Convert.ToDecimal(RmvCmaInNum(VB_label__ShowValue_최대_영상_비트레이트.Text)), VB_comboBox_예상_출력_영상_크기_단위.Text, VB_comboBox_Bitrate_단위.Text);
-            VB_label__ShowValue_예상_출력_영상_크기.Text = AddCmaInNum(Convert.ToString(capacity.ToString(CpctDecimalPointStr)));
+            VB_label__ShowValue_최대_영상_비트레이트.Text = GetUnitSeparatedDigit(Convert.ToString(VB.ToString(VBDecimalPointStr)));
+            decimal capacity = CalcCapacity(Convert.ToDecimal(RemoveDigitSeparator(VB_label__ShowValue_최대_영상_비트레이트.Text)), VB_comboBox_예상_출력_영상_크기_단위.Text, VB_comboBox_Bitrate_단위.Text);
+            VB_label__ShowValue_예상_출력_영상_크기.Text = GetUnitSeparatedDigit(Convert.ToString(capacity.ToString(CapacityDecimalPointStr)));
         }
 
         //원하는 비트레이트 상태 업데이트
         private void UpdateHopeVBState()
         {
             decimal hopeVB = CalcHopeVB(CVBOC_comboBox_원하는_출력물_크기_단위.Text, CVBOC_comboBox_Bitrate_단위.Text);
-            CVBOC_label__ShowValue_영상_비트레이트.Text = AddCmaInNum(Convert.ToString(hopeVB.ToString(VBDecimalPointStr)));
+            CVBOC_label__ShowValue_영상_비트레이트.Text = GetUnitSeparatedDigit(Convert.ToString(hopeVB.ToString(VBDecimalPointStr)));
         }
 
         //문자열 실수 숫자에 콤마 넣기
-        private string AddCmaInNum(string number)
+        private string GetUnitSeparatedDigit(string number)
         {
 
             if (number.IndexOf(".") == -1)
@@ -363,7 +361,7 @@ namespace Bitrate_Calculator
         }
 
         //문자열 실수 숫자에 콤마 제거
-        private string RmvCmaInNum(string number)
+        private string RemoveDigitSeparator(string number)
         {
             string tmpString = number;
             tmpString = tmpString.Replace(",", "");
@@ -788,10 +786,10 @@ namespace Bitrate_Calculator
             //최대 영상 비트레이트를 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
             bool isCtrlToClcMVB = control == DFI_textBox_화면_해상도_가로 || control == DFI_textBox_화면_해상도_세로 || control == DFI_textBox_FPS || control == DFI_comboBox_적용_코덱 || control == VB_comboBox_Bitrate_단위;
             //최대 영상 비트레이트에 해당하는 영상 용량을 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
-            bool isCtrlToClcCpctOfMaxVB = control == DFI_textBox_시간 || control == DFI_textBox_분 || control == DFI_textBox_초 || control == DFI_textBox_오디오_비트레이트 || control == VB_comboBox_예상_출력_영상_크기_단위 || control == CVBOC_comboBox_Bitrate_단위;
+            bool isCtrlToClcCapacityOfMaxVB = control == DFI_textBox_시간 || control == DFI_textBox_분 || control == DFI_textBox_초 || control == DFI_textBox_오디오_비트레이트 || control == VB_comboBox_예상_출력_영상_크기_단위 || control == CVBOC_comboBox_Bitrate_단위;
             //CVBOC 컨트롤이 변경되었는 지 확인
             bool isCVBOCCtrl = control == CVBOC_textBox_원하는_출력_영상_크기 || control == CVBOC_comboBox_원하는_출력물_크기_단위;
-            if (isCtrlToClcMVB || isCtrlToClcCpctOfMaxVB || isCVBOCCtrl)
+            if (isCtrlToClcMVB || isCtrlToClcCapacityOfMaxVB || isCVBOCCtrl)
             {
                 UpdateVBState();
                 UpdateHopeVBState();
@@ -1011,7 +1009,7 @@ namespace Bitrate_Calculator
          */
         private void VB_label__ShowValue_최대_영상_비트레이트_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(RmvCmaInNum(VB_label__ShowValue_최대_영상_비트레이트.Text));
+            Clipboard.SetText(RemoveDigitSeparator(VB_label__ShowValue_최대_영상_비트레이트.Text));
             _Form_Main_toolStripStatusLabel.Text = "최대 영상 비트레이트가 복사되었습니다.";
             TimerStart();
         }
@@ -1028,7 +1026,7 @@ namespace Bitrate_Calculator
 
         private void CVBOC_label_ShowValue_영상_비트레이트_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(RmvCmaInNum(CVBOC_label__ShowValue_영상_비트레이트.Text));
+            Clipboard.SetText(RemoveDigitSeparator(CVBOC_label__ShowValue_영상_비트레이트.Text));
             _Form_Main_toolStripStatusLabel.Text = "예상 영상 비트레이트가 복사되었습니다.";
             TimerStart();
         }
