@@ -962,14 +962,12 @@ namespace Bitrate_Calculator
 
         private void 프로그램정보ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _Form_프로그램_정보 form = new _Form_프로그램_정보();
-            form.Show();
+            ChildFormManager.Show_프로그램_정보(this);
         }
 
         private void 제작자ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _Form_제작자_및_도움 form = new _Form_제작자_및_도움();
-            form.Show();
+            ChildFormManager.Show_제작자_및_도움(this);
         }
 
         private void 전체선택AToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1004,8 +1002,7 @@ namespace Bitrate_Calculator
 
         private void 영상비트레이트소수점설정ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _Form_SetDecimalPoint form = new _Form_SetDecimalPoint(this);
-            form.Show();
+            ChildFormManager.Show_SetDecimalPoint(this);
         }
 
 

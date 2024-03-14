@@ -5,8 +5,15 @@ namespace Bitrate_Calculator
 {
     public partial class _Form_프로그램_정보 : Form
     {
+        private static bool isCreated;
+        public static bool IsCreated
+        {
+            get { return isCreated; }
+        }
+
         public _Form_프로그램_정보()
         {
+            isCreated = true;
             InitializeComponent();
         }
 
@@ -15,6 +22,7 @@ namespace Bitrate_Calculator
             if (keyData == Keys.Escape)
             {
                 Close();
+                isCreated = false;
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -23,12 +31,7 @@ namespace Bitrate_Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://www.iconfinder.com/icons/173168/calculator_icon");
+            isCreated = false;
         }
     }
 }

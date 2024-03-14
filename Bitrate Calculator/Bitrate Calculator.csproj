@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFormManager.cs" />
     <Compile Include="SetDecimalPoint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="profile.png" />
     <Content Include="비트레이트 계산기.ico" />
     <None Include="비트레이트 계산기.png" />
   </ItemGroup>

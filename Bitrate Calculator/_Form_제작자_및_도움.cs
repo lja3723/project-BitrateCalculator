@@ -3,10 +3,17 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator
 {
-    public partial class _Form_제작자_및_도움 : Form
+    public partial class _Form_제작자_정보 : Form
     {
-        public _Form_제작자_및_도움()
+        private static bool isCreated;
+        public static bool IsCreated
         {
+            get { return isCreated; }
+        }
+
+        public _Form_제작자_정보()
+        {
+            isCreated = true;
             InitializeComponent();
         }
 
@@ -15,6 +22,7 @@ namespace Bitrate_Calculator
             if (keyData == Keys.Escape)
             {
                 Close();
+                isCreated = false;
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -23,18 +31,13 @@ namespace Bitrate_Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+            isCreated = false;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start("http://blog.naver.com/lja3333");
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start("http://guswo92.blog.me/130177577402");
+            System.Diagnostics.Process.Start("https://lja3723.github.io");
         }
     }
 }
