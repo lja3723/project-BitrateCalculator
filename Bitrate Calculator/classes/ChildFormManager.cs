@@ -19,11 +19,11 @@ namespace Bitrate_Calculator
 
         public static void Show_프로그램_정보(Form parent)
         {
-            if (_Form_프로그램_정보.IsCreated) return;
-            CreateChild(parent, new _Form_프로그램_정보());
+            if (Form_프로그램_정보.IsCreated) return;
+            CreateChild(parent, new Form_프로그램_정보());
         }
 
-        public static void Show_SetDecimalPoint(_Form_Main parent)
+        public static void Show_소수점_설정(Form_Main parent)
         {
             if (_Form_SetDecimalPoint.IsCreated) return;
             CreateChild(parent, new _Form_SetDecimalPoint(parent));

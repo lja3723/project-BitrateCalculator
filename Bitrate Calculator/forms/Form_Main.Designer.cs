@@ -1,6 +1,6 @@
 ﻿namespace Bitrate_Calculator
 {
-    partial class _Form_Main
+    partial class Form_Main
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Form_Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this._Form_Main_컨tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.DFI_컨_groupBox = new System.Windows.Forms.GroupBox();
             this.DFI_컨_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();

@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator
 {
-    public partial class _Form_Main : Form
+    public partial class Form_Main : Form
     {
         /*
          * 프로그램 Initializing
          */
-        public _Form_Main()
+        public Form_Main()
         {
             InitializeComponent();
         }
@@ -1002,7 +1002,7 @@ namespace Bitrate_Calculator
 
         private void 영상비트레이트소수점설정ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildFormManager.Show_SetDecimalPoint(this);
+            ChildFormManager.Show_소수점_설정(this);
         }
 
 

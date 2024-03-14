@@ -19,7 +19,7 @@ namespace Bitrate_Calculator
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new _Form_Main());
+            Application.Run(new Form_Main());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

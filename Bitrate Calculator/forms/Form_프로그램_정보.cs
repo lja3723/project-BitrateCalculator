@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator
 {
-    public partial class _Form_프로그램_정보 : Form
+    public partial class Form_프로그램_정보 : Form
     {
         private static bool isCreated;
         public static bool IsCreated
@@ -11,7 +11,7 @@ namespace Bitrate_Calculator
             get { return isCreated; }
         }
 
-        public _Form_프로그램_정보()
+        public Form_프로그램_정보()
         {
             isCreated = true;
             InitializeComponent();

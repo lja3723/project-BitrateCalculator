@@ -73,9 +73,9 @@ namespace Bitrate_Calculator.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 비트레이트_계산기 {
+        internal static System.Drawing.Bitmap program_icon {
             get {
-                object obj = ResourceManager.GetObject("비트레이트_계산기", resourceCulture);
+                object obj = ResourceManager.GetObject("program_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Bitrate_Calculator.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 비트레이트_계산기1 {
+        internal static System.Drawing.Bitmap program_info {
             get {
-                object obj = ResourceManager.GetObject("비트레이트_계산기1", resourceCulture);
+                object obj = ResourceManager.GetObject("program_info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

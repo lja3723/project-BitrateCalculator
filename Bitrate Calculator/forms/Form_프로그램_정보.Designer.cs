@@ -1,6 +1,6 @@
 ﻿namespace Bitrate_Calculator
 {
-    partial class _Form_프로그램_정보
+    partial class Form_프로그램_정보
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::Bitrate_Calculator.Properties.Resources.비트레이트_계산기1;
+            this.pictureBox1.Image = global::Bitrate_Calculator.Properties.Resources.program_info;
             this.pictureBox1.Location = new System.Drawing.Point(2, 16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
