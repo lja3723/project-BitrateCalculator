@@ -7,6 +7,9 @@ using System.Windows.Forms;
  * Bitrate: 그냥 Bitrate라고 하면 Video의 Bitrate를 의미
  * Audio Bitrate: Audio의 Bitrate
  * 
+ * CVBOC to OutSizeBasedBitrate
+ *          ConvertResolution
+ * 
  * ~Str: String
  * ~Int: int
  */
@@ -36,7 +39,7 @@ namespace Bitrate_Calculator
             //용량 소수점 정밀도 초기화
             Bitrate_label_ShowValue_예상_출력_영상_크기.Text = CapacityDecimalPointStr;
             Bitrate_label_ShowValue_최대_영상_비트레이트.Text = BitrateDecimalPointStr;
-            CVBOC_label_ShowValue_영상_비트레이트.Text = BitrateDecimalPointStr;
+            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트.Text = BitrateDecimalPointStr;
             ConvertResolution_label_ShowValue_변환예상크기.Text = CapacityDecimalPointStr;
 
             //텍스트박스 크기 초기화
@@ -45,7 +48,7 @@ namespace Bitrate_Calculator
             double textBoxWidthAdd = 10;
 
             ConvertResolution_textBox_기준픽셀.Height = textBoxHeight;
-            CVBOC_textBox_원하는_출력_영상_크기.Height = textBoxHeight;
+            OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.Height = textBoxHeight;
             OriginVidInfo_textBox_FPS.Height = textBoxHeight;
             OriginVidInfo_textBox_분.Height = textBoxHeight;
             OriginVidInfo_textBox_시간.Height = textBoxHeight;
@@ -55,7 +58,7 @@ namespace Bitrate_Calculator
             OriginVidInfo_textBox_화면_해상도_세로.Height = textBoxHeight;
 
             ConvertResolution_textBox_기준픽셀.Width = (int)Math.Round(ConvertResolution_textBox_기준픽셀.MaxLength * textBoxWidth + textBoxWidthAdd);
-            CVBOC_textBox_원하는_출력_영상_크기.Width = (int)Math.Round(CVBOC_textBox_원하는_출력_영상_크기.MaxLength * textBoxWidth + textBoxWidthAdd);
+            OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.Width = (int)Math.Round(OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_FPS.Width = (int)Math.Round(OriginVidInfo_textBox_FPS.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_분.Width = (int)Math.Round(OriginVidInfo_textBox_분.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_시간.Width = (int)Math.Round(OriginVidInfo_textBox_시간.MaxLength * textBoxWidth + textBoxWidthAdd);
@@ -225,7 +228,7 @@ namespace Bitrate_Calculator
             //모두 비어있지 않을 경우 계산
             if (
                 fileSizeCapacity != "" &&
-                CVBOC_textBox_원하는_출력_영상_크기.Text != "" &&
+                OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.Text != "" &&
                 OriginVidInfo_textBox_오디오_비트레이트.Text != "" &&
                 OriginVidInfo_textBox_시간.Text != "" &&
                 OriginVidInfo_textBox_분.Text != "" &&
@@ -240,7 +243,7 @@ namespace Bitrate_Calculator
                     return 0;
 
                 decimal audioBitrate = Convert.ToInt64(OriginVidInfo_textBox_오디오_비트레이트.Text);
-                long hopeCapacity = Convert.ToInt64(CVBOC_textBox_원하는_출력_영상_크기.Text);
+                long hopeCapacity = Convert.ToInt64(OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.Text);
                 if (fileSizeCapacity.Equals("MB"))
                     hopeBitrate = (8192.0m / totalSeconds * hopeCapacity) - audioBitrate;
                 else if (fileSizeCapacity.Equals("GB"))
@@ -336,8 +339,8 @@ namespace Bitrate_Calculator
         //원하는 비트레이트 상태 업데이트
         private void UpdateHopeBitrateState()
         {
-            decimal hopeBitrate = CalcHopeBitrate(CVBOC_comboBox_원하는_출력물_크기_단위.Text, CVBOC_comboBox_Bitrate_단위.Text);
-            CVBOC_label_ShowValue_영상_비트레이트.Text = GetUnitSeparatedDigit(Convert.ToString(hopeBitrate.ToString(BitrateDecimalPointStr)));
+            decimal hopeBitrate = CalcHopeBitrate(OutSizeBasedBitrate_comboBox_원하는_출력물_크기_단위.Text, OutSizeBasedBitrate_comboBox_Bitrate_단위.Text);
+            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트.Text = GetUnitSeparatedDigit(Convert.ToString(hopeBitrate.ToString(BitrateDecimalPointStr)));
         }
 
         //문자열 실수 숫자에 콤마 넣기
@@ -397,7 +400,7 @@ namespace Bitrate_Calculator
             }
             else if (keyData == (Keys.Control | Keys.F))
             {
-                CVBOC_label_ShowValue_영상_비트레이트_Click(sender, e);
+                OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.A))
@@ -780,14 +783,14 @@ namespace Bitrate_Calculator
             //최대 영상 비트레이트를 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
             bool isCtrlToClcMVB = control == OriginVidInfo_textBox_화면_해상도_가로 || control == OriginVidInfo_textBox_화면_해상도_세로 || control == OriginVidInfo_textBox_FPS || control == OriginVidInfo_comboBox_적용_코덱 || control == Bitrate_comboBox_Bitrate_단위;
             //최대 영상 비트레이트에 해당하는 영상 용량을 계산하는 데 필요한 컨트롤이 변경되었는 지 확인
-            bool isCtrlToClcCapacityOfMaxVB = control == OriginVidInfo_textBox_시간 || control == OriginVidInfo_textBox_분 || control == OriginVidInfo_textBox_초 || control == OriginVidInfo_textBox_오디오_비트레이트 || control == Bitrate_comboBox_예상_출력_영상_크기_단위 || control == CVBOC_comboBox_Bitrate_단위;
-            //CVBOC 컨트롤이 변경되었는 지 확인
-            bool isCVBOCCtrl = control == CVBOC_textBox_원하는_출력_영상_크기 || control == CVBOC_comboBox_원하는_출력물_크기_단위;
-            if (isCtrlToClcMVB || isCtrlToClcCapacityOfMaxVB || isCVBOCCtrl)
+            bool isCtrlToClcCapacityOfMaxVB = control == OriginVidInfo_textBox_시간 || control == OriginVidInfo_textBox_분 || control == OriginVidInfo_textBox_초 || control == OriginVidInfo_textBox_오디오_비트레이트 || control == Bitrate_comboBox_예상_출력_영상_크기_단위 || control == OutSizeBasedBitrate_comboBox_Bitrate_단위;
+            //OutSizeBasedBitrate 컨트롤이 변경되었는 지 확인
+            bool isOutSizeBasedBitrateCtrl = control == OutSizeBasedBitrate_textBox_원하는_출력_영상_크기 || control == OutSizeBasedBitrate_comboBox_원하는_출력물_크기_단위;
+            if (isCtrlToClcMVB || isCtrlToClcCapacityOfMaxVB || isOutSizeBasedBitrateCtrl)
             {
                 UpdateBitrateState();
                 UpdateHopeBitrateState();
-                    if (control != Bitrate_comboBox_예상_출력_영상_크기_단위 && control != CVBOC_comboBox_Bitrate_단위 && !isCVBOCCtrl)
+                    if (control != Bitrate_comboBox_예상_출력_영상_크기_단위 && control != OutSizeBasedBitrate_comboBox_Bitrate_단위 && !isOutSizeBasedBitrateCtrl)
                     {
                         _Form_Main_원본영상파일정보초기화ToolStripMenuItem.Enabled = true;
                         OriginVidInfo_button_초기화.Enabled = true;
@@ -909,9 +912,9 @@ namespace Bitrate_Calculator
             원본영상파일정보초기화ToolStripMenuItem_Click(sender, e);
             Bitrate_comboBox_예상_출력_영상_크기_단위.Text = "MB";
             Bitrate_comboBox_Bitrate_단위.Text = "Kbps";
-            CVBOC_comboBox_원하는_출력물_크기_단위.Text = "MB";
-            CVBOC_textBox_원하는_출력_영상_크기.Text = "";
-            CVBOC_comboBox_Bitrate_단위.Text = "Kbps";
+            OutSizeBasedBitrate_comboBox_원하는_출력물_크기_단위.Text = "MB";
+            OutSizeBasedBitrate_textBox_원하는_출력_영상_크기.Text = "";
+            OutSizeBasedBitrate_comboBox_Bitrate_단위.Text = "Kbps";
             ConvertResolution_comboBox_기준.Text = "가로";
             ConvertResolution_textBox_기준픽셀.Text = "";
             ConvertResolution_label_ShowValue_현재해상도_가로.Text = "0";
@@ -989,7 +992,7 @@ namespace Bitrate_Calculator
 
         private void 예상영상비트레이트복사EToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CVBOC_label_ShowValue_영상_비트레이트_Click(sender, e);
+            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
         }
 
         private void 영상비트레이트소수점설정ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1018,21 +1021,21 @@ namespace Bitrate_Calculator
             Bitrate_label_ShowValue_최대_영상_비트레이트_Click(sender, e);
         }
 
-        private void CVBOC_label_ShowValue_영상_비트레이트_Click(object sender, EventArgs e)
+        private void OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(RemoveDigitSeparator(CVBOC_label_ShowValue_영상_비트레이트.Text));
+            Clipboard.SetText(RemoveDigitSeparator(OutSizeBasedBitrate_label_ShowValue_영상_비트레이트.Text));
             _Form_Main_toolStripStatusLabel.Text = "예상 영상 비트레이트가 복사되었습니다.";
             TimerStart();
         }
 
-        private void CVBOC_label_예상_영상_비트레이트_Click(object sender, EventArgs e)
+        private void OutSizeBasedBitrate_label_예상_영상_비트레이트_Click(object sender, EventArgs e)
         {
-            CVBOC_label_ShowValue_영상_비트레이트_Click(sender, e);
+            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
         }
 
-        private void CVBOC_label_Kbps_Click(object sender, EventArgs e)
+        private void OutSizeBasedBitrate_label_Kbps_Click(object sender, EventArgs e)
         {
-            CVBOC_label_ShowValue_영상_비트레이트_Click(sender, e);
+            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
         }
     }
 }
