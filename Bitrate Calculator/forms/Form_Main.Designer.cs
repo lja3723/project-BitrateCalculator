@@ -58,23 +58,23 @@
             this.OriginVidInfo_textBox_화면_해상도_가로 = new System.Windows.Forms.TextBox();
             this.OriginVidInfo_label_곱하기 = new System.Windows.Forms.Label();
             this.OriginVidInfo_textBox_화면_해상도_세로 = new System.Windows.Forms.TextBox();
-            this.VideoBitrate_컨_groupBox_영상_비트레이트 = new System.Windows.Forms.GroupBox();
-            this.VideoBitrate_컨_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기 = new System.Windows.Forms.Label();
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기 = new System.Windows.Forms.FlowLayoutPanel();
-            this.VideoBitrate_label_예상_출력_영상_크기 = new System.Windows.Forms.Label();
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위 = new System.Windows.Forms.ComboBox();
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트 = new System.Windows.Forms.Label();
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
-            this.VideoBitrate_label_최대_영상_비트레이트 = new System.Windows.Forms.Label();
-            this.VideoBitrate_comboBox_Bitrate_단위 = new System.Windows.Forms.ComboBox();
+            this.Bitrate_컨_groupBox_영상_비트레이트 = new System.Windows.Forms.GroupBox();
+            this.Bitrate_컨_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기 = new System.Windows.Forms.Label();
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Bitrate_label_예상_출력_영상_크기 = new System.Windows.Forms.Label();
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위 = new System.Windows.Forms.ComboBox();
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트 = new System.Windows.Forms.Label();
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Bitrate_label_최대_영상_비트레이트 = new System.Windows.Forms.Label();
+            this.Bitrate_comboBox_Bitrate_단위 = new System.Windows.Forms.ComboBox();
             this.CVBOC_컨_groupBox = new System.Windows.Forms.GroupBox();
             this.CVBOC_컨_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.CVBOC_textBox_원하는_출력_영상_크기 = new System.Windows.Forms.TextBox();
             this.CVBOC_컨flowLayoutPanel_원하는_출력물_크기 = new System.Windows.Forms.FlowLayoutPanel();
             this.CVBOC_label_원하는_출력_영상_크기 = new System.Windows.Forms.Label();
             this.CVBOC_comboBox_원하는_출력물_크기_단위 = new System.Windows.Forms.ComboBox();
-            this.CVBOC_label__ShowValue_영상_비트레이트 = new System.Windows.Forms.Label();
+            this.CVBOC_label_ShowValue_영상_비트레이트 = new System.Windows.Forms.Label();
             this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트 = new System.Windows.Forms.FlowLayoutPanel();
             this.CVBOC_label_예상_영상_비트레이트 = new System.Windows.Forms.Label();
             this.CVBOC_comboBox_Bitrate_단위 = new System.Windows.Forms.ComboBox();
@@ -138,10 +138,10 @@
             this.OriginVidInfo_컨flowLayoutPanel_영상_길이.SuspendLayout();
             this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.SuspendLayout();
             this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.SuspendLayout();
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.SuspendLayout();
-            this.VideoBitrate_컨_tableLayoutPanel.SuspendLayout();
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.SuspendLayout();
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.SuspendLayout();
+            this.Bitrate_컨_groupBox_영상_비트레이트.SuspendLayout();
+            this.Bitrate_컨_tableLayoutPanel.SuspendLayout();
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.SuspendLayout();
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.SuspendLayout();
             this.CVBOC_컨_groupBox.SuspendLayout();
             this.CVBOC_컨_tableLayoutPanel.SuspendLayout();
             this.CVBOC_컨flowLayoutPanel_원하는_출력물_크기.SuspendLayout();
@@ -164,7 +164,7 @@
             this._Form_Main_컨tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.4298F));
             this._Form_Main_컨tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.5702F));
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.OriginVidInfo_컨_groupBox, 0, 0);
-            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.VideoBitrate_컨_groupBox_영상_비트레이트, 0, 2);
+            this._Form_Main_컨tableLayoutPanel.Controls.Add(this.Bitrate_컨_groupBox_영상_비트레이트, 0, 2);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.CVBOC_컨_groupBox, 1, 0);
             this._Form_Main_컨tableLayoutPanel.Controls.Add(this.ConvertResolution_컨_tableLayoutPanel1, 1, 1);
             this._Form_Main_컨tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -640,171 +640,171 @@
             this.OriginVidInfo_textBox_화면_해상도_세로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
             this.OriginVidInfo_textBox_화면_해상도_세로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
-            // VideoBitrate_컨_groupBox_영상_비트레이트
+            // Bitrate_컨_groupBox_영상_비트레이트
             // 
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Controls.Add(this.VideoBitrate_컨_tableLayoutPanel);
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Location = new System.Drawing.Point(2, 265);
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Name = "VideoBitrate_컨_groupBox_영상_비트레이트";
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Padding = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Size = new System.Drawing.Size(440, 107);
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.TabIndex = 1;
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.TabStop = false;
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.Text = "영상 비트레이트";
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_컨_groupBox_영상_비트레이트, "최대 영상 비트레이트와 예상 출력 영상 크기를 보여줍니다.");
+            this.Bitrate_컨_groupBox_영상_비트레이트.Controls.Add(this.Bitrate_컨_tableLayoutPanel);
+            this.Bitrate_컨_groupBox_영상_비트레이트.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bitrate_컨_groupBox_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_컨_groupBox_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_컨_groupBox_영상_비트레이트.Location = new System.Drawing.Point(2, 265);
+            this.Bitrate_컨_groupBox_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_컨_groupBox_영상_비트레이트.Name = "Bitrate_컨_groupBox_영상_비트레이트";
+            this.Bitrate_컨_groupBox_영상_비트레이트.Padding = new System.Windows.Forms.Padding(2);
+            this.Bitrate_컨_groupBox_영상_비트레이트.Size = new System.Drawing.Size(440, 107);
+            this.Bitrate_컨_groupBox_영상_비트레이트.TabIndex = 1;
+            this.Bitrate_컨_groupBox_영상_비트레이트.TabStop = false;
+            this.Bitrate_컨_groupBox_영상_비트레이트.Text = "영상 비트레이트";
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_컨_groupBox_영상_비트레이트, "최대 영상 비트레이트와 예상 출력 영상 크기를 보여줍니다.");
             // 
-            // VideoBitrate_컨_tableLayoutPanel
+            // Bitrate_컨_tableLayoutPanel
             // 
-            this.VideoBitrate_컨_tableLayoutPanel.ColumnCount = 2;
-            this.VideoBitrate_컨_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.51603F));
-            this.VideoBitrate_컨_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.48397F));
-            this.VideoBitrate_컨_tableLayoutPanel.Controls.Add(this.VideoBitrate_label__ShowValue_예상_출력_영상_크기, 1, 1);
-            this.VideoBitrate_컨_tableLayoutPanel.Controls.Add(this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기, 0, 1);
-            this.VideoBitrate_컨_tableLayoutPanel.Controls.Add(this.VideoBitrate_label__ShowValue_최대_영상_비트레이트, 1, 0);
-            this.VideoBitrate_컨_tableLayoutPanel.Controls.Add(this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트, 0, 0);
-            this.VideoBitrate_컨_tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VideoBitrate_컨_tableLayoutPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_컨_tableLayoutPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_컨_tableLayoutPanel.Location = new System.Drawing.Point(2, 24);
-            this.VideoBitrate_컨_tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_컨_tableLayoutPanel.Name = "VideoBitrate_컨_tableLayoutPanel";
-            this.VideoBitrate_컨_tableLayoutPanel.RowCount = 2;
-            this.VideoBitrate_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.VideoBitrate_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.VideoBitrate_컨_tableLayoutPanel.Size = new System.Drawing.Size(436, 81);
-            this.VideoBitrate_컨_tableLayoutPanel.TabIndex = 0;
+            this.Bitrate_컨_tableLayoutPanel.ColumnCount = 2;
+            this.Bitrate_컨_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.51603F));
+            this.Bitrate_컨_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.48397F));
+            this.Bitrate_컨_tableLayoutPanel.Controls.Add(this.Bitrate_label_ShowValue_예상_출력_영상_크기, 1, 1);
+            this.Bitrate_컨_tableLayoutPanel.Controls.Add(this.Bitrate_컨flowLayoutPanel_예상_출력물_크기, 0, 1);
+            this.Bitrate_컨_tableLayoutPanel.Controls.Add(this.Bitrate_label_ShowValue_최대_영상_비트레이트, 1, 0);
+            this.Bitrate_컨_tableLayoutPanel.Controls.Add(this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트, 0, 0);
+            this.Bitrate_컨_tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bitrate_컨_tableLayoutPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_컨_tableLayoutPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_컨_tableLayoutPanel.Location = new System.Drawing.Point(2, 24);
+            this.Bitrate_컨_tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_컨_tableLayoutPanel.Name = "Bitrate_컨_tableLayoutPanel";
+            this.Bitrate_컨_tableLayoutPanel.RowCount = 2;
+            this.Bitrate_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Bitrate_컨_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Bitrate_컨_tableLayoutPanel.Size = new System.Drawing.Size(436, 81);
+            this.Bitrate_컨_tableLayoutPanel.TabIndex = 0;
             // 
-            // VideoBitrate_label__ShowValue_예상_출력_영상_크기
+            // Bitrate_label__ShowValue_예상_출력_영상_크기
             // 
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.AutoSize = true;
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Location = new System.Drawing.Point(270, 49);
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Name = "VideoBitrate_label__ShowValue_예상_출력_영상_크기";
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Size = new System.Drawing.Size(16, 23);
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.TabIndex = 0;
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.Text = " ";
-            this.VideoBitrate_label__ShowValue_예상_출력_영상_크기.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label__ShowValue_예상_출력_영상_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.AutoSize = true;
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Location = new System.Drawing.Point(270, 49);
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Name = "Bitrate_label__ShowValue_예상_출력_영상_크기";
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Size = new System.Drawing.Size(16, 23);
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.TabIndex = 0;
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.Text = " ";
+            this.Bitrate_label_ShowValue_예상_출력_영상_크기.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_label_ShowValue_예상_출력_영상_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
             // 
-            // VideoBitrate_컨flowLayoutPanel_예상_출력물_크기
+            // Bitrate_컨flowLayoutPanel_예상_출력물_크기
             // 
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.AutoSize = true;
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.VideoBitrate_label_예상_출력_영상_크기);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.VideoBitrate_comboBox_예상_출력_영상_크기_단위);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Location = new System.Drawing.Point(38, 44);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Name = "VideoBitrate_컨flowLayoutPanel_예상_출력물_크기";
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.Size = new System.Drawing.Size(228, 32);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.TabIndex = 3;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.AutoSize = true;
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.Bitrate_label_예상_출력_영상_크기);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Controls.Add(this.Bitrate_comboBox_예상_출력_영상_크기_단위);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Location = new System.Drawing.Point(38, 44);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Name = "Bitrate_컨flowLayoutPanel_예상_출력물_크기";
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.Size = new System.Drawing.Size(228, 32);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.TabIndex = 3;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_컨flowLayoutPanel_예상_출력물_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 영상의 크기입니다.");
             // 
-            // VideoBitrate_label_예상_출력_영상_크기
+            // Bitrate_label_예상_출력_영상_크기
             // 
-            this.VideoBitrate_label_예상_출력_영상_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.VideoBitrate_label_예상_출력_영상_크기.AutoSize = true;
-            this.VideoBitrate_label_예상_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_label_예상_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_label_예상_출력_영상_크기.Location = new System.Drawing.Point(2, 4);
-            this.VideoBitrate_label_예상_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.VideoBitrate_label_예상_출력_영상_크기.Name = "VideoBitrate_label_예상_출력_영상_크기";
-            this.VideoBitrate_label_예상_출력_영상_크기.Size = new System.Drawing.Size(168, 23);
-            this.VideoBitrate_label_예상_출력_영상_크기.TabIndex = 2;
-            this.VideoBitrate_label_예상_출력_영상_크기.Text = "예상 출력 영상 크기:";
-            this.VideoBitrate_label_예상_출력_영상_크기.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label_예상_출력_영상_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 출력 영상의 크기입니다.");
+            this.Bitrate_label_예상_출력_영상_크기.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Bitrate_label_예상_출력_영상_크기.AutoSize = true;
+            this.Bitrate_label_예상_출력_영상_크기.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_label_예상_출력_영상_크기.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_label_예상_출력_영상_크기.Location = new System.Drawing.Point(2, 4);
+            this.Bitrate_label_예상_출력_영상_크기.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bitrate_label_예상_출력_영상_크기.Name = "Bitrate_label_예상_출력_영상_크기";
+            this.Bitrate_label_예상_출력_영상_크기.Size = new System.Drawing.Size(168, 23);
+            this.Bitrate_label_예상_출력_영상_크기.TabIndex = 2;
+            this.Bitrate_label_예상_출력_영상_크기.Text = "예상 출력 영상 크기:";
+            this.Bitrate_label_예상_출력_영상_크기.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_label_예상_출력_영상_크기, "최대 영상 비트레이트로 원본 영상을 재 인코딩할 때 예상되는 출력 영상의 크기입니다.");
             // 
-            // VideoBitrate_comboBox_예상_출력_영상_크기_단위
+            // Bitrate_comboBox_예상_출력_영상_크기_단위
             // 
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.FormattingEnabled = true;
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Items.AddRange(new object[] {
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.FormattingEnabled = true;
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Items.AddRange(new object[] {
             "MB",
             "GB"});
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Location = new System.Drawing.Point(174, 2);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Name = "VideoBitrate_comboBox_예상_출력_영상_크기_단위";
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Size = new System.Drawing.Size(52, 28);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.TabIndex = 1;
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Text = "MB";
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.Enter += new System.EventHandler(this.ControlEnter);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.VideoBitrate_comboBox_예상_출력_영상_크기_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Location = new System.Drawing.Point(174, 2);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Name = "Bitrate_comboBox_예상_출력_영상_크기_단위";
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Size = new System.Drawing.Size(52, 28);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.TabIndex = 1;
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Text = "MB";
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.Enter += new System.EventHandler(this.ControlEnter);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.Bitrate_comboBox_예상_출력_영상_크기_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
-            // VideoBitrate_label__ShowValue_최대_영상_비트레이트
+            // Bitrate_label__ShowValue_최대_영상_비트레이트
             // 
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.AutoSize = true;
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Location = new System.Drawing.Point(270, 8);
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Name = "VideoBitrate_label__ShowValue_최대_영상_비트레이트";
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.TabIndex = 0;
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Text = " ";
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label__ShowValue_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.AutoSize = true;
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Location = new System.Drawing.Point(270, 8);
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Name = "Bitrate_label__ShowValue_최대_영상_비트레이트";
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.TabIndex = 0;
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Text = " ";
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_label_ShowValue_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
         "영상 품질에 영향을 끼치지 않습니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+D)");
-            this.VideoBitrate_label__ShowValue_최대_영상_비트레이트.Click += new System.EventHandler(this.VideoBitrate_label_ShowValue_최대_영상_비트레이트_Click);
+            this.Bitrate_label_ShowValue_최대_영상_비트레이트.Click += new System.EventHandler(this.Bitrate_label_ShowValue_최대_영상_비트레이트_Click);
             // 
-            // VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트
+            // Bitrate_컨flowLayoutPanel_최대_영상_비트레이트
             // 
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.AutoSize = true;
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.VideoBitrate_label_최대_영상_비트레이트);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.VideoBitrate_comboBox_Bitrate_단위);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Location = new System.Drawing.Point(5, 4);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Name = "VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트";
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.Size = new System.Drawing.Size(261, 32);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.TabIndex = 1;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.AutoSize = true;
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.Bitrate_label_최대_영상_비트레이트);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Controls.Add(this.Bitrate_comboBox_Bitrate_단위);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Location = new System.Drawing.Point(5, 4);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Name = "Bitrate_컨flowLayoutPanel_최대_영상_비트레이트";
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.Size = new System.Drawing.Size(261, 32);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.TabIndex = 1;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
         "영상 품질에 영향을 끼치지 않습니다.");
             // 
-            // VideoBitrate_label_최대_영상_비트레이트
+            // Bitrate_label_최대_영상_비트레이트
             // 
-            this.VideoBitrate_label_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.VideoBitrate_label_최대_영상_비트레이트.AutoSize = true;
-            this.VideoBitrate_label_최대_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VideoBitrate_label_최대_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VideoBitrate_label_최대_영상_비트레이트.Location = new System.Drawing.Point(2, 4);
-            this.VideoBitrate_label_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.VideoBitrate_label_최대_영상_비트레이트.Name = "VideoBitrate_label_최대_영상_비트레이트";
-            this.VideoBitrate_label_최대_영상_비트레이트.Size = new System.Drawing.Size(179, 23);
-            this.VideoBitrate_label_최대_영상_비트레이트.TabIndex = 0;
-            this.VideoBitrate_label_최대_영상_비트레이트.Text = "최대 영상 비트레이트:";
-            this.VideoBitrate_label_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Form_Main_toolTip.SetToolTip(this.VideoBitrate_label_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
+            this.Bitrate_label_최대_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Bitrate_label_최대_영상_비트레이트.AutoSize = true;
+            this.Bitrate_label_최대_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Bitrate_label_최대_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bitrate_label_최대_영상_비트레이트.Location = new System.Drawing.Point(2, 4);
+            this.Bitrate_label_최대_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bitrate_label_최대_영상_비트레이트.Name = "Bitrate_label_최대_영상_비트레이트";
+            this.Bitrate_label_최대_영상_비트레이트.Size = new System.Drawing.Size(179, 23);
+            this.Bitrate_label_최대_영상_비트레이트.TabIndex = 0;
+            this.Bitrate_label_최대_영상_비트레이트.Text = "최대 영상 비트레이트:";
+            this.Bitrate_label_최대_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Form_Main_toolTip.SetToolTip(this.Bitrate_label_최대_영상_비트레이트, "원본 영상 파일 정보를 토대로 계산된 최대 품질의 영상으로 인코딩 할 수 있는 영상 비트레이트 값입니다.\r\n이 이상의 영상 비트레이트 값은 출력 " +
         "영상 품질에 영향을 끼치지 않습니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+D)");
-            this.VideoBitrate_label_최대_영상_비트레이트.Click += new System.EventHandler(this.VideoBitrate_label_최대_영상_비트레이트_Click);
+            this.Bitrate_label_최대_영상_비트레이트.Click += new System.EventHandler(this.Bitrate_label_최대_영상_비트레이트_Click);
             // 
-            // VideoBitrate_comboBox_Bitrate_단위
+            // Bitrate_comboBox_Bitrate_단위
             // 
-            this.VideoBitrate_comboBox_Bitrate_단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.VideoBitrate_comboBox_Bitrate_단위.FormattingEnabled = true;
-            this.VideoBitrate_comboBox_Bitrate_단위.Items.AddRange(new object[] {
+            this.Bitrate_comboBox_Bitrate_단위.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.Bitrate_comboBox_Bitrate_단위.FormattingEnabled = true;
+            this.Bitrate_comboBox_Bitrate_단위.Items.AddRange(new object[] {
             "Kbps",
             "Mbps"});
-            this.VideoBitrate_comboBox_Bitrate_단위.Location = new System.Drawing.Point(185, 2);
-            this.VideoBitrate_comboBox_Bitrate_단위.Margin = new System.Windows.Forms.Padding(2);
-            this.VideoBitrate_comboBox_Bitrate_단위.Name = "VideoBitrate_comboBox_Bitrate_단위";
-            this.VideoBitrate_comboBox_Bitrate_단위.Size = new System.Drawing.Size(74, 28);
-            this.VideoBitrate_comboBox_Bitrate_단위.TabIndex = 3;
-            this.VideoBitrate_comboBox_Bitrate_단위.Text = "Kbps";
-            this.VideoBitrate_comboBox_Bitrate_단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
-            this.VideoBitrate_comboBox_Bitrate_단위.Enter += new System.EventHandler(this.ControlEnter);
-            this.VideoBitrate_comboBox_Bitrate_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.VideoBitrate_comboBox_Bitrate_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.Bitrate_comboBox_Bitrate_단위.Location = new System.Drawing.Point(185, 2);
+            this.Bitrate_comboBox_Bitrate_단위.Margin = new System.Windows.Forms.Padding(2);
+            this.Bitrate_comboBox_Bitrate_단위.Name = "Bitrate_comboBox_Bitrate_단위";
+            this.Bitrate_comboBox_Bitrate_단위.Size = new System.Drawing.Size(74, 28);
+            this.Bitrate_comboBox_Bitrate_단위.TabIndex = 3;
+            this.Bitrate_comboBox_Bitrate_단위.Text = "Kbps";
+            this.Bitrate_comboBox_Bitrate_단위.TextChanged += new System.EventHandler(this.ControlTextChanged);
+            this.Bitrate_comboBox_Bitrate_단위.Enter += new System.EventHandler(this.ControlEnter);
+            this.Bitrate_comboBox_Bitrate_단위.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.Bitrate_comboBox_Bitrate_단위.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
             // 
             // CVBOC_컨_groupBox
             // 
@@ -829,7 +829,7 @@
             this.CVBOC_컨_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.94118F));
             this.CVBOC_컨_tableLayoutPanel.Controls.Add(this.CVBOC_textBox_원하는_출력_영상_크기, 1, 0);
             this.CVBOC_컨_tableLayoutPanel.Controls.Add(this.CVBOC_컨flowLayoutPanel_원하는_출력물_크기, 0, 0);
-            this.CVBOC_컨_tableLayoutPanel.Controls.Add(this.CVBOC_label__ShowValue_영상_비트레이트, 1, 1);
+            this.CVBOC_컨_tableLayoutPanel.Controls.Add(this.CVBOC_label_ShowValue_영상_비트레이트, 1, 1);
             this.CVBOC_컨_tableLayoutPanel.Controls.Add(this.CVBOC_컨flowLayoutPanel_최적_영상_비트레이트, 0, 1);
             this.CVBOC_컨_tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CVBOC_컨_tableLayoutPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -915,20 +915,20 @@
             // 
             // CVBOC_label__ShowValue_영상_비트레이트
             // 
-            this.CVBOC_label__ShowValue_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CVBOC_label__ShowValue_영상_비트레이트.AutoSize = true;
-            this.CVBOC_label__ShowValue_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CVBOC_label__ShowValue_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CVBOC_label__ShowValue_영상_비트레이트.Location = new System.Drawing.Point(268, 50);
-            this.CVBOC_label__ShowValue_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CVBOC_label__ShowValue_영상_비트레이트.Name = "CVBOC_label__ShowValue_영상_비트레이트";
-            this.CVBOC_label__ShowValue_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
-            this.CVBOC_label__ShowValue_영상_비트레이트.TabIndex = 0;
-            this.CVBOC_label__ShowValue_영상_비트레이트.Text = " ";
-            this.CVBOC_label__ShowValue_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._Form_Main_toolTip.SetToolTip(this.CVBOC_label__ShowValue_영상_비트레이트, "원본 영상을 재 인코딩할 때 원하는 출력 영상 크기가 되도록 하는 영상 비트레이트 값입니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+F)" +
+            this.CVBOC_label_ShowValue_영상_비트레이트.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CVBOC_label_ShowValue_영상_비트레이트.AutoSize = true;
+            this.CVBOC_label_ShowValue_영상_비트레이트.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CVBOC_label_ShowValue_영상_비트레이트.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CVBOC_label_ShowValue_영상_비트레이트.Location = new System.Drawing.Point(268, 50);
+            this.CVBOC_label_ShowValue_영상_비트레이트.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CVBOC_label_ShowValue_영상_비트레이트.Name = "CVBOC_label__ShowValue_영상_비트레이트";
+            this.CVBOC_label_ShowValue_영상_비트레이트.Size = new System.Drawing.Size(16, 23);
+            this.CVBOC_label_ShowValue_영상_비트레이트.TabIndex = 0;
+            this.CVBOC_label_ShowValue_영상_비트레이트.Text = " ";
+            this.CVBOC_label_ShowValue_영상_비트레이트.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Form_Main_toolTip.SetToolTip(this.CVBOC_label_ShowValue_영상_비트레이트, "원본 영상을 재 인코딩할 때 원하는 출력 영상 크기가 되도록 하는 영상 비트레이트 값입니다.\r\n클릭하면 값이 복사됩니다. (단축키: Ctrl+F)" +
         "");
-            this.CVBOC_label__ShowValue_영상_비트레이트.Click += new System.EventHandler(this.CVBOC_label_ShowValue_영상_비트레이트_Click);
+            this.CVBOC_label_ShowValue_영상_비트레이트.Click += new System.EventHandler(this.CVBOC_label_ShowValue_영상_비트레이트_Click);
             // 
             // CVBOC_컨flowLayoutPanel_최적_영상_비트레이트
             // 
@@ -1523,19 +1523,19 @@
             // _Form_Main_제작자ToolStripMenuItem
             // 
             this._Form_Main_제작자ToolStripMenuItem.Name = "_Form_Main_제작자ToolStripMenuItem";
-            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this._Form_Main_제작자ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this._Form_Main_제작자ToolStripMenuItem.Text = "제작자(&P)...";
             this._Form_Main_제작자ToolStripMenuItem.Click += new System.EventHandler(this.제작자ToolStripMenuItem_Click);
             // 
             // _Form_Main_toolStripSeparator2
             // 
             this._Form_Main_toolStripSeparator2.Name = "_Form_Main_toolStripSeparator2";
-            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this._Form_Main_toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
             // 
             // _Form_Main_프로그램_정보ToolStripMenuItem
             // 
             this._Form_Main_프로그램_정보ToolStripMenuItem.Name = "_Form_Main_프로그램_정보ToolStripMenuItem";
-            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this._Form_Main_프로그램_정보ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this._Form_Main_프로그램_정보ToolStripMenuItem.Text = "프로그램 정보(&I)...";
             this._Form_Main_프로그램_정보ToolStripMenuItem.Click += new System.EventHandler(this.프로그램정보ToolStripMenuItem_Click);
             // 
@@ -1631,13 +1631,13 @@
             this.OriginVidInfo_컨flowLayoutPanel_초당_프레임.PerformLayout();
             this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.ResumeLayout(false);
             this.OriginVidInfo_컨flowLayoutPanel_화면_해상도.PerformLayout();
-            this.VideoBitrate_컨_groupBox_영상_비트레이트.ResumeLayout(false);
-            this.VideoBitrate_컨_tableLayoutPanel.ResumeLayout(false);
-            this.VideoBitrate_컨_tableLayoutPanel.PerformLayout();
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.ResumeLayout(false);
-            this.VideoBitrate_컨flowLayoutPanel_예상_출력물_크기.PerformLayout();
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.ResumeLayout(false);
-            this.VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트.PerformLayout();
+            this.Bitrate_컨_groupBox_영상_비트레이트.ResumeLayout(false);
+            this.Bitrate_컨_tableLayoutPanel.ResumeLayout(false);
+            this.Bitrate_컨_tableLayoutPanel.PerformLayout();
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.ResumeLayout(false);
+            this.Bitrate_컨flowLayoutPanel_예상_출력물_크기.PerformLayout();
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.ResumeLayout(false);
+            this.Bitrate_컨flowLayoutPanel_최대_영상_비트레이트.PerformLayout();
             this.CVBOC_컨_groupBox.ResumeLayout(false);
             this.CVBOC_컨_tableLayoutPanel.ResumeLayout(false);
             this.CVBOC_컨_tableLayoutPanel.PerformLayout();
@@ -1681,12 +1681,12 @@
         private System.Windows.Forms.Label OriginVidInfo_label_오디오_비트레이트;
         private System.Windows.Forms.TextBox OriginVidInfo_textBox_오디오_비트레이트;
         private System.Windows.Forms.Label OriginVidInfo_label_코덱_값;
-        private System.Windows.Forms.GroupBox VideoBitrate_컨_groupBox_영상_비트레이트;
-        private System.Windows.Forms.TableLayoutPanel VideoBitrate_컨_tableLayoutPanel;
-        private System.Windows.Forms.Label VideoBitrate_label_최대_영상_비트레이트;
-        private System.Windows.Forms.Label VideoBitrate_label__ShowValue_최대_영상_비트레이트;
-        private System.Windows.Forms.Label VideoBitrate_label_예상_출력_영상_크기;
-        private System.Windows.Forms.Label VideoBitrate_label__ShowValue_예상_출력_영상_크기;
+        private System.Windows.Forms.GroupBox Bitrate_컨_groupBox_영상_비트레이트;
+        private System.Windows.Forms.TableLayoutPanel Bitrate_컨_tableLayoutPanel;
+        private System.Windows.Forms.Label Bitrate_label_최대_영상_비트레이트;
+        private System.Windows.Forms.Label Bitrate_label_ShowValue_최대_영상_비트레이트;
+        private System.Windows.Forms.Label Bitrate_label_예상_출력_영상_크기;
+        private System.Windows.Forms.Label Bitrate_label_ShowValue_예상_출력_영상_크기;
         private System.Windows.Forms.TextBox OriginVidInfo_textBox_화면_해상도_가로;
         private System.Windows.Forms.TextBox OriginVidInfo_textBox_화면_해상도_세로;
         private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_오디오_비트레이트;
@@ -1694,8 +1694,8 @@
         private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_초당_프레임;
         private System.Windows.Forms.Label OriginVidInfo_label_FPS;
         private System.Windows.Forms.Button OriginVidInfo_button_초기화;
-        private System.Windows.Forms.FlowLayoutPanel VideoBitrate_컨flowLayoutPanel_최대_영상_비트레이트;
-        private System.Windows.Forms.FlowLayoutPanel VideoBitrate_컨flowLayoutPanel_예상_출력물_크기;
+        private System.Windows.Forms.FlowLayoutPanel Bitrate_컨flowLayoutPanel_최대_영상_비트레이트;
+        private System.Windows.Forms.FlowLayoutPanel Bitrate_컨flowLayoutPanel_예상_출력물_크기;
         private System.Windows.Forms.TableLayoutPanel OriginVidInfo_컨_tableLayoutPanel1;
         private System.Windows.Forms.Button _Form_Main_button_제작자;
         private System.Windows.Forms.ToolTip _Form_Main_toolTip;
@@ -1710,7 +1710,7 @@
         private System.Windows.Forms.ComboBox CVBOC_comboBox_원하는_출력물_크기_단위;
         private System.Windows.Forms.Label CVBOC_label_예상_영상_비트레이트;
         private System.Windows.Forms.FlowLayoutPanel CVBOC_컨flowLayoutPanel_최적_영상_비트레이트;
-        private System.Windows.Forms.Label CVBOC_label__ShowValue_영상_비트레이트;
+        private System.Windows.Forms.Label CVBOC_label_ShowValue_영상_비트레이트;
         private System.Windows.Forms.GroupBox ConvertResolution_컨_groupBox;
         private System.Windows.Forms.TableLayoutPanel ConvertResolution_컨_tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel ConvertResolution_컨flowLayoutPanel_기준;
@@ -1737,7 +1737,7 @@
         private System.Windows.Forms.StatusStrip _Form_Main_statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel _Form_Main_toolStripStatusLabel;
         private System.Windows.Forms.Timer _Form_Main_timer;
-        private System.Windows.Forms.ComboBox VideoBitrate_comboBox_예상_출력_영상_크기_단위;
+        private System.Windows.Forms.ComboBox Bitrate_comboBox_예상_출력_영상_크기_단위;
         private System.Windows.Forms.ComboBox ConvertResolution_comboBox_변환예상크기단위;
         private System.Windows.Forms.ToolStripMenuItem _Form_Main_파일ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _Form_Main_해상도변환적용ToolStripMenuItem;
@@ -1760,7 +1760,7 @@
         private System.Windows.Forms.ToolStripMenuItem 복사CToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 붙여넣기VToolStripMenuItem;
         private System.Windows.Forms.Label ConvertResolution_label_colon;
-        private System.Windows.Forms.ComboBox VideoBitrate_comboBox_Bitrate_단위;
+        private System.Windows.Forms.ComboBox Bitrate_comboBox_Bitrate_단위;
         private System.Windows.Forms.ComboBox CVBOC_comboBox_Bitrate_단위;
         private System.Windows.Forms.ToolStripMenuItem 영상비트레이트소수점설정ToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel OriginVidInfo_컨flowLayoutPanel_영상_길이;
