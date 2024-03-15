@@ -290,7 +290,7 @@ namespace Bitrate_Calculator
                         ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
                         ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "MAX";
                         ValuePrintLabel_Main_status.Text = "변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
-                        Main_ToolStripMenuItem_해상도변환적용.Enabled = false;
+                        ToolStripMenuItem_해상도변환적용.Enabled = false;
                         ConvertResolution_button_적용.Enabled = false;
                         System.Media.SystemSounds.Asterisk.Play(); ;
                         TimerStart();
@@ -315,7 +315,7 @@ namespace Bitrate_Calculator
                         ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "MAX";
                         ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
                         ValuePrintLabel_Main_status.Text = "변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
-                        Main_ToolStripMenuItem_해상도변환적용.Enabled = false;
+                        ToolStripMenuItem_해상도변환적용.Enabled = false;
                         ConvertResolution_button_적용.Enabled = false;
                         System.Media.SystemSounds.Asterisk.Play(); ;
                         TimerStart();
@@ -382,31 +382,31 @@ namespace Bitrate_Calculator
             EventArgs e = null;
             if (keyData == (Keys.Control | Keys.R))
             {
-                if (Main_ToolStripMenuItem_모두초기화.Enabled == true)
-                    모두초기화ToolStripMenuItem_Click(sender, e);
+                if (ToolStripMenuItem_모두초기화.Enabled == true)
+                    ToolStripMenuItem_모두초기화_Click(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.W))
             {
-                if (Main_ToolStripMenuItem_원본영상파일정보초기화.Enabled == true)
-                    원본영상파일정보초기화ToolStripMenuItem_Click(sender, e);
+                if (ToolStripMenuItem_원본영상파일정보초기화.Enabled == true)
+                    ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
                 return true;
             }
 
             else if (keyData == (Keys.Control | Keys.S))
             {
-                if (Main_ToolStripMenuItem_해상도변환적용.Enabled == true)
-                    해상도변환적용ToolStripMenuItem_Click(sender, e);
+                if (ToolStripMenuItem_해상도변환적용.Enabled == true)
+                    ToolStripMenuItem_해상도변환적용_Click(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.D))
             {
-                Bitrate_label_ShowValue_최대_영상_비트레이트_Click(sender, e);
+                ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.F))
             {
-                OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
+                ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.A))
@@ -440,7 +440,7 @@ namespace Bitrate_Calculator
                 else if (ActiveControl == OriginVidInfo_button_초기화)
                     OriginVidInfo_button_초기화_Click(sender, e);
                 else if (ActiveControl == Main_button_모두초기화)
-                    Main_button_모두_초기화_Click(sender, e);
+                    Main_button_모두초기화_Click(sender, e);
                 else if (ActiveControl == Main_button_제작자)
                     Main_button_제작자_Click(sender, e);
                 else if (ActiveControl == Main_button_종료)
@@ -555,26 +555,26 @@ namespace Bitrate_Calculator
 
         private void TimerStart()
         {
-            if (Main_Util_timer.Enabled == true)
-                Main_Util_timer.Stop();
-            Main_Util_timer.Interval = timerInterval;
-            Main_Util_timer.Tick += new EventHandler(timer_Tick);
-            Main_Util_timer.Start();
+            if (Main_timer.Enabled == true)
+                Main_timer.Stop();
+            Main_timer.Interval = timerInterval;
+            Main_timer.Tick += new EventHandler(timer_Tick);
+            Main_timer.Start();
         }
 
         private void TimerStart(int customTimerInterVal)
         {
-            if (Main_Util_timer.Enabled == true)
-                Main_Util_timer.Stop();
-            Main_Util_timer.Interval = customTimerInterVal;
-            Main_Util_timer.Tick += new EventHandler(timer_Tick);
-            Main_Util_timer.Start();
+            if (Main_timer.Enabled == true)
+                Main_timer.Stop();
+            Main_timer.Interval = customTimerInterVal;
+            Main_timer.Tick += new EventHandler(timer_Tick);
+            Main_timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             ValuePrintLabel_Main_status.Text = " ";
-            Main_Util_timer.Stop();
+            Main_timer.Stop();
         }
 
 
@@ -781,7 +781,7 @@ namespace Bitrate_Calculator
         private void ControlTextChanged(object sender, EventArgs e)
         {
             Control control = sender as Control;
-            Main_ToolStripMenuItem_모두초기화.Enabled = true;
+            ToolStripMenuItem_모두초기화.Enabled = true;
             Main_button_모두초기화.Enabled = true;
 
 
@@ -798,7 +798,7 @@ namespace Bitrate_Calculator
                 UpdateHopeBitrateState();
                     if (control != Bitrate_comboBox_예상출력영상크기 && control != OutSizeBasedBitrate_comboBox_예상영상비트레이트 && !isOutSizeBasedBitrateCtrl)
                     {
-                        Main_ToolStripMenuItem_원본영상파일정보초기화.Enabled = true;
+                        ToolStripMenuItem_원본영상파일정보초기화.Enabled = true;
                         OriginVidInfo_button_초기화.Enabled = true;
                     }               
             }
@@ -840,7 +840,7 @@ namespace Bitrate_Calculator
                     ConvertResolution();
                 if (isConvertResolution변환예상해상도Label)
                 {
-                    Main_ToolStripMenuItem_해상도변환적용.Enabled = true;
+                    ToolStripMenuItem_해상도변환적용.Enabled = true;
                     ConvertResolution_button_적용.Enabled = true;
                     if (control == ValuePrintLabel_ConvertResolution_현재해상도_가로)
                         if (ValuePrintLabel_ConvertResolution_현재해상도_가로.Text.Equals("0"))
@@ -869,27 +869,27 @@ namespace Bitrate_Calculator
          */
         private void ConvertResolution_button_적용_Click(object sender, EventArgs e)
         {
-            해상도변환적용ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_해상도변환적용_Click(sender, e);
         }
 
         private void Main_button_제작자_Click(object sender, EventArgs e)
         {
-            제작자ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_제작자_Click(sender, e);
         }
 
         private void OriginVidInfo_button_초기화_Click(object sender, EventArgs e)
         {
-            원본영상파일정보초기화ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
         }
 
-        private void Main_button_모두_초기화_Click(object sender, EventArgs e)
+        private void Main_button_모두초기화_Click(object sender, EventArgs e)
         {
-            모두초기화ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_모두초기화_Click(sender, e);
         }
 
         private void Main_button_종료_Click(object sender, EventArgs e)
         {
-            종료ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_종료_Click(sender, e);
         }
 
 
@@ -897,7 +897,7 @@ namespace Bitrate_Calculator
         /*
          * ToolStrip
          */
-        private void 원본영상파일정보초기화ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_원본영상파일정보초기화_Click(object sender, EventArgs e)
         {
             OriginVidInfo_textBox_초당프레임.Text = "";
             OriginVidInfo_textBox_시간.Text = "";
@@ -909,13 +909,13 @@ namespace Bitrate_Calculator
             OriginVidInfo_comboBox_적용코덱.Text = "H.264";
             ValuePrintLabel_Main_status.Text = "원본 영상 파일 정보가 초기화되었습니다.";
             TimerStart();
-            Main_ToolStripMenuItem_원본영상파일정보초기화.Enabled = false;
+            ToolStripMenuItem_원본영상파일정보초기화.Enabled = false;
             OriginVidInfo_button_초기화.Enabled = false;
         }
 
-        private void 모두초기화ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_모두초기화_Click(object sender, EventArgs e)
         {
-            원본영상파일정보초기화ToolStripMenuItem_Click(sender, e);
+            ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
             Bitrate_comboBox_예상출력영상크기.Text = "MB";
             Bitrate_comboBox_최대영상비트레이트.Text = "Kbps";
             OutSizeBasedBitrate_comboBox_원하는출력영상크기.Text = "MB";
@@ -930,13 +930,13 @@ namespace Bitrate_Calculator
             ConvertResolution_comboBox_변환예상크기.Text = "MB";
             ValuePrintLabel_Main_status.Text = "모두 초기화되었습니다.";
             TimerStart();
-            Main_ToolStripMenuItem_모두초기화.Enabled = false;
+            ToolStripMenuItem_모두초기화.Enabled = false;
             Main_button_모두초기화.Enabled = false;
             ConvertResolution_button_적용.Enabled = false;
-            Main_ToolStripMenuItem_해상도변환적용.Enabled = false;
+            ToolStripMenuItem_해상도변환적용.Enabled = false;
         }
 
-        private void 해상도변환적용ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_해상도변환적용_Click(object sender, EventArgs e)
         {
             if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
             {
@@ -952,56 +952,56 @@ namespace Bitrate_Calculator
             ValuePrintLabel_Main_status.Text = "변환된 해상도가 적용되었습니다.";
             ConvertResolution_textBox_변환기준.Text = "";
             TimerStart();
-            Main_ToolStripMenuItem_해상도변환적용.Enabled = false;
+            ToolStripMenuItem_해상도변환적용.Enabled = false;
             ConvertResolution_button_적용.Enabled = false;
         }
 
-        private void 종료ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_종료_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void 프로그램정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_프로그램정보_Click(object sender, EventArgs e)
         {
             ChildFormManager.Show_프로그램_정보(this);
         }
 
-        private void 제작자ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_제작자_Click(object sender, EventArgs e)
         {
             ChildFormManager.Show_제작자_및_도움(this);
         }
 
-        private void 전체선택AToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_전체선택_Click(object sender, EventArgs e)
         {
             SelectAll();
         }
 
-        private void 잘라내기XToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_잘라내기_Click(object sender, EventArgs e)
         {
             CutX();
         }
 
-        private void 복사CToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_복사_Click(object sender, EventArgs e)
         {
             CopyC();
         }
 
-        private void 붙여넣기VToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_붙여넣기_Click(object sender, EventArgs e)
         {
             PasteV();
         }
 
-        private void 최대영상비트레이트복사MToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_최대영상비트레이트복사_Click(object sender, EventArgs e)
         {
-            Bitrate_label_ShowValue_최대_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
         }
 
-        private void 예상영상비트레이트복사EToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_예상영상비트레이트복사_Click(object sender, EventArgs e)
         {
-            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
         }
 
-        private void 영상비트레이트소수점설정ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem_표시소수점정밀도설정_Click(object sender, EventArgs e)
         {
             ChildFormManager.Show_소수점_설정(this);
         }
@@ -1010,38 +1010,38 @@ namespace Bitrate_Calculator
         /*
          * 비트레이트 값 복사
          */
-        private void Bitrate_label_ShowValue_최대_영상_비트레이트_Click(object sender, EventArgs e)
+        private void ValuePrintLabel_Bitrate_최대영상비트레이트_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_Bitrate_최대영상비트레이트.Text));
             ValuePrintLabel_Main_status.Text = "최대 영상 비트레이트가 복사되었습니다.";
             TimerStart();
         }
 
-        private void Bitrate_label_최대_영상_비트레이트_Click(object sender, EventArgs e)
+        private void Bitrate_label_최대영상비트레이트_Click(object sender, EventArgs e)
         {
-            Bitrate_label_ShowValue_최대_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
         }
 
-        private void VB_label_Kbps_Click(object sender, EventArgs e)
+        private void Bitrate_label_Kbps_Click(object sender, EventArgs e)
         {
-            Bitrate_label_ShowValue_최대_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
         }
 
-        private void OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(object sender, EventArgs e)
+        private void ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트.Text));
             ValuePrintLabel_Main_status.Text = "예상 영상 비트레이트가 복사되었습니다.";
             TimerStart();
         }
 
-        private void OutSizeBasedBitrate_label_예상_영상_비트레이트_Click(object sender, EventArgs e)
+        private void OutSizeBasedBitrate_label_예상영상비트레이트_Click(object sender, EventArgs e)
         {
-            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
         }
 
         private void OutSizeBasedBitrate_label_Kbps_Click(object sender, EventArgs e)
         {
-            OutSizeBasedBitrate_label_ShowValue_영상_비트레이트_Click(sender, e);
+            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
         }
     }
 }
