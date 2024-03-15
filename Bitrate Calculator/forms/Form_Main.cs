@@ -25,12 +25,10 @@ namespace Bitrate_Calculator
 {
     public partial class Main_Form : Form
     {
+        #region 프로그램 Initializing
         private ChildFormManager childFormManager;
         private StatusStripManager statusStripManager;
 
-        /*
-         * 프로그램 Initializing
-         */
         public Main_Form()
         {
             InitializeComponent();
@@ -82,10 +80,11 @@ namespace Bitrate_Calculator
 
             statusStripManager.ShowMessage("프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.", 5800);
         }
+        #endregion
+        
 
-        /*
-         * SetDecimalPoint 관련 메서드
-         */
+
+        #region SetDecimalPoint 관련 메서드
         //DecimalPoint 값을 설정한다.
         public void SetDecimalPoint(int BitrateDecimalPointInt, int CapacityDecimalPointInt)
         {
@@ -127,13 +126,11 @@ namespace Bitrate_Calculator
             CalcBitrateWithConvertedResolution();
             UpdateHopeBitrateState();      
         }
-        
+        #endregion
 
 
-        /*
-         * 구현 메서드
-         */
-        //
+
+        #region 구현 메서드
         //문자열 또는 문자가 지정된 범위 안에 있는 지 검사
         private bool IsRanged(string str, int min, int max)
         {
@@ -374,12 +371,11 @@ namespace Bitrate_Calculator
             tmpString = tmpString.Replace(",", "");
             return tmpString;
         }
+        #endregion
 
 
 
-        /*
-         * 단축키
-         */
+        #region 단축키
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             object sender = null;
@@ -415,22 +411,22 @@ namespace Bitrate_Calculator
             }
             else if (keyData == (Keys.Control | Keys.A))
             {
-                SelectAll();
+                SelectAll(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.X))
             {
-                CutX();
+                CutX(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.C))
             {
-                CopyC();
+                CopyC(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.V))
             {
-                PasteV();
+                PasteV(sender, e);
                 return true;
             }
             else if (keyData == Keys.Return)
@@ -446,114 +442,18 @@ namespace Bitrate_Calculator
                 else if (ActiveControl == Main_button_모두초기화)
                     ClearAll(sender, e);
                 else if (ActiveControl == Main_button_제작자)
-                    ToolStripMenuItem_제작자_Click(sender, e);
+                    CreateChildForm_제작자(sender, e);
                 else if (ActiveControl == Main_button_종료)
-                    ToolStripMenuItem_종료_Click(sender, e);
+                    ExitProgram(sender, e);
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-
-        private void SelectAll()
-        {
-            if (ActiveControl is TextBox)
-            {
-                TextBox textBox = (TextBox)ActiveControl;
-                textBox.SelectionStart = 0;
-                textBox.SelectionLength = textBox.Text.Length;
-            }
-        }
-
-        private void CutX()
-        {
-            if (ActiveControl is TextBox)
-            {
-                TextBox textBox = (TextBox)ActiveControl;
-                textBox.Cut();
-            }
-        }
-
-        private void CopyC()
-        {
-            if (ActiveControl is TextBox)
-            {
-                TextBox textBox = (TextBox)ActiveControl;
-                textBox.Copy();
-            }
-        }
-
-        private void PasteV()
-        {
-            EventArgs e = null;
-
-            if (ActiveControl is TextBox)
-            {
-                TextBox textBox = (TextBox)ActiveControl;
-
-                //클립보드의 내용을 임시로 저장하는 스트링 변수 선언
-                string tmpClipboardStr = Clipboard.GetText();
-
-                //클립보드의 내용이 모두 숫자인 지 확인하는 플래그 선언
-                bool isClipBoardStrOnlyDigit = true;
-
-                //클립보드 내용이 모두 숫자인 지 확인.
-                for (int i = 0; i < tmpClipboardStr.Length; i++)
-                {
-                    if (!char.IsDigit(tmpClipboardStr[i]))
-                    {
-                        isClipBoardStrOnlyDigit = false;
-                        break;
-                    }
-                }
-
-                //클립보드가 모두 숫자의 나열로 이루어져 있으면
-                if (isClipBoardStrOnlyDigit)
-                {
-                    //column : 텍스트박스의 키보드 커서 위치 
-                    int column = textBox.SelectionStart;
-
-                    //클립보드의 숫자의 나열을 정확한 자연수의 표현으로 변환한 문자열을
-                    //임시로 담는 변수 tmpStr 선언
-                    //예) 002011 => 2011
-                    string tmpStr = Convert.ToString(Convert.ToInt64(tmpClipboardStr));
-
-                    //만약 현재 선택된 텍스트박스가 분 또는 초일 때 0~59에서 벗어나면
-                    //범위 초과 에러 발생 후 메서드 종료
-                    if (textBox == OriginVidInfo_textBox_분 || textBox == OriginVidInfo_textBox_초)
-                    {
-                        if (!IsRanged(tmpStr, 0, 59))
-                        {
-                            OverRangedError("정수", 0, 59);
-                            return;
-                        }
-                    }
-
-                    //만약 tmpStr길이 + 현재 텍스트박스의 텍스트 길이 > 텍스트박스 최대 길이라면
-                    //문자열 길이 초과 에러 발생 후 메서드 종료
-                    if (tmpStr.Length + textBox.Text.Length > textBox.MaxLength)
-                    {
-                        OverMaxLengthError(textBox);
-                        return;
-                    }
-
-
-                    //클립보드의 내용을 텍스트박스의 텍스트의 현재 column 위치에 삽입
-                    textBox.Text = textBox.Text.Insert(column, tmpStr);
-                    textBox.SelectionStart = column + tmpStr.Length;
-                    textBox.SelectionLength = 0;
-                }
-                else //클립보드에 하나라도 숫자가 아닌 값이 있으면 삽입 불가 에러 발생
-                {
-                    CannotPutError(e);
-                }
-            }
-        }
+        #endregion
 
 
 
-        /*
-         * 에러
-         */
+        #region 에러
         //입력할 수 없을 때 발생하는 에러
         private void CannotPutError(object e)
         {
@@ -592,12 +492,12 @@ namespace Bitrate_Calculator
             TextBox textBox = (TextBox)sender;
             statusStripManager.ShowErrorMessage("입력 한도는 " + textBox.MaxLength + "자리입니다.");
         }
+        #endregion
 
 
 
-        /*
-         * Key입력 이벤트
-         */
+        #region Key입력 이벤트
+
         //쓰기 가능한 컨트롤에 대한 시스템 문자 입력 처리
         private void WritableControlKeyDown(object sender, KeyEventArgs e)
         {
@@ -738,11 +638,12 @@ namespace Bitrate_Calculator
             e.Handled = true;
         }
 
+        #endregion
 
 
-        /*
-         * TextChanged 이벤트
-         */
+
+        #region TextChanged 이벤트
+  
         private void ControlTextChanged(object sender, EventArgs e)
         {
             Control control = sender as Control;
@@ -817,65 +718,11 @@ namespace Bitrate_Calculator
             }
         }
 
-
-
-        /*
-         * Enter 이벤트
-         */
-        private void ControlEnter(object sender, EventArgs e)
-        {
-            SelectAll();
-        }
+        #endregion
 
 
 
-        /*
-         * ToolStrip
-         */
-        private void ToolStripMenuItem_종료_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void ToolStripMenuItem_프로그램정보_Click(object sender, EventArgs e)
-        {
-            childFormManager.Show_프로그램_정보(this);
-        }
-
-        private void ToolStripMenuItem_제작자_Click(object sender, EventArgs e)
-        {
-            childFormManager.Show_제작자_및_도움(this);
-        }
-
-        private void ToolStripMenuItem_전체선택_Click(object sender, EventArgs e)
-        {
-            SelectAll();
-        }
-
-        private void ToolStripMenuItem_잘라내기_Click(object sender, EventArgs e)
-        {
-            CutX();
-        }
-
-        private void ToolStripMenuItem_복사_Click(object sender, EventArgs e)
-        {
-            CopyC();
-        }
-
-        private void ToolStripMenuItem_붙여넣기_Click(object sender, EventArgs e)
-        {
-            PasteV();
-        }
-
-        private void ToolStripMenuItem_표시소수점정밀도설정_Click(object sender, EventArgs e)
-        {
-            childFormManager.Show_소수점_설정(this);
-        }
-
-
-        /*
-         * 비트레이트 값 복사
-         */
+        #region 비트레이트 값 복사
         private void Copy최대영상비트레이트(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_Bitrate_최대영상비트레이트.Text));
@@ -887,13 +734,11 @@ namespace Bitrate_Calculator
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트.Text));
             statusStripManager.ShowMessage("예상 영상 비트레이트가 복사되었습니다.");
         }
+        #endregion
 
 
 
-        /*
-         *      프로그램 기능
-         */
-        
+        #region 프로그램 기능
         private void Clear원본영상파일정보(object sender, EventArgs e)
         {
             OriginVidInfo_textBox_초당프레임.Text = "";
@@ -956,5 +801,129 @@ namespace Bitrate_Calculator
 
             statusStripManager.ShowMessage("변환된 해상도가 적용되었습니다.");
         }
+
+
+
+
+        private void SelectAll(object sender, EventArgs e)
+        {
+            if (ActiveControl is TextBox)
+            {
+                TextBox textBox = (TextBox)ActiveControl;
+                textBox.SelectionStart = 0;
+                textBox.SelectionLength = textBox.Text.Length;
+            }
+        }
+
+        private void CutX(object sender, EventArgs e)
+        {
+            if (ActiveControl is TextBox)
+            {
+                TextBox textBox = (TextBox)ActiveControl;
+                textBox.Cut();
+            }
+        }
+
+        private void CopyC(object sender, EventArgs e)
+        {
+            if (ActiveControl is TextBox)
+            {
+                TextBox textBox = (TextBox)ActiveControl;
+                textBox.Copy();
+            }
+        }
+
+        private void PasteV(object sender, EventArgs e)
+        {
+            if (ActiveControl is TextBox)
+            {
+                TextBox textBox = (TextBox)ActiveControl;
+
+                //클립보드의 내용을 임시로 저장하는 스트링 변수 선언
+                string tmpClipboardStr = Clipboard.GetText();
+
+                //클립보드의 내용이 모두 숫자인 지 확인하는 플래그 선언
+                bool isClipBoardStrOnlyDigit = true;
+
+                //클립보드 내용이 모두 숫자인 지 확인.
+                for (int i = 0; i < tmpClipboardStr.Length; i++)
+                {
+                    if (!char.IsDigit(tmpClipboardStr[i]))
+                    {
+                        isClipBoardStrOnlyDigit = false;
+                        break;
+                    }
+                }
+
+                //클립보드가 모두 숫자의 나열로 이루어져 있으면
+                if (isClipBoardStrOnlyDigit)
+                {
+                    //column : 텍스트박스의 키보드 커서 위치 
+                    int column = textBox.SelectionStart;
+
+                    //클립보드의 숫자의 나열을 정확한 자연수의 표현으로 변환한 문자열을
+                    //임시로 담는 변수 tmpStr 선언
+                    //예) 002011 => 2011
+                    string tmpStr = Convert.ToString(Convert.ToInt64(tmpClipboardStr));
+
+                    //만약 현재 선택된 텍스트박스가 분 또는 초일 때 0~59에서 벗어나면
+                    //범위 초과 에러 발생 후 메서드 종료
+                    if (textBox == OriginVidInfo_textBox_분 || textBox == OriginVidInfo_textBox_초)
+                    {
+                        if (!IsRanged(tmpStr, 0, 59))
+                        {
+                            OverRangedError("정수", 0, 59);
+                            return;
+                        }
+                    }
+
+                    //만약 tmpStr길이 + 현재 텍스트박스의 텍스트 길이 > 텍스트박스 최대 길이라면
+                    //문자열 길이 초과 에러 발생 후 메서드 종료
+                    if (tmpStr.Length + textBox.Text.Length > textBox.MaxLength)
+                    {
+                        OverMaxLengthError(textBox);
+                        return;
+                    }
+
+
+                    //클립보드의 내용을 텍스트박스의 텍스트의 현재 column 위치에 삽입
+                    textBox.Text = textBox.Text.Insert(column, tmpStr);
+                    textBox.SelectionStart = column + tmpStr.Length;
+                    textBox.SelectionLength = 0;
+                }
+                else //클립보드에 하나라도 숫자가 아닌 값이 있으면 삽입 불가 에러 발생
+                {
+                    CannotPutError(e);
+                }
+            }
+        }
+
+
+
+
+        private void ExitProgram(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+
+
+        #region 자식 폼 관리
+        private void CreateChildForm_프로그램정보(object sender, EventArgs e)
+        {
+            childFormManager.Show_프로그램_정보(this);
+        }
+
+        private void CreateChildForm_제작자(object sender, EventArgs e)
+        {
+            childFormManager.Show_제작자_및_도움(this);
+        }
+
+        private void CreateChildForm_표시소수점정밀도설정(object sender, EventArgs e)
+        {
+            childFormManager.Show_소수점_설정(this);
+        }
+        #endregion
     }
 }
