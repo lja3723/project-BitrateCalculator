@@ -135,17 +135,7 @@ namespace Bitrate_Calculator
         private bool IsRanged(string str, int min, int max)
         {
             long num = Convert.ToInt64(str);
-            if (min <= num && num <= max)
-                return true;
-            else
-                return false;
-        }
-        private bool IsRanged(char ch, int min, int max)
-        {
-            if (min + '0' <= ch && ch <= max + '0')
-                return true;
-            else
-                return false;
+            return min <= num && num <= max;
         }
 
         //영상 용량 계산
@@ -353,7 +343,6 @@ namespace Bitrate_Calculator
         //문자열 실수 숫자에 콤마 넣기
         private string GetUnitSeparatedDigit(string number)
         {
-
             if (number.IndexOf(".") == -1)
                 for (int i = number.Length - 3; i > 0; i -= 3)
                     number = number.Insert(i, ",");
@@ -380,73 +369,57 @@ namespace Bitrate_Calculator
         {
             object sender = null;
             EventArgs e = null;
-            if (keyData == (Keys.Control | Keys.R))
-            {
-                if (ToolStripMenuItem_모두초기화.Enabled == true)
-                    ClearAll(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.W))
-            {
-                if (ToolStripMenuItem_원본영상파일정보초기화.Enabled == true)
-                    Clear원본영상파일정보(sender, e);
-                return true;
-            }
 
-            else if (keyData == (Keys.Control | Keys.S))
+            switch (keyData)
             {
-                if (ToolStripMenuItem_해상도변환적용.Enabled == true)
-                    Apply해상도변환(sender, e);
-                return true;
+                case Keys.Control | Keys.R:
+                    if (ToolStripMenuItem_모두초기화.Enabled == true)
+                        ClearAll(sender, e);
+                    return true;
+                case Keys.Control | Keys.W:
+                    if (ToolStripMenuItem_원본영상파일정보초기화.Enabled == true)
+                        Clear원본영상파일정보(sender, e);
+                   return true;
+                case Keys.Control | Keys.S:
+                    if (ToolStripMenuItem_해상도변환적용.Enabled == true)
+                        Apply해상도변환(sender, e);
+                   return true;
+                case Keys.Control | Keys.D:
+                    Copy최대영상비트레이트(sender, e);
+                    return true;
+                case Keys.Control | Keys.F:
+                    Copy예상영상비트레이트(sender, e);
+                    return true;
+                case Keys.Control | Keys.A:
+                    SelectAll(sender, e);
+                    return true;
+                case Keys.Control | Keys.X:
+                    CutX(sender, e);
+                    return true;
+                case Keys.Control | Keys.C:
+                    CopyC(sender, e);
+                    return true;
+                case Keys.Control | Keys.V:
+                    PasteV(sender, e);
+                    return true;
+                case Keys.Return:
+                    if (!(ActiveControl is Button))
+                        do
+                            SelectNextControl(ActiveControl, true, true, true, true);
+                        while (ActiveControl is Button);
+                    else if (ActiveControl == ConvertResolution_button_적용)
+                        Apply해상도변환(sender, e);
+                    else if (ActiveControl == OriginVidInfo_button_초기화)
+                        Clear원본영상파일정보(sender, e);
+                    else if (ActiveControl == Main_button_모두초기화)
+                        ClearAll(sender, e);
+                    else if (ActiveControl == Main_button_제작자)
+                        CreateChildForm_제작자(sender, e);
+                    else if (ActiveControl == Main_button_종료)
+                        ExitProgram(sender, e);
+                    return true;
             }
-            else if (keyData == (Keys.Control | Keys.D))
-            {
-                Copy최대영상비트레이트(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.F))
-            {
-                Copy예상영상비트레이트(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.A))
-            {
-                SelectAll(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.X))
-            {
-                CutX(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.C))
-            {
-                CopyC(sender, e);
-                return true;
-            }
-            else if (keyData == (Keys.Control | Keys.V))
-            {
-                PasteV(sender, e);
-                return true;
-            }
-            else if (keyData == Keys.Return)
-            {
-                if (!(ActiveControl is Button))
-                    do
-                        SelectNextControl(ActiveControl, true, true, true, true);
-                    while (ActiveControl is Button);
-                else if (ActiveControl == ConvertResolution_button_적용)
-                    Apply해상도변환(sender, e);
-                else if (ActiveControl == OriginVidInfo_button_초기화)
-                    Clear원본영상파일정보(sender, e);
-                else if (ActiveControl == Main_button_모두초기화)
-                    ClearAll(sender, e);
-                else if (ActiveControl == Main_button_제작자)
-                    CreateChildForm_제작자(sender, e);
-                else if (ActiveControl == Main_button_종료)
-                    ExitProgram(sender, e);
-                return true;
-            }
+            
             return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion
