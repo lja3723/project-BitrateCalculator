@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Bitrate_Calculator.src;
 
 
 /*
@@ -24,12 +25,18 @@ namespace Bitrate_Calculator
 {
     public partial class Main_Form : Form
     {
+        private ChildFormManager childFormManager;
+        private StatusStripManager statusStripManager;
+
         /*
          * 프로그램 Initializing
          */
         public Main_Form()
         {
             InitializeComponent();
+
+            childFormManager = new ChildFormManager();
+            statusStripManager = new StatusStripManager(Main_timer, ValuePrintLabel_Main_status);
         }
 
         //영상 비트레이트 소수점 정밀도
@@ -73,8 +80,7 @@ namespace Bitrate_Calculator
             OriginVidInfo_textBox_화면해상도_가로.Width = (int)Math.Round(OriginVidInfo_textBox_화면해상도_가로.MaxLength * textBoxWidth + textBoxWidthAdd);
             OriginVidInfo_textBox_화면해상도_세로.Width = (int)Math.Round(OriginVidInfo_textBox_화면해상도_세로.MaxLength * textBoxWidth + textBoxWidthAdd);
 
-            ValuePrintLabel_Main_status.Text = "프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.";
-            TimerStart(5800);
+            statusStripManager.ShowMessage("프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.", 5800);
         }
 
         /*
@@ -289,11 +295,10 @@ namespace Bitrate_Calculator
                     {
                         ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
                         ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "MAX";
-                        ValuePrintLabel_Main_status.Text = "변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
                         ToolStripMenuItem_해상도변환적용.Enabled = false;
                         ConvertResolution_button_적용.Enabled = false;
-                        System.Media.SystemSounds.Asterisk.Play(); ;
-                        TimerStart();
+
+                        statusStripManager.ShowErrorMessage("변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
                         return;
                     }
 
@@ -314,11 +319,10 @@ namespace Bitrate_Calculator
                     {
                         ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "MAX";
                         ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
-                        ValuePrintLabel_Main_status.Text = "변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.";
                         ToolStripMenuItem_해상도변환적용.Enabled = false;
                         ConvertResolution_button_적용.Enabled = false;
-                        System.Media.SystemSounds.Asterisk.Play(); ;
-                        TimerStart();
+
+                        statusStripManager.ShowErrorMessage("변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
                         return;
                     }
 
@@ -548,38 +552,6 @@ namespace Bitrate_Calculator
 
 
         /*
-         * 타이머
-         */
-        //statusStrip에 알림이 표시되는 static 시간(ms)
-        private int timerInterval = 2755;
-
-        private void TimerStart()
-        {
-            if (Main_timer.Enabled == true)
-                Main_timer.Stop();
-            Main_timer.Interval = timerInterval;
-            Main_timer.Tick += new EventHandler(timer_Tick);
-            Main_timer.Start();
-        }
-
-        private void TimerStart(int customTimerInterVal)
-        {
-            if (Main_timer.Enabled == true)
-                Main_timer.Stop();
-            Main_timer.Interval = customTimerInterVal;
-            Main_timer.Tick += new EventHandler(timer_Tick);
-            Main_timer.Start();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            ValuePrintLabel_Main_status.Text = " ";
-            Main_timer.Stop();
-        }
-
-
-
-        /*
          * 에러
          */
         //입력할 수 없을 때 발생하는 에러
@@ -597,35 +569,28 @@ namespace Bitrate_Calculator
                 eKeyPressEventArgs = (KeyPressEventArgs)e;
                 eKeyPressEventArgs.Handled = true;
             }
-            ValuePrintLabel_Main_status.Text = "입력할 수 없습니다.";
-            System.Media.SystemSounds.Asterisk.Play();
-            TimerStart();
+
+            statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
         }
 
         //입력값이 숫자가 아닐 때 발생하는 에러
         private void PutIsOnlyDigitError(KeyPressEventArgs e)
         {
-            ValuePrintLabel_Main_status.Text = "숫자만 입력할 수 있습니다.";
-            System.Media.SystemSounds.Asterisk.Play();
             e.Handled = true;
-            TimerStart();
+            statusStripManager.ShowErrorMessage("숫자만 입력할 수 있습니다.");
         }
 
         //입력값의 수치 범위가 초과할 때 발생하는 에러
         private void OverRangedError(string kindOfValue, int min, int max)
         {
-            ValuePrintLabel_Main_status.Text = min + " 이상 " + max + " 이하의 " + kindOfValue + "만 입력할 수 있습니다.";
-            System.Media.SystemSounds.Asterisk.Play();
-            TimerStart();
+            statusStripManager.ShowErrorMessage(min + " 이상 " + max + " 이하의 " + kindOfValue + "만 입력할 수 있습니다.");
         }
 
         //입력값의 길이 범위가 초과할 때 발생하는 에러
         private void OverMaxLengthError(object sender)
         {
             TextBox textBox = (TextBox)sender;
-            ValuePrintLabel_Main_status.Text = "입력 한도는 " + textBox.MaxLength + "자리입니다.";
-            System.Media.SystemSounds.Asterisk.Play();
-            TimerStart();
+            statusStripManager.ShowErrorMessage("입력 한도는 " + textBox.MaxLength + "자리입니다.");
         }
 
 
@@ -907,10 +872,12 @@ namespace Bitrate_Calculator
             OriginVidInfo_textBox_화면해상도_세로.Text = "";
             OriginVidInfo_textBox_오디오비트레이트.Text = "";
             OriginVidInfo_comboBox_적용코덱.Text = "H.264";
-            ValuePrintLabel_Main_status.Text = "원본 영상 파일 정보가 초기화되었습니다.";
-            TimerStart();
+
             ToolStripMenuItem_원본영상파일정보초기화.Enabled = false;
             OriginVidInfo_button_초기화.Enabled = false;
+
+
+            statusStripManager.ShowMessage("원본 영상 파일 정보가 초기화되었습니다.");
         }
 
         private void ToolStripMenuItem_모두초기화_Click(object sender, EventArgs e)
@@ -928,12 +895,13 @@ namespace Bitrate_Calculator
             ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "0";
             ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "0";
             ConvertResolution_comboBox_변환예상크기.Text = "MB";
-            ValuePrintLabel_Main_status.Text = "모두 초기화되었습니다.";
-            TimerStart();
+
             ToolStripMenuItem_모두초기화.Enabled = false;
             Main_button_모두초기화.Enabled = false;
             ConvertResolution_button_적용.Enabled = false;
             ToolStripMenuItem_해상도변환적용.Enabled = false;
+
+            statusStripManager.ShowMessage("모두 초기화되었습니다.");
         }
 
         private void ToolStripMenuItem_해상도변환적용_Click(object sender, EventArgs e)
@@ -949,11 +917,13 @@ namespace Bitrate_Calculator
                 OriginVidInfo_textBox_화면해상도_가로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text;
                 OriginVidInfo_textBox_화면해상도_세로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text;
             }
-            ValuePrintLabel_Main_status.Text = "변환된 해상도가 적용되었습니다.";
             ConvertResolution_textBox_변환기준.Text = "";
-            TimerStart();
+
             ToolStripMenuItem_해상도변환적용.Enabled = false;
             ConvertResolution_button_적용.Enabled = false;
+
+
+            statusStripManager.ShowMessage("변환된 해상도가 적용되었습니다.");
         }
 
         private void ToolStripMenuItem_종료_Click(object sender, EventArgs e)
@@ -963,12 +933,12 @@ namespace Bitrate_Calculator
 
         private void ToolStripMenuItem_프로그램정보_Click(object sender, EventArgs e)
         {
-            ChildFormManager.Show_프로그램_정보(this);
+            childFormManager.Show_프로그램_정보(this);
         }
 
         private void ToolStripMenuItem_제작자_Click(object sender, EventArgs e)
         {
-            ChildFormManager.Show_제작자_및_도움(this);
+            childFormManager.Show_제작자_및_도움(this);
         }
 
         private void ToolStripMenuItem_전체선택_Click(object sender, EventArgs e)
@@ -1003,7 +973,7 @@ namespace Bitrate_Calculator
 
         private void ToolStripMenuItem_표시소수점정밀도설정_Click(object sender, EventArgs e)
         {
-            ChildFormManager.Show_소수점_설정(this);
+            childFormManager.Show_소수점_설정(this);
         }
 
 
@@ -1013,8 +983,7 @@ namespace Bitrate_Calculator
         private void ValuePrintLabel_Bitrate_최대영상비트레이트_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_Bitrate_최대영상비트레이트.Text));
-            ValuePrintLabel_Main_status.Text = "최대 영상 비트레이트가 복사되었습니다.";
-            TimerStart();
+            statusStripManager.ShowMessage("최대 영상 비트레이트가 복사되었습니다.");
         }
 
         private void Bitrate_label_최대영상비트레이트_Click(object sender, EventArgs e)
@@ -1030,8 +999,7 @@ namespace Bitrate_Calculator
         private void ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트.Text));
-            ValuePrintLabel_Main_status.Text = "예상 영상 비트레이트가 복사되었습니다.";
-            TimerStart();
+            statusStripManager.ShowMessage("예상 영상 비트레이트가 복사되었습니다.");
         }
 
         private void OutSizeBasedBitrate_label_예상영상비트레이트_Click(object sender, EventArgs e)
