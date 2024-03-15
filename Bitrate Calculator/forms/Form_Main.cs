@@ -387,30 +387,30 @@ namespace Bitrate_Calculator
             if (keyData == (Keys.Control | Keys.R))
             {
                 if (ToolStripMenuItem_모두초기화.Enabled == true)
-                    ToolStripMenuItem_모두초기화_Click(sender, e);
+                    ClearAll(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.W))
             {
                 if (ToolStripMenuItem_원본영상파일정보초기화.Enabled == true)
-                    ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
+                    Clear원본영상파일정보(sender, e);
                 return true;
             }
 
             else if (keyData == (Keys.Control | Keys.S))
             {
                 if (ToolStripMenuItem_해상도변환적용.Enabled == true)
-                    ToolStripMenuItem_해상도변환적용_Click(sender, e);
+                    Apply해상도변환(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.D))
             {
-                ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
+                Copy최대영상비트레이트(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.F))
             {
-                ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
+                Copy예상영상비트레이트(sender, e);
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.A))
@@ -440,15 +440,15 @@ namespace Bitrate_Calculator
                         SelectNextControl(ActiveControl, true, true, true, true);
                     while (ActiveControl is Button);
                 else if (ActiveControl == ConvertResolution_button_적용)
-                    ConvertResolution_button_적용_Click(sender, e);
+                    Apply해상도변환(sender, e);
                 else if (ActiveControl == OriginVidInfo_button_초기화)
-                    OriginVidInfo_button_초기화_Click(sender, e);
+                    Clear원본영상파일정보(sender, e);
                 else if (ActiveControl == Main_button_모두초기화)
-                    Main_button_모두초기화_Click(sender, e);
+                    ClearAll(sender, e);
                 else if (ActiveControl == Main_button_제작자)
-                    Main_button_제작자_Click(sender, e);
+                    ToolStripMenuItem_제작자_Click(sender, e);
                 else if (ActiveControl == Main_button_종료)
-                    Main_button_종료_Click(sender, e);
+                    ToolStripMenuItem_종료_Click(sender, e);
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -830,102 +830,8 @@ namespace Bitrate_Calculator
 
 
         /*
-         * 버튼
-         */
-        private void ConvertResolution_button_적용_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_해상도변환적용_Click(sender, e);
-        }
-
-        private void Main_button_제작자_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_제작자_Click(sender, e);
-        }
-
-        private void OriginVidInfo_button_초기화_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
-        }
-
-        private void Main_button_모두초기화_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_모두초기화_Click(sender, e);
-        }
-
-        private void Main_button_종료_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_종료_Click(sender, e);
-        }
-
-
-
-        /*
          * ToolStrip
          */
-        private void ToolStripMenuItem_원본영상파일정보초기화_Click(object sender, EventArgs e)
-        {
-            OriginVidInfo_textBox_초당프레임.Text = "";
-            OriginVidInfo_textBox_시간.Text = "";
-            OriginVidInfo_textBox_분.Text = "";
-            OriginVidInfo_textBox_초.Text = "";
-            OriginVidInfo_textBox_화면해상도_가로.Text = "";
-            OriginVidInfo_textBox_화면해상도_세로.Text = "";
-            OriginVidInfo_textBox_오디오비트레이트.Text = "";
-            OriginVidInfo_comboBox_적용코덱.Text = "H.264";
-
-            ToolStripMenuItem_원본영상파일정보초기화.Enabled = false;
-            OriginVidInfo_button_초기화.Enabled = false;
-
-
-            statusStripManager.ShowMessage("원본 영상 파일 정보가 초기화되었습니다.");
-        }
-
-        private void ToolStripMenuItem_모두초기화_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem_원본영상파일정보초기화_Click(sender, e);
-            Bitrate_comboBox_예상출력영상크기.Text = "MB";
-            Bitrate_comboBox_최대영상비트레이트.Text = "Kbps";
-            OutSizeBasedBitrate_comboBox_원하는출력영상크기.Text = "MB";
-            OutSizeBasedBitrate_textBox_원하는출력영상크기.Text = "";
-            OutSizeBasedBitrate_comboBox_예상영상비트레이트.Text = "Kbps";
-            ConvertResolution_comboBox_기준.Text = "가로";
-            ConvertResolution_textBox_변환기준.Text = "";
-            ValuePrintLabel_ConvertResolution_현재해상도_가로.Text = "0";
-            ValuePrintLabel_ConvertResolution_현재해상도_세로.Text = "0";
-            ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "0";
-            ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "0";
-            ConvertResolution_comboBox_변환예상크기.Text = "MB";
-
-            ToolStripMenuItem_모두초기화.Enabled = false;
-            Main_button_모두초기화.Enabled = false;
-            ConvertResolution_button_적용.Enabled = false;
-            ToolStripMenuItem_해상도변환적용.Enabled = false;
-
-            statusStripManager.ShowMessage("모두 초기화되었습니다.");
-        }
-
-        private void ToolStripMenuItem_해상도변환적용_Click(object sender, EventArgs e)
-        {
-            if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
-            {
-                OriginVidInfo_textBox_화면해상도_세로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text;
-                OriginVidInfo_textBox_화면해상도_가로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text;
-
-            }
-            else if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
-            {
-                OriginVidInfo_textBox_화면해상도_가로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text;
-                OriginVidInfo_textBox_화면해상도_세로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text;
-            }
-            ConvertResolution_textBox_변환기준.Text = "";
-
-            ToolStripMenuItem_해상도변환적용.Enabled = false;
-            ConvertResolution_button_적용.Enabled = false;
-
-
-            statusStripManager.ShowMessage("변환된 해상도가 적용되었습니다.");
-        }
-
         private void ToolStripMenuItem_종료_Click(object sender, EventArgs e)
         {
             Close();
@@ -961,16 +867,6 @@ namespace Bitrate_Calculator
             PasteV();
         }
 
-        private void ToolStripMenuItem_최대영상비트레이트복사_Click(object sender, EventArgs e)
-        {
-            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
-        }
-
-        private void ToolStripMenuItem_예상영상비트레이트복사_Click(object sender, EventArgs e)
-        {
-            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
-        }
-
         private void ToolStripMenuItem_표시소수점정밀도설정_Click(object sender, EventArgs e)
         {
             childFormManager.Show_소수점_설정(this);
@@ -980,36 +876,85 @@ namespace Bitrate_Calculator
         /*
          * 비트레이트 값 복사
          */
-        private void ValuePrintLabel_Bitrate_최대영상비트레이트_Click(object sender, EventArgs e)
+        private void Copy최대영상비트레이트(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_Bitrate_최대영상비트레이트.Text));
             statusStripManager.ShowMessage("최대 영상 비트레이트가 복사되었습니다.");
         }
 
-        private void Bitrate_label_최대영상비트레이트_Click(object sender, EventArgs e)
-        {
-            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
-        }
-
-        private void Bitrate_label_Kbps_Click(object sender, EventArgs e)
-        {
-            ValuePrintLabel_Bitrate_최대영상비트레이트_Click(sender, e);
-        }
-
-        private void ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(object sender, EventArgs e)
+        private void Copy예상영상비트레이트(object sender, EventArgs e)
         {
             Clipboard.SetText(RemoveDigitSeparator(ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트.Text));
             statusStripManager.ShowMessage("예상 영상 비트레이트가 복사되었습니다.");
         }
 
-        private void OutSizeBasedBitrate_label_예상영상비트레이트_Click(object sender, EventArgs e)
+
+
+        /*
+         *      프로그램 기능
+         */
+        
+        private void Clear원본영상파일정보(object sender, EventArgs e)
         {
-            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
+            OriginVidInfo_textBox_초당프레임.Text = "";
+            OriginVidInfo_textBox_시간.Text = "";
+            OriginVidInfo_textBox_분.Text = "";
+            OriginVidInfo_textBox_초.Text = "";
+            OriginVidInfo_textBox_화면해상도_가로.Text = "";
+            OriginVidInfo_textBox_화면해상도_세로.Text = "";
+            OriginVidInfo_textBox_오디오비트레이트.Text = "";
+            OriginVidInfo_comboBox_적용코덱.Text = "H.264";
+
+            ToolStripMenuItem_원본영상파일정보초기화.Enabled = false;
+            OriginVidInfo_button_초기화.Enabled = false;
+
+
+            statusStripManager.ShowMessage("원본 영상 파일 정보가 초기화되었습니다.");
         }
 
-        private void OutSizeBasedBitrate_label_Kbps_Click(object sender, EventArgs e)
+        private void ClearAll(object sender, EventArgs e)
         {
-            ValuePrintLabel_OutSizeBasedBitrate_영상비트레이트_Click(sender, e);
+            Clear원본영상파일정보(sender, e);
+            Bitrate_comboBox_예상출력영상크기.Text = "MB";
+            Bitrate_comboBox_최대영상비트레이트.Text = "Kbps";
+            OutSizeBasedBitrate_comboBox_원하는출력영상크기.Text = "MB";
+            OutSizeBasedBitrate_textBox_원하는출력영상크기.Text = "";
+            OutSizeBasedBitrate_comboBox_예상영상비트레이트.Text = "Kbps";
+            ConvertResolution_comboBox_기준.Text = "가로";
+            ConvertResolution_textBox_변환기준.Text = "";
+            ValuePrintLabel_ConvertResolution_현재해상도_가로.Text = "0";
+            ValuePrintLabel_ConvertResolution_현재해상도_세로.Text = "0";
+            ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "0";
+            ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "0";
+            ConvertResolution_comboBox_변환예상크기.Text = "MB";
+
+            ToolStripMenuItem_모두초기화.Enabled = false;
+            Main_button_모두초기화.Enabled = false;
+            ConvertResolution_button_적용.Enabled = false;
+            ToolStripMenuItem_해상도변환적용.Enabled = false;
+
+            statusStripManager.ShowMessage("모두 초기화되었습니다.");
+        }
+
+        private void Apply해상도변환(object sender, EventArgs e)
+        {
+            if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
+            {
+                OriginVidInfo_textBox_화면해상도_세로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text;
+                OriginVidInfo_textBox_화면해상도_가로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text;
+
+            }
+            else if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
+            {
+                OriginVidInfo_textBox_화면해상도_가로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text;
+                OriginVidInfo_textBox_화면해상도_세로.Text = ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text;
+            }
+            ConvertResolution_textBox_변환기준.Text = "";
+
+            ToolStripMenuItem_해상도변환적용.Enabled = false;
+            ConvertResolution_button_적용.Enabled = false;
+
+            statusStripManager.ShowMessage("변환된 해상도가 적용되었습니다.");
         }
     }
 }
