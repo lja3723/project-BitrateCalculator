@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
 {
@@ -29,7 +28,7 @@ namespace Bitrate_Calculator.src
             child.Show(parent);
             int centerX = parent.Location.X + (parent.Size.Width - child.Size.Width) / 2;
             int centerY = parent.Location.Y + (parent.Size.Height - child.Size.Height) / 2;
-            child.Location = new Point(centerX, centerY);
+            child.Location = new System.Drawing.Point(centerX, centerY);
         }
     }
 }

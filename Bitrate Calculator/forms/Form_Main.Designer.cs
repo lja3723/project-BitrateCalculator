@@ -241,7 +241,7 @@
             this.Main_toolTip.SetToolTip(this.OutSizeBasedBitrate_textBox_원하는출력영상크기, "원본 영상을 재 인코딩 할 때 적용되는 출력 영상 크기를 설정합니다.");
             this.OutSizeBasedBitrate_textBox_원하는출력영상크기.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OutSizeBasedBitrate_textBox_원하는출력영상크기.Enter += new System.EventHandler(this.SelectAll);
-            this.OutSizeBasedBitrate_textBox_원하는출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OutSizeBasedBitrate_textBox_원하는출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OutSizeBasedBitrate_textBox_원하는출력영상크기.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // Layout_OutSizeBasedBitrate_flowLayoutPanel_원하는출력영상크기
@@ -291,8 +291,7 @@
             this.Main_toolTip.SetToolTip(this.OutSizeBasedBitrate_comboBox_원하는출력영상크기, "원본 영상을 재 인코딩 할 때 적용되는 출력 영상 크기를 설정합니다.");
             this.OutSizeBasedBitrate_comboBox_원하는출력영상크기.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OutSizeBasedBitrate_comboBox_원하는출력영상크기.Enter += new System.EventHandler(this.SelectAll);
-            this.OutSizeBasedBitrate_comboBox_원하는출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.OutSizeBasedBitrate_comboBox_원하는출력영상크기.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.OutSizeBasedBitrate_comboBox_원하는출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트
             // 
@@ -357,8 +356,7 @@
             this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.Text = "Kbps";
             this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.Enter += new System.EventHandler(this.SelectAll);
-            this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.OutSizeBasedBitrate_comboBox_예상영상비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // Layout_ConvertResolution_groupBox
             // 
@@ -471,8 +469,7 @@
             this.Main_toolTip.SetToolTip(this.ConvertResolution_comboBox_기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
             this.ConvertResolution_comboBox_기준.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.ConvertResolution_comboBox_기준.Enter += new System.EventHandler(this.SelectAll);
-            this.ConvertResolution_comboBox_기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.ConvertResolution_comboBox_기준.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.ConvertResolution_comboBox_기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // ConvertResolution_textBox_변환기준
             // 
@@ -491,7 +488,7 @@
             this.Main_toolTip.SetToolTip(this.ConvertResolution_textBox_변환기준, "해상도 변환의 기준이 되는 해상도의 가로 길이 또는 세로 길이를 설정합니다.");
             this.ConvertResolution_textBox_변환기준.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.ConvertResolution_textBox_변환기준.Enter += new System.EventHandler(this.SelectAll);
-            this.ConvertResolution_textBox_변환기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.ConvertResolution_textBox_변환기준.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.ConvertResolution_textBox_변환기준.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // ConvertResolution_label_변환예상해상도
@@ -696,8 +693,7 @@
             this.ConvertResolution_comboBox_변환예상크기.Text = "MB";
             this.ConvertResolution_comboBox_변환예상크기.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.ConvertResolution_comboBox_변환예상크기.Enter += new System.EventHandler(this.SelectAll);
-            this.ConvertResolution_comboBox_변환예상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.ConvertResolution_comboBox_변환예상크기.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.ConvertResolution_comboBox_변환예상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // ConvertResolution_label_colon
             // 
@@ -830,8 +826,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_comboBox_적용코덱, "원본 영상을 재 인코딩 할 때 적용하려는 코덱입니다.");
             this.OriginVidInfo_comboBox_적용코덱.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_comboBox_적용코덱.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_comboBox_적용코덱.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.OriginVidInfo_comboBox_적용코덱.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.OriginVidInfo_comboBox_적용코덱.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // OriginVidInfo_label_오디오비트레이트
             // 
@@ -923,7 +918,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_오디오비트레이트, "원본 영상의 오디오 비트레이트입니다.");
             this.OriginVidInfo_textBox_오디오비트레이트.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_오디오비트레이트.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_오디오비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_오디오비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_오디오비트레이트.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_Kbps
@@ -974,7 +969,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_시간, "원본 영상의 런타임 시간입니다.");
             this.OriginVidInfo_textBox_시간.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_시간.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_시간.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_시간.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_시간.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_시간
@@ -1008,7 +1003,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_분, "원본 영상의 런타임 시간입니다.");
             this.OriginVidInfo_textBox_분.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_분.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_분.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_분.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_분.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_분
@@ -1042,7 +1037,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_초, "원본 영상의 런타임 시간입니다.");
             this.OriginVidInfo_textBox_초.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_초.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_초.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_초.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_초.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_초
@@ -1090,7 +1085,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_초당프레임, "원본 영상의 초당 프레임입니다.");
             this.OriginVidInfo_textBox_초당프레임.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_초당프레임.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_초당프레임.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_초당프레임.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_초당프레임.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_FPS
@@ -1137,7 +1132,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_화면해상도_가로, "원본 영상 화면 해상도의 가로 길이입니다.");
             this.OriginVidInfo_textBox_화면해상도_가로.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_화면해상도_가로.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_화면해상도_가로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_화면해상도_가로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_화면해상도_가로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // OriginVidInfo_label_x
@@ -1170,7 +1165,7 @@
             this.Main_toolTip.SetToolTip(this.OriginVidInfo_textBox_화면해상도_세로, "원본 영상 화면 해상도의 세로 길이입니다.");
             this.OriginVidInfo_textBox_화면해상도_세로.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.OriginVidInfo_textBox_화면해상도_세로.Enter += new System.EventHandler(this.SelectAll);
-            this.OriginVidInfo_textBox_화면해상도_세로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
+            this.OriginVidInfo_textBox_화면해상도_세로.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventLeadingZeroCausedByDelKey);
             this.OriginVidInfo_textBox_화면해상도_세로.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // Layout_Bitrate_groupBox
@@ -1274,8 +1269,7 @@
             this.Bitrate_comboBox_예상출력영상크기.Text = "MB";
             this.Bitrate_comboBox_예상출력영상크기.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.Bitrate_comboBox_예상출력영상크기.Enter += new System.EventHandler(this.SelectAll);
-            this.Bitrate_comboBox_예상출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.Bitrate_comboBox_예상출력영상크기.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.Bitrate_comboBox_예상출력영상크기.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // ValuePrintLabel_Bitrate_최대영상비트레이트
             // 
@@ -1341,8 +1335,7 @@
             this.Bitrate_comboBox_최대영상비트레이트.Text = "Kbps";
             this.Bitrate_comboBox_최대영상비트레이트.TextChanged += new System.EventHandler(this.ControlTextChanged);
             this.Bitrate_comboBox_최대영상비트레이트.Enter += new System.EventHandler(this.SelectAll);
-            this.Bitrate_comboBox_최대영상비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WritableControlKeyDown);
-            this.Bitrate_comboBox_최대영상비트레이트.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_KeyPress);
+            this.Bitrate_comboBox_최대영상비트레이트.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PreventDelKeyAtComboBox);
             // 
             // Layout_Main_tableLayoutPanel_Buttons
             // 
@@ -1552,19 +1545,19 @@
             // ToolStripMenuItem_제작자
             // 
             this.ToolStripMenuItem_제작자.Name = "ToolStripMenuItem_제작자";
-            this.ToolStripMenuItem_제작자.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItem_제작자.Size = new System.Drawing.Size(210, 26);
             this.ToolStripMenuItem_제작자.Text = "제작자(&P)...";
             this.ToolStripMenuItem_제작자.Click += new System.EventHandler(this.CreateChildForm_제작자);
             // 
             // ToolStripSeparator_도움말
             // 
             this.ToolStripSeparator_도움말.Name = "ToolStripSeparator_도움말";
-            this.ToolStripSeparator_도움말.Size = new System.Drawing.Size(221, 6);
+            this.ToolStripSeparator_도움말.Size = new System.Drawing.Size(207, 6);
             // 
             // ToolStripMenuItem_프로그램정보
             // 
             this.ToolStripMenuItem_프로그램정보.Name = "ToolStripMenuItem_프로그램정보";
-            this.ToolStripMenuItem_프로그램정보.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItem_프로그램정보.Size = new System.Drawing.Size(210, 26);
             this.ToolStripMenuItem_프로그램정보.Text = "프로그램 정보(&I)...";
             this.ToolStripMenuItem_프로그램정보.Click += new System.EventHandler(this.CreateChildForm_프로그램정보);
             // 

@@ -28,6 +28,7 @@ namespace Bitrate_Calculator
         #region 프로그램 Initializing
         private ChildFormManager childFormManager;
         private StatusStripManager statusStripManager;
+        private Storage storage;
 
         public Main_Form()
         {
@@ -35,6 +36,7 @@ namespace Bitrate_Calculator
 
             childFormManager = new ChildFormManager();
             statusStripManager = new StatusStripManager(Main_timer, ValuePrintLabel_Main_status);
+            storage = new Storage();
         }
 
         //영상 비트레이트 소수점 정밀도
@@ -558,50 +560,24 @@ namespace Bitrate_Calculator
 
 
         #region Key입력 이벤트
-
-        //쓰기 가능한 컨트롤에 대한 시스템 문자 입력 처리
-        private void WritableControlKeyDown(object sender, KeyEventArgs e)
+        //Delete 키에 의해 0으로 시작하는 숫자가 되는 것을 방지
+        private void PreventLeadingZeroCausedByDelKey(object sender, KeyEventArgs e)
         {
-            //TextBox에 대한 처리
-            if (sender is TextBox)
-            {
-                TextBox textBox = (TextBox)sender;
+            TextBox textBox = sender as TextBox;
 
-                
-                //Delete키 입력을 처리한다.
-                if (textBox.Text.Length > 0)
-                {
-                    int column = textBox.SelectionStart;
-                    string tmpStr1, tmpStr2;
+            if (e.KeyCode != Keys.Delete) return;
+            if (textBox.SelectionStart != 0) return;
+            if (textBox.Text.Length <= 1) return;
+            if (textBox.Text[1] != '0') return;
+            
+            CannotPutError(e);
+        }
 
-                    if (e.KeyCode == Keys.Delete)
-                    {
-                        if (column == 0)
-                        {
-                            tmpStr1 = textBox.Text.Remove(column, 1);
-                            if (tmpStr1.Equals(""))
-                                return;
-                            else
-                                tmpStr2 = Convert.ToString(Convert.ToInt64(tmpStr1));
-
-                            if (!tmpStr1.Equals(tmpStr2))
-                            {
-                                CannotPutError(e);
-                            }
-                        }
-                    }
-                }
-            }
-
-            //ComboBox에 대한 처리
-            if (sender is ComboBox)
-            {
-                ComboBox comboBox = (ComboBox)sender;
-
-                //Delete키 입력 처리
-                if (e.KeyCode == Keys.Delete)
-                    e.Handled = true;
-            }
+        //ComboBox의 Delete키 입력 방지
+        private void PreventDelKeyAtComboBox(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+                e.Handled = true;
         }
 
         //텍스트박스에 대한 일반 문자 입력 처리
