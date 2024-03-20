@@ -28,7 +28,6 @@ namespace Bitrate_Calculator
         #region 프로그램 Initializing
         private ChildFormManager childFormManager;
         private StatusStripManager statusStripManager;
-        private Storage storage;
 
         public Main_Form()
         {
@@ -36,7 +35,6 @@ namespace Bitrate_Calculator
 
             childFormManager = new ChildFormManager();
             statusStripManager = new StatusStripManager(Main_timer, ValuePrintLabel_Main_status);
-            storage = new Storage();
         }
 
         //영상 비트레이트 소수점 정밀도
@@ -119,67 +117,69 @@ namespace Bitrate_Calculator
         //해상도 변환
         private void ConvertResolution()
         {
-            //비어있지 않을 경우 계산
-            if (!ConvertResolution_textBox_변환기준.Text.Equals(""))
-            {
-                long currentWidth = Convert.ToInt64(ValuePrintLabel_ConvertResolution_현재해상도_가로.Text);
-                long currentHeight = Convert.ToInt64(ValuePrintLabel_ConvertResolution_현재해상도_세로.Text);
-                const int MAXRANGE = 9999;
-
-                //가로 기준 해상도 변환
-                if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
-                {
-
-                    if (currentWidth == 0)
-                        return;
-                    long newWidth = Convert.ToInt64(ConvertResolution_textBox_변환기준.Text);
-                    decimal newHeight = newWidth / (decimal)currentWidth * currentHeight;
-
-                    //변환된 세로가 최대 범위 초과시
-                    if (newHeight > MAXRANGE)
-                    {
-                        ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
-                        ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "MAX";
-                        ToolStripMenuItem_해상도변환적용.Enabled = false;
-                        ConvertResolution_button_적용.Enabled = false;
-
-                        statusStripManager.ShowErrorMessage("변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
-                        return;
-                    }
-
-                    ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
-                    ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(Math.Round(newHeight));
-                }
-
-                //세로 기준 해상도 변환
-                if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
-                {
-                    if (currentHeight == 0)
-                        return;
-                    long newHeight = Convert.ToInt64(ConvertResolution_textBox_변환기준.Text);
-                    decimal newWidth = currentWidth / (decimal)currentHeight * newHeight;
-
-                    //변환된 가로가 최대 범위 초과시
-                    if (newWidth > MAXRANGE)
-                    {
-                        ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "MAX";
-                        ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
-                        ToolStripMenuItem_해상도변환적용.Enabled = false;
-                        ConvertResolution_button_적용.Enabled = false;
-
-                        statusStripManager.ShowErrorMessage("변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
-                        return;
-                    }
-
-                    ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(Math.Round(newWidth));
-                    ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
-                }
-            }
-            else
+            //비어있으면 반환
+            if (ConvertResolution_textBox_변환기준.Text == "")
             {
                 ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "0";
                 ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "0";
+                return;
             }
+
+            long currentWidth = Convert.ToInt64(ValuePrintLabel_ConvertResolution_현재해상도_가로.Text);
+            long currentHeight = Convert.ToInt64(ValuePrintLabel_ConvertResolution_현재해상도_세로.Text);
+            const int MAXRANGE = 9999;
+
+            //TODO: 공통로직 제거필요
+            //가로 기준 해상도 변환
+            if (ConvertResolution_comboBox_기준.Text.Equals("가로"))
+            {
+
+                if (currentWidth == 0)
+                    return;
+                long newWidth = Convert.ToInt64(ConvertResolution_textBox_변환기준.Text);
+                decimal newHeight = newWidth / (decimal)currentWidth * currentHeight;
+
+                //변환된 세로가 최대 범위 초과시
+                if (newHeight > MAXRANGE)
+                {
+                    ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
+                    ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = "MAX";
+                    ToolStripMenuItem_해상도변환적용.Enabled = false;
+                    ConvertResolution_button_적용.Enabled = false;
+
+                    statusStripManager.ShowErrorMessage("변환 예상 해상도의 세로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
+                    return;
+                }
+
+                ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(newWidth);
+                ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(Math.Round(newHeight));
+            }
+
+            //세로 기준 해상도 변환
+            if (ConvertResolution_comboBox_기준.Text.Equals("세로"))
+            {
+                if (currentHeight == 0)
+                    return;
+                long newHeight = Convert.ToInt64(ConvertResolution_textBox_변환기준.Text);
+                decimal newWidth = currentWidth / (decimal)currentHeight * newHeight;
+
+                //변환된 가로가 최대 범위 초과시
+                if (newWidth > MAXRANGE)
+                {
+                    ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
+                    ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = "MAX";
+                    ToolStripMenuItem_해상도변환적용.Enabled = false;
+                    ConvertResolution_button_적용.Enabled = false;
+
+                    statusStripManager.ShowErrorMessage("변환 예상 해상도의 가로 길이가 최대 범위(" + MAXRANGE + ")를 벗어납니다.");
+                    return;
+                }
+
+                ValuePrintLabel_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(newHeight);
+                ValuePrintLabel_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(Math.Round(newWidth));
+            }
+
+
         }
 
 
@@ -364,7 +364,7 @@ namespace Bitrate_Calculator
             }
             return capacity;
         }
-
+        
         //영상 비트레이트 계산
         private decimal CalcBitrate(string strWidth, string strHeight, string bitrateCapacity)
         {
@@ -378,7 +378,7 @@ namespace Bitrate_Calculator
             {
                 //CodecValue를 할당
                 decimal CodecValue = CodecsConvert.ToValue(OriginVidInfo_comboBox_적용코덱.Text);                
-
+            
                 long width = Convert.ToInt64(strWidth);
                 long height = Convert.ToInt64(strHeight);
                 long FPS = Convert.ToInt64(OriginVidInfo_textBox_초당프레임.Text);
@@ -518,21 +518,22 @@ namespace Bitrate_Calculator
 
         #region 에러
         //입력할 수 없을 때 발생하는 에러
+        private void CannotPutError(KeyEventArgs e)
+        {
+            e.Handled = true;
+            statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
+        }
+        private void CannotPutError(KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
+        }
+        private void CannotPutError(EventArgs e)
+        {
+            statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
+        }
         private void CannotPutError(object e)
         {
-            KeyEventArgs eKeyEventArgs;
-            KeyPressEventArgs eKeyPressEventArgs;
-            if (e is KeyEventArgs)
-            {
-                eKeyEventArgs = (KeyEventArgs)e;
-                eKeyEventArgs.Handled = true;
-            }
-            else if (e is KeyPressEventArgs)
-            {
-                eKeyPressEventArgs = (KeyPressEventArgs)e;
-                eKeyPressEventArgs.Handled = true;
-            }
-
             statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
         }
 
@@ -560,6 +561,9 @@ namespace Bitrate_Calculator
 
 
         #region Key입력 이벤트
+        //Delete 키는 KeyPress로 탐지가 안된다.
+        //따라서 KeyDown에서 확인해야 함
+
         //Delete 키에 의해 0으로 시작하는 숫자가 되는 것을 방지
         private void PreventLeadingZeroCausedByDelKey(object sender, KeyEventArgs e)
         {
@@ -583,91 +587,84 @@ namespace Bitrate_Calculator
         //텍스트박스에 대한 일반 문자 입력 처리
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            TextBox textBox = sender as TextBox;
 
-            //현재 키보드 이벤트 문자가 숫자 또는 백스페이스가 아니면 숫자입력아님에러 발생
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            //숫자 입력 또는 지우기만 허용
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == '\b'))
             {
                 PutIsOnlyDigitError(e);
                 return;
             }
-            
+
             /* 텍스트박스의 텍스트 길이가 0보다 클 때의 처리
              * 현재 텍스트박스의 텍스트를 임시 저장하는 임시 스트링 변수 tmpTextBoxText를 선언 후
              * tmpTextBox에 입력된 키에 해당하는 TextBox의 변화를 미리 적용시킨다.
              * tmpConvertedStr에 tmpTextBox를 Convert.ToInt64 시킨 문자열을 저장하여
              * tmpTextBox와 tmpConvertStr을 비교, 같으면 적용, 다르면 에러를 발생시킨다. */
-            if (textBox.Text.Length > 0)
+            if (textBox.Text.Length == 0) return;
+            
+            //column = 키보드 커서의 위치 (가장 왼쪽 = 0, 가장 오른쪽 = TextBox.Text.Length)
+            int column = textBox.SelectionStart;
+            string tmpTextBoxText;
+            tmpTextBoxText = textBox.Text;
+
+            //백스페이스 키와 관련된 처리
+            if (textBox.SelectionLength != 0)
+                tmpTextBoxText = tmpTextBoxText.Remove(column, textBox.SelectionLength);
+
+
+            if (e.KeyChar != '\b')
+                tmpTextBoxText = tmpTextBoxText.Insert(column, Convert.ToString(e.KeyChar));
+            else
+                if (column != 0)
+                    tmpTextBoxText = tmpTextBoxText.Remove(column - 1, 1);
+            
+            if (tmpTextBoxText.Equals(""))
+                tmpTextBoxText = "0";
+
+            string tmpConvertedStr = Convert.ToString(Convert.ToInt64(tmpTextBoxText));
+
+            //tmpConvertStr의 길이가 textBox의 길이보다 클 경우 입력한도넘김에러 발생
+            if (tmpConvertedStr.Length > textBox.MaxLength)
             {
-                //column = 키보드 커서의 위치 (가장 왼쪽 = 0, 가장 오른쪽 = TextBox.Text.Length)
-                int column = textBox.SelectionStart;
-                string tmpTextBoxText, tmpConvertedStr;
-                tmpTextBoxText = textBox.Text;
+                OverMaxLengthError(sender);
+                e.Handled = true;
+                return;
+            }
 
-                //백스페이스 키와 관련된 처리
-                if (textBox.SelectionLength != 0)
-                    tmpTextBoxText = tmpTextBoxText.Remove(column, textBox.SelectionLength);
+            //두 임시 문자열이 같지 않으면 입력 불가 에러 발생
+            if (tmpTextBoxText != tmpConvertedStr)
+            {
+                CannotPutError(e);
+                return;
+            }
 
-
-                if (e.KeyChar != '\b')
-                    tmpTextBoxText = tmpTextBoxText.Insert(column, Convert.ToString(e.KeyChar));
-                else
-                    if (column != 0)
-                        tmpTextBoxText = tmpTextBoxText.Remove(column - 1, 1);
-                if (tmpTextBoxText.Equals(""))
-                    tmpTextBoxText = "0";
-
-                tmpConvertedStr = Convert.ToString(Convert.ToInt64(tmpTextBoxText));
-
-
-                //tmpConvertStr의 길이가 textBox의 길이보다 클 경우 입력한도넘김에러 발생
-                if (tmpConvertedStr.Length > textBox.MaxLength)
+            
+            //이벤트 발생 컨트롤이 분 또는 초인 경우
+            if ( textBox == OriginVidInfo_textBox_분 ||
+                 textBox == OriginVidInfo_textBox_초 
+                 )
+            {
+                if (!IsRanged(tmpConvertedStr, 0, 59))
                 {
-                    OverMaxLengthError(sender);
+                    OverRangedError("정수", 0, 59);
                     e.Handled = true;
                     return;
                 }
+            }
 
-                //두 임시 문자열이 같지 않으면 입력 불가 에러 발생
-                if (!tmpTextBoxText.Equals(tmpConvertedStr))
+            //시간인 경우
+            if (textBox == OriginVidInfo_textBox_시간)
+            {
+                if (!IsRanged(tmpConvertedStr, 0, 24 * 30))
                 {
-                    CannotPutError(e);
+                    OverRangedError("정수", 0, 24 * 30);
+                    e.Handled = true;
                     return;
-                }
-                else
-                {
-                    //이벤트 발생 컨트롤이 분 또는 초인 지 판별
-                    bool isMinTxtBoxOrSecTxtBox = false;
-                    if (
-                        textBox == OriginVidInfo_textBox_분 ||
-                        textBox == OriginVidInfo_textBox_초
-                        )
-                    {
-                        isMinTxtBoxOrSecTxtBox = true;
-                    }
-
-                    if (isMinTxtBoxOrSecTxtBox)
-                    {
-                        if (!IsRanged(tmpConvertedStr, 0, 59))
-                        {
-                            OverRangedError("정수", 0, 59);
-                            e.Handled = true;
-                            return;
-                        }
-                    }
-
-                    if (textBox == OriginVidInfo_textBox_시간)
-                    {
-                        if (!IsRanged(tmpConvertedStr, 0, 24 * 30))
-                        {
-                            OverRangedError("정수", 0, 24 * 30);
-                            e.Handled = true;
-                            return;
-                        }
-                    }
                 }
             }
         }
+
 
         //콤보박스에 대한 모든 문자 입력 처리
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
