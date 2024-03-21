@@ -11,8 +11,10 @@ namespace Bitrate_Calculator.src
         MB, GB
     }
 
-    internal class FilesizeConvert
+    internal class FilesizeUnitHelper
     {
+        public const FilesizeUnit Default = FilesizeUnit.MB;
+
         public static string ToString(FilesizeUnit e)
         {
             return Enum.GetName(typeof(FilesizeUnit), e);
@@ -24,14 +26,12 @@ namespace Bitrate_Calculator.src
         }
 
 
-        public static decimal ToValue(Enum e)
+        public static int ToValue(FilesizeUnit e)
         {
             switch (e)
             {
-                case FilesizeUnit.MB:
-                    return 0;
-                case FilesizeUnit.GB:
-                    return 0;
+                case FilesizeUnit.MB: return 1024;
+                case FilesizeUnit.GB: return 1024 * 1024;
             }
             throw new ArgumentException();
         }

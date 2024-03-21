@@ -13,8 +13,10 @@ namespace Bitrate_Calculator.src
         DivX    //DivX
     }
 
-    public static class CodecsConvert
+    public static class CodecsHelper
     {
+        public const Codecs Default = Codecs.H263;
+
         public static string ToString(Codecs codecs)
         {
             switch(codecs)

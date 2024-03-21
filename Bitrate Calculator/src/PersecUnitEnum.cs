@@ -11,8 +11,10 @@ namespace Bitrate_Calculator.src
         Kbps, Mbps
     }
 
-    internal class PersecUnitConvert
+    internal class PersecUnitHelper
     {
+        public const PersecUnit Default = PersecUnit.Kbps;
+
         public static string ToString(PersecUnit e)
         {
             return Enum.GetName(typeof(PersecUnit), e);
@@ -23,19 +25,19 @@ namespace Bitrate_Calculator.src
             return (PersecUnit)Enum.Parse(typeof(PersecUnit), e);
         }
 
-        public static decimal ToValue(PersecUnit e)
+        public static int ToValue(PersecUnit e)
         {
             switch (e)
             {
                 case PersecUnit.Kbps:
-                    return 0;
+                    return 1024;
                 case PersecUnit.Mbps:
-                    return 0;
+                    return 1024 * 1024;
             }
             throw new ArgumentException();
         }
 
-        public static decimal ToValue(string s)
+        public static int ToValue(string s)
         {
             return ToValue(ToPersecUnit(s));
         }

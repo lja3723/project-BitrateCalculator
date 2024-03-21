@@ -9,7 +9,7 @@ namespace Bitrate_Calculator.src
 {
     internal class VisualManager
     {
-        private VisualStorage storage;
+        private Storage storage;
 
         private TextBox originVidInfo_시간;
         private TextBox originVidInfo_분;
@@ -41,273 +41,188 @@ namespace Bitrate_Calculator.src
         private Label valuePrint_ConvertResolution_변환예상크기;
 
 
-
         public int 시간
         {
-            get
+            get 
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_시간.Text.Length == 0) return -1; //값이 0이 아닌 아예 null 의미
+                return Convert.ToInt32(originVidInfo_시간.Text); 
             }
         }
         public int 분
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_분.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_분.Text); 
             }
         }
         public int 초
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_초.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_초.Text); 
             }
         }
         public int 화면해상도_가로
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_화면해상도_가로.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_화면해상도_가로.Text);
             }
         }
         public int 화면해상도_세로
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_화면해상도_세로.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_화면해상도_세로.Text); 
             }
         }
         public int 초당프레임
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_초당프레임.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_초당프레임.Text); 
             }
         }
         public int 오디오비트레이트
         {
             get
             {
-                return 0;
-            }
-            set
-            {
-
+                if (originVidInfo_오디오비트레이트.Text.Length == 0) return -1;
+                return Convert.ToInt32(originVidInfo_오디오비트레이트.Text); 
             }
         }
         public Codecs 적용코덱
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return CodecsHelper.ToCodecs(originVidInfo_적용코덱.Text); }
         }
+
 
         public PersecUnit 최대영상비트레이트
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return PersecUnitHelper.ToPersecUnit(bitrate_최대영상비트레이트.Text); }
         }
         public FilesizeUnit 예상출력영상크기
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return FilesizeUnitHelper.ToFilesizeUnit(bitrate_예상출력영상크기.Text); }
         }
+
 
         public FilesizeUnit 원하는출력영상크기_단위
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return FilesizeUnitHelper.ToFilesizeUnit(outSizeBasedBitrate_원하는출력영상크기_단위.Text); }
         }
         public int 원하는출력영상크기
         {
-            get
+            get 
             {
-                return 0;
-            }
-            set
-            {
-
+                if (outSizeBasedBitrate_원하는출력영상크기.Text.Length == 0) return -1;
+                return Convert.ToInt32(outSizeBasedBitrate_원하는출력영상크기.Text); 
             }
         }
         public PersecUnit 예상영상비트레이트
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return PersecUnitHelper.ToPersecUnit(outSizeBasedBitrate_예상영상비트레이트.Text); }
         }
-        public bool 변환기준_단위
+        
+        
+        public ConvertResolutionBase 변환기준_단위
         {
-            get
-            {
-                return true;
-            }
-            set
-            {
-
-            }
+            get { return ConvertResolutionBaseHelper.ToConvertResolutionBase(convertResolution_변환기준_단위.Text); }
         }
-
         public int 변환기준
         {
-            get
+            get 
             {
-                return 0;
-            }
-            set
-            {
-
+                if (convertResolution_변환기준.Text.Length == 0) return -1;
+                return Convert.ToInt32(convertResolution_변환기준.Text); 
             }
         }
         public FilesizeUnit 변환예상크기
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-
-            }
+            get { return FilesizeUnitHelper.ToFilesizeUnit(convertResolution_변환예상크기.Text); }
         }
 
-        public decimal ValuePrint_최대영상비트레이트
-        {
-            get
-            {
-                return 0;
-            }
-            set
-            {
 
+        public decimal ValueLabel최대영상비트레이트
+        {
+
+            get //임시구현
+            {
+                return Convert.ToDecimal(valuePrint_Bitrate_최대영상비트레이트.Text);
+            }
+            set 
+            { 
+                //3자리씩 끊는 로직 추가 필요
+                valuePrint_Bitrate_최대영상비트레이트.Text = Convert.ToString(value); 
             }
         }
-        public decimal ValuePrint_예상출력영상크기
+        public decimal ValueLabel예상출력영상크기
         {
-            get
-            {
-                return 0;
-            }
             set
             {
-
+                valuePrint_Bitrate_예상출력영상크기.Text = Convert.ToString(value);
             }
         }
-        public decimal ValuePrin_예상영상비트레이트
+        public decimal ValueLabel예상영상비트레이트
         {
-            get
+
+            get //임시구현
             {
-                return 0;
+                return Convert.ToDecimal(valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text);
             }
             set
             {
-
+                valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = Convert.ToString(value);
             }
         }
-        public int ValuePrint_현재해상도_가로
+        public int ValueLabel현재해상도_가로
         {
-            get
-            {
-                return 0;
-            }
             set
             {
-
+                valuePrint_ConvertResolution_현재해상도_가로.Text = Convert.ToString(value);
             }
         }
-        public int ValuePrint_현재해상도_세로
+        public int ValueLabel현재해상도_세로
         {
-            get
-            {
-                return 0;
-            }
             set
             {
-
+                valuePrint_ConvertResolution_현재해상도_세로.Text = Convert.ToString(value);
             }
         }
-        public int ValuePrint_변환예상해상도_가로
+        public int ValueLabel변환예상해상도_가로
         {
-            get
+
+            get //임시구현
             {
-                return 0;
+                return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_가로.Text);
             }
             set
             {
-
+                valuePrint_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(value);
             }
         }
-        public int ValuePrint_변환예상해상도_세로
+        public int ValueLabel변환예상해상도_세로
         {
-            get
+            get //임시구현
             {
-                return 0;
+                return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_세로.Text);
             }
             set
             {
-
+                valuePrint_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(value);
             }
         }
-        public decimal ValuePrint_변환예상크기
+        public decimal ValueLabel변환예상크기
         {
-            get
-            {
-                return 0;
-            }
             set
             {
-
+                valuePrint_ConvertResolution_변환예상크기.Text = Convert.ToString(value);
             }
         }
 
@@ -315,7 +230,7 @@ namespace Bitrate_Calculator.src
 
         public VisualManager(TextBox originVidInfo_시간, TextBox originVidInfo_분, TextBox originVidInfo_초, TextBox originVidInfo_화면해상도_가로, TextBox originVidInfo_화면해상도_세로, TextBox originVidInfo_초당프레임, TextBox originVidInfo_오디오비트레이트, ComboBox originVidInfo_적용코덱, ComboBox bitrate_최대영상비트레이트, ComboBox bitrate_예상출력영상크기, ComboBox outSizeBasedBitrate_원하는출력영상크기_단위, TextBox outSizeBasedBitrate_원하는출력영상크기, ComboBox outSizeBasedBitrate_예상영상비트레이트, ComboBox convertResolution_변환기준_단위, TextBox convertResolution_변환기준, ComboBox convertResolution_변환예상크기, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
         {
-            storage = new VisualStorage();
+            storage = new Storage();
             this.originVidInfo_시간 = originVidInfo_시간;
             this.originVidInfo_분 = originVidInfo_분;
             this.originVidInfo_초 = originVidInfo_초;
@@ -342,10 +257,4 @@ namespace Bitrate_Calculator.src
             this.valuePrint_ConvertResolution_변환예상크기 = valuePrint_ConvertResolution_변환예상크기;
         }
     }
-
-    internal class VisualStorage
-    {
-
-    }
-
 }
