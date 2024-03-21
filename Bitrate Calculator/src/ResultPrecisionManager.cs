@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bitrate_Calculator.src
+﻿namespace Bitrate_Calculator.src
 {
     public class ResultPrecisionManager
     {
-        #region SetDecimalPoint 관련 메서드 (모듈화 필요)
-
         //영상 비트레이트 소수점 정밀도
         public uint BitratePrecision { get; set; }
         public string BitratePrecisionFormat
@@ -28,15 +20,5 @@ namespace Bitrate_Calculator.src
         {
             return "N" + n.ToString();
         }
-
-        //문자열 실수 숫자에 콤마 제거
-        private string RemoveDigitSeparator(string number)
-        {
-            string tmpString = number;
-            tmpString = tmpString.Replace(",", "");
-            return tmpString;
-        }
-        #endregion
-
     }
 }

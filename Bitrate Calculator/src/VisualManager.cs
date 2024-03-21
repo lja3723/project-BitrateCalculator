@@ -9,37 +9,37 @@ namespace Bitrate_Calculator.src
 {
     internal class VisualManager
     {
-        private Storage storage;
-        private ResultPrecisionManager precision;
+        private readonly Storage storage;
+        private readonly ResultPrecisionManager precision;
 
-        private TextBox originVidInfo_시간;
-        private TextBox originVidInfo_분;
-        private TextBox originVidInfo_초;
-        private TextBox originVidInfo_화면해상도_가로;
-        private TextBox originVidInfo_화면해상도_세로;
-        private TextBox originVidInfo_초당프레임;
-        private TextBox originVidInfo_오디오비트레이트;
-        private ComboBox originVidInfo_적용코덱;
+        private readonly TextBox originVidInfo_시간;
+        private readonly TextBox originVidInfo_분;
+        private readonly TextBox originVidInfo_초;
+        private readonly TextBox originVidInfo_화면해상도_가로;
+        private readonly TextBox originVidInfo_화면해상도_세로;
+        private readonly TextBox originVidInfo_초당프레임;
+        private readonly TextBox originVidInfo_오디오비트레이트;
+        private readonly ComboBox originVidInfo_적용코덱;
 
-        private ComboBox bitrate_최대영상비트레이트;
-        private ComboBox bitrate_예상출력영상크기;
+        private readonly ComboBox bitrate_최대영상비트레이트;
+        private readonly ComboBox bitrate_예상출력영상크기;
 
-        private ComboBox outSizeBasedBitrate_원하는출력영상크기_단위;
-        private TextBox outSizeBasedBitrate_원하는출력영상크기;
-        private ComboBox outSizeBasedBitrate_예상영상비트레이트;
+        private readonly ComboBox outSizeBasedBitrate_원하는출력영상크기_단위;
+        private readonly TextBox outSizeBasedBitrate_원하는출력영상크기;
+        private readonly ComboBox outSizeBasedBitrate_예상영상비트레이트;
 
-        private ComboBox convertResolution_변환기준_단위;
-        private TextBox convertResolution_변환기준;
-        private ComboBox convertResolution_변환예상크기;
+        private readonly ComboBox convertResolution_변환기준_단위;
+        private readonly TextBox convertResolution_변환기준;
+        private readonly ComboBox convertResolution_변환예상크기;
 
-        private Label valuePrint_Bitrate_최대영상비트레이트;
-        private Label valuePrint_Bitrate_예상출력영상크기;
-        private Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트;
-        private Label valuePrint_ConvertResolution_현재해상도_가로;
-        private Label valuePrint_ConvertResolution_현재해상도_세로;
-        private Label valuePrint_ConvertResolution_변환예상해상도_가로;
-        private Label valuePrint_ConvertResolution_변환예상해상도_세로;
-        private Label valuePrint_ConvertResolution_변환예상크기;
+        private readonly Label valuePrint_Bitrate_최대영상비트레이트;
+        private readonly Label valuePrint_Bitrate_예상출력영상크기;
+        private readonly Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트;
+        private readonly Label valuePrint_ConvertResolution_현재해상도_가로;
+        private readonly Label valuePrint_ConvertResolution_현재해상도_세로;
+        private readonly Label valuePrint_ConvertResolution_변환예상해상도_가로;
+        private readonly Label valuePrint_ConvertResolution_변환예상해상도_세로;
+        private readonly Label valuePrint_ConvertResolution_변환예상크기;
 
 
         public int 시간
@@ -150,7 +150,7 @@ namespace Bitrate_Calculator.src
         }
 
 
-        public decimal ValueLabel최대영상비트레이트 //TODO: 소수점 반영 표기 필요
+        public decimal ValueLabel최대영상비트레이트
         {
 
             get //임시구현
@@ -163,14 +163,14 @@ namespace Bitrate_Calculator.src
                 valuePrint_Bitrate_최대영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat); 
             }
         }
-        public decimal ValueLabel예상출력영상크기 //TODO: 소수점 반영 표기 필요
+        public decimal ValueLabel예상출력영상크기
         {
             set
             {
                 valuePrint_Bitrate_예상출력영상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
             }
         }
-        public decimal ValueLabel예상영상비트레이트 //TODO: 소수점 반영 표기 필요
+        public decimal ValueLabel예상영상비트레이트
         {
 
             get //임시구현
@@ -223,7 +223,7 @@ namespace Bitrate_Calculator.src
                     Convert.ToString(value) : "MAX";
             }
         }
-        public decimal ValueLabel변환예상크기 //TODO: 소수점 반영 표기 필요
+        public decimal ValueLabel변환예상크기
         {
             set
             {

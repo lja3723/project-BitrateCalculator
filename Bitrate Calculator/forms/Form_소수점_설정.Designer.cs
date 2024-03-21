@@ -1,6 +1,6 @@
 ﻿namespace Bitrate_Calculator
 {
-    partial class _Form_SetDecimalPoint
+    partial class Form_소수점_설정
     {
         /// <summary>
         /// Required designer variable.
@@ -200,7 +200,7 @@
             this.button_OK.TabIndex = 0;
             this.button_OK.Text = "확인";
             this.button_OK.UseVisualStyleBackColor = true;
-            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
+            this.button_OK.Click += new System.EventHandler(this.Button_OK_Click);
             // 
             // button_cancel
             // 
@@ -214,7 +214,7 @@
             this.button_cancel.TabIndex = 1;
             this.button_cancel.Text = "취소";
             this.button_cancel.UseVisualStyleBackColor = true;
-            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
+            this.button_cancel.Click += new System.EventHandler(this.Button_cancel_Click);
             // 
             // _Form_SetDecimalPoint
             // 

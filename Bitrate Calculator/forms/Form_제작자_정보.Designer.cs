@@ -1,6 +1,6 @@
 ﻿namespace Bitrate_Calculator
 {
-    partial class _Form_제작자_정보
+    partial class Form_제작자_정보
     {
         /// <summary>
         /// Required designer variable.
@@ -72,7 +72,7 @@
     "자 블로그 주소:\r\nhttps://lja3723.github.io";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.UseCompatibleTextRendering = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // flowLayoutPanel1
             // 
@@ -97,7 +97,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "확인";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // pictureBox1
             // 

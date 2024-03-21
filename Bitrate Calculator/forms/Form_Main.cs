@@ -26,10 +26,10 @@ namespace Bitrate_Calculator
     public partial class Main_Form : Form
     {
         #region 프로그램 Initializing
-        private ResultPrecisionManager resultPrecisionManager;
-        private ChildFormManager childFormManager;
-        private StatusStripManager statusStripManager;
-        private VisualManager visual;
+        private readonly ResultPrecisionManager resultPrecisionManager;
+        private readonly ChildFormManager childFormManager;
+        private readonly StatusStripManager statusStripManager;
+        private readonly VisualManager visual;
 
         public Main_Form()
         {
@@ -64,9 +64,8 @@ namespace Bitrate_Calculator
                 ValuePrintLabel_ConvertResolution_변환예상해상도_가로,
                 ValuePrintLabel_ConvertResolution_변환예상해상도_세로,
                 ValuePrintLabel_ConvertResolution_변환예상크기);
-
-
         }
+
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
@@ -106,7 +105,6 @@ namespace Bitrate_Calculator
         #endregion
 
 
-
         #region real time 처리
         //bitrate 상태 업데이트
         private void UpdateBitrateState()
@@ -132,11 +130,10 @@ namespace Bitrate_Calculator
         #endregion
 
 
-        
-
 
         #region TODO: 리얼타임 처리와 도메인 로직 분리필요
         //해상도 변환
+        //TODO: 공통로직 제거필요
         private void ConvertResolution()
         {
             //validation: 비어있으면 반환
@@ -150,7 +147,6 @@ namespace Bitrate_Calculator
             long currentWidth = visual.화면해상도_가로;
             long currentHeight = visual.화면해상도_세로;
 
-            //TODO: 공통로직 제거필요
             //가로 기준 해상도 변환
             if (visual.변환기준_단위 == ConvertResolutionBase.Horizontal)
             {
@@ -204,19 +200,14 @@ namespace Bitrate_Calculator
                 return;
             }
 
-
-            decimal newBitrate = CalcBitrate(
-                visual.ValueLabel변환예상해상도_가로,
-                visual.ValueLabel변환예상해상도_세로,
-                visual.초당프레임, visual.적용코덱,
-                visual.최대영상비트레이트);
-
-            decimal newCapacity = CalcCapacity(
-                newBitrate,
+            visual.ValueLabel변환예상크기 = CalcCapacity(
+                CalcBitrate(
+                    visual.ValueLabel변환예상해상도_가로,
+                    visual.ValueLabel변환예상해상도_세로,
+                    visual.초당프레임, visual.적용코덱,
+                    visual.최대영상비트레이트),
                 visual.변환예상크기,
                 visual.최대영상비트레이트);
-
-            visual.ValueLabel변환예상크기 = newCapacity;
         }
 
 
@@ -449,11 +440,7 @@ namespace Bitrate_Calculator
             e.Handled = true;
             statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
         }
-        private void CannotPutError(EventArgs e)
-        {
-            statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
-        }
-        private void CannotPutError(object e)
+        private void CannotPutError()
         {
             statusStripManager.ShowErrorMessage("입력할 수 없습니다.");
         }
@@ -660,7 +647,7 @@ namespace Bitrate_Calculator
         {
             if (ActiveControl is TextBox)
             {
-                TextBox textBox = (TextBox)ActiveControl;
+                TextBox textBox = ActiveControl as TextBox;
                 textBox.SelectionStart = 0;
                 textBox.SelectionLength = textBox.Text.Length;
             }
@@ -670,7 +657,7 @@ namespace Bitrate_Calculator
         {
             if (ActiveControl is TextBox)
             {
-                TextBox textBox = (TextBox)ActiveControl;
+                TextBox textBox = ActiveControl as TextBox;
                 textBox.Cut();
             }
         }
@@ -679,7 +666,7 @@ namespace Bitrate_Calculator
         {
             if (ActiveControl is TextBox)
             {
-                TextBox textBox = (TextBox)ActiveControl;
+                TextBox textBox = ActiveControl as TextBox;
                 textBox.Copy();
             }
         }
@@ -688,7 +675,7 @@ namespace Bitrate_Calculator
         {
             if (ActiveControl is TextBox)
             {
-                TextBox textBox = (TextBox)ActiveControl;
+                TextBox textBox = ActiveControl as TextBox;
 
                 //클립보드의 내용을 임시로 저장하는 스트링 변수 선언
                 string tmpClipboardStr = Clipboard.GetText();
@@ -744,7 +731,7 @@ namespace Bitrate_Calculator
                 }
                 else //클립보드에 하나라도 숫자가 아닌 값이 있으면 삽입 불가 에러 발생
                 {
-                    CannotPutError(e);
+                    CannotPutError();
                 }
             }
         }

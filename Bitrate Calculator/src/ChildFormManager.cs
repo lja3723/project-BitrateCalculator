@@ -6,8 +6,8 @@ namespace Bitrate_Calculator.src
 
     internal class ChildFormManager
     {
-        private Form parent;
-        private ResultPrecisionManager resultPrecisionManager;
+        private readonly Form parent;
+        private readonly ResultPrecisionManager resultPrecisionManager;
 
         public ChildFormManager(Form parent, ResultPrecisionManager resultPrecisionManager)
         {
@@ -17,8 +17,8 @@ namespace Bitrate_Calculator.src
 
         public void Show_제작자_정보()
         {
-            if (_Form_제작자_정보.IsCreated) return;
-            CreateChild(new _Form_제작자_정보());
+            if (Form_제작자_정보.IsCreated) return;
+            CreateChild(new Form_제작자_정보());
         }
 
         public void Show_프로그램_정보()
@@ -29,8 +29,8 @@ namespace Bitrate_Calculator.src
 
         public void Show_SetDecimalPoint(Action programRefresher)
         {
-            if (_Form_SetDecimalPoint.IsCreated) return;
-            CreateChild(new _Form_SetDecimalPoint(programRefresher, resultPrecisionManager));
+            if (Form_소수점_설정.IsCreated) return;
+            CreateChild(new Form_소수점_설정(programRefresher, resultPrecisionManager));
         }
 
         private void CreateChild(Form child)
