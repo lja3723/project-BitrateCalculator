@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="src\FilesizeUnitEnum.cs" />
     <Compile Include="src\RealtimeManager.cs" />
+    <Compile Include="src\ResultPrecisionManager.cs" />
     <Compile Include="src\StatusStripManager.cs" />
     <Compile Include="src\CodecsEnum.cs" />
     <Compile Include="src\Storage.cs" />

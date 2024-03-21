@@ -26,6 +26,7 @@ namespace Bitrate_Calculator
     public partial class Main_Form : Form
     {
         #region 프로그램 Initializing
+        private ResultPrecisionManager resultPrecisionManager;
         private ChildFormManager childFormManager;
         private StatusStripManager statusStripManager;
         private VisualManager visual;
@@ -34,9 +35,11 @@ namespace Bitrate_Calculator
         {
             InitializeComponent();
 
-            childFormManager = new ChildFormManager();
+            resultPrecisionManager = new ResultPrecisionManager();
+            childFormManager = new ChildFormManager(this, resultPrecisionManager);
             statusStripManager = new StatusStripManager(Main_timer, ValuePrintLabel_Main_status);
             visual = new VisualManager(
+                resultPrecisionManager,
                 OriginVidInfo_textBox_시간,
                 OriginVidInfo_textBox_분,
                 OriginVidInfo_textBox_초,
@@ -50,7 +53,7 @@ namespace Bitrate_Calculator
                 OutSizeBasedBitrate_comboBox_원하는출력영상크기,
                 OutSizeBasedBitrate_textBox_원하는출력영상크기,
                 OutSizeBasedBitrate_comboBox_예상영상비트레이트,
-                ConvertResolution_comboBox_기준,
+                ConvertResolution_comboBox_변환기준,
                 ConvertResolution_textBox_변환기준,
                 ConvertResolution_comboBox_변환예상크기,
                 ValuePrintLabel_Bitrate_최대영상비트레이트,
@@ -105,14 +108,6 @@ namespace Bitrate_Calculator
 
 
         #region real time 처리
-        //표시 상태 업데이트
-        public void UpdateFormMainState()
-        {
-            UpdateBitrateState();
-            CalcBitrateWithConvertedResolution();
-            UpdateOutsizeBasedBitrateState();
-        }
-
         //bitrate 상태 업데이트
         private void UpdateBitrateState()
         {
@@ -134,79 +129,10 @@ namespace Bitrate_Calculator
         {
             visual.ValueLabel예상영상비트레이트 = CalcOutsizeBasedBitrate(visual.원하는출력영상크기_단위, visual.예상영상비트레이트);
         }
-
         #endregion
 
 
-        #region SetDecimalPoint 관련 메서드 (모듈화 필요)
-
-
-        //영상 비트레이트 소수점 정밀도
-        private string BitrateDecimalPointStr = "0"; // decimal의 포맷팅에 필요한 format 표시 문자열임
-        private int BitrateDecimalPointInt = 0;
-
-        //용량 소수점 정밀도
-        private string CapacityDecimalPointStr = "0"; // decimal의 포맷팅에 필요한 format 표시 문자열임
-        private int CapacityDecimalPointInt = 0;
-
-        //DecimalPoint 값을 설정한다.
-        //설정된 포인트 값에 따라 format 문자열 설정함
-        //0, 0.0, 0.00, 0.000, 0.0000 이렇게 설정됨
-        public void SetDecimalPoint(int bitrateDecimalPointInt, int capacityDecimalPointInt)
-        {
-            BitrateDecimalPointInt = bitrateDecimalPointInt;
-            BitrateDecimalPointStr = "0";
-            if (BitrateDecimalPointInt > 0)
-            {
-                BitrateDecimalPointStr += ".";
-                for (int i = 0; i < BitrateDecimalPointInt; i++)
-                    BitrateDecimalPointStr += "0";
-            }
-
-            CapacityDecimalPointInt = capacityDecimalPointInt;
-            CapacityDecimalPointStr = "0";
-            if (CapacityDecimalPointInt > 0)
-            {
-                CapacityDecimalPointStr += ".";
-                for (int i = 0; i < CapacityDecimalPointInt; i++)
-                    CapacityDecimalPointStr += "0";
-            }
-        }
-
-        //BitrateDecimalPointStr 값을 얻음
-        public int GetBitrateDecimalPoint()
-        {
-            return BitrateDecimalPointInt;
-        }
-
-        //CapacityDecimalPoint 값을 얻음
-        public int GetCapacityDecimalPoint()
-        {
-            return CapacityDecimalPointInt;
-        }
-
-        //문자열 실수 숫자에 콤마 넣기
-        private string GetUnitSeparatedDigit(string number)
-        {
-            if (number.IndexOf(".") == -1)
-                for (int i = number.Length - 3; i > 0; i -= 3)
-                    number = number.Insert(i, ",");
-            else
-                for (int i = number.IndexOf(".") - 3; i > 0; i -= 3)
-                    number = number.Insert(i, ",");
-
-            return number;
-        }
-
-        //문자열 실수 숫자에 콤마 제거
-        private string RemoveDigitSeparator(string number)
-        {
-            string tmpString = number;
-            tmpString = tmpString.Replace(",", "");
-            return tmpString;
-        }
-        #endregion
-
+        
 
 
         #region TODO: 리얼타임 처리와 도메인 로직 분리필요
@@ -352,7 +278,7 @@ namespace Bitrate_Calculator
 
             //ConvertResolution 컨트롤의 편집 가능한 컨트롤이 변경되었는 지 확인
             bool isConvertResolutionWritableCtrl = 
-                control == ConvertResolution_comboBox_기준 || 
+                control == ConvertResolution_comboBox_변환기준 || 
                 control == ConvertResolution_textBox_변환기준 || 
                 control == ConvertResolution_comboBox_변환예상크기;
 
@@ -672,7 +598,7 @@ namespace Bitrate_Calculator
 
 
 
-        #region 프로그램 기능
+        #region 프로그램 기능 - TODO: 컨트롤 직접참조 제거하기
         private void Clear원본영상파일정보(object sender, EventArgs e)
         {
             OriginVidInfo_textBox_초당프레임.Text = "";
@@ -699,7 +625,7 @@ namespace Bitrate_Calculator
             OutSizeBasedBitrate_comboBox_원하는출력영상크기.Text = "MB";
             OutSizeBasedBitrate_textBox_원하는출력영상크기.Text = "";
             OutSizeBasedBitrate_comboBox_예상영상비트레이트.Text = "Kbps";
-            ConvertResolution_comboBox_기준.Text = "가로";
+            ConvertResolution_comboBox_변환기준.Text = "가로";
             ConvertResolution_textBox_변환기준.Text = "";
             ValuePrintLabel_ConvertResolution_현재해상도_가로.Text = "0";
             ValuePrintLabel_ConvertResolution_현재해상도_세로.Text = "0";
@@ -838,17 +764,23 @@ namespace Bitrate_Calculator
         #region 자식 폼 관리
         private void CreateChildForm_프로그램정보(object sender, EventArgs e)
         {
-            childFormManager.Show_프로그램_정보(this);
+            childFormManager.Show_프로그램_정보();
         }
 
         private void CreateChildForm_제작자(object sender, EventArgs e)
         {
-            childFormManager.Show_제작자_및_도움(this);
+            childFormManager.Show_제작자_정보();
         }
 
         private void CreateChildForm_표시소수점정밀도설정(object sender, EventArgs e)
         {
-            childFormManager.Show_소수점_설정(this);
+            //소수점 설정 후 프로그램 새로고침되는 로직 넣기
+            childFormManager.Show_SetDecimalPoint(() => 
+            {
+                UpdateBitrateState();
+                CalcBitrateWithConvertedResolution();
+                UpdateOutsizeBasedBitrateState();
+            });
         }
         #endregion
 

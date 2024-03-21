@@ -10,6 +10,7 @@ namespace Bitrate_Calculator.src
     internal class VisualManager
     {
         private Storage storage;
+        private ResultPrecisionManager precision;
 
         private TextBox originVidInfo_시간;
         private TextBox originVidInfo_분;
@@ -159,14 +160,14 @@ namespace Bitrate_Calculator.src
             set 
             { 
                 //3자리씩 끊는 로직 추가 필요
-                valuePrint_Bitrate_최대영상비트레이트.Text = Convert.ToString(value); 
+                valuePrint_Bitrate_최대영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat); 
             }
         }
         public decimal ValueLabel예상출력영상크기 //TODO: 소수점 반영 표기 필요
         {
             set
             {
-                valuePrint_Bitrate_예상출력영상크기.Text = Convert.ToString(value);
+                valuePrint_Bitrate_예상출력영상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
             }
         }
         public decimal ValueLabel예상영상비트레이트 //TODO: 소수점 반영 표기 필요
@@ -178,7 +179,7 @@ namespace Bitrate_Calculator.src
             }
             set
             {
-                valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = Convert.ToString(value);
+                valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat);
             }
         }
         public int ValueLabel현재해상도_가로
@@ -226,16 +227,17 @@ namespace Bitrate_Calculator.src
         {
             set
             {
-                valuePrint_ConvertResolution_변환예상크기.Text = Convert.ToString(value);
+                valuePrint_ConvertResolution_변환예상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
             }
         }
 
         public const int 변환예상해상도_최대범위 = 9999;
 
 
-        public VisualManager(TextBox originVidInfo_시간, TextBox originVidInfo_분, TextBox originVidInfo_초, TextBox originVidInfo_화면해상도_가로, TextBox originVidInfo_화면해상도_세로, TextBox originVidInfo_초당프레임, TextBox originVidInfo_오디오비트레이트, ComboBox originVidInfo_적용코덱, ComboBox bitrate_최대영상비트레이트, ComboBox bitrate_예상출력영상크기, ComboBox outSizeBasedBitrate_원하는출력영상크기_단위, TextBox outSizeBasedBitrate_원하는출력영상크기, ComboBox outSizeBasedBitrate_예상영상비트레이트, ComboBox convertResolution_변환기준_단위, TextBox convertResolution_변환기준, ComboBox convertResolution_변환예상크기, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
+        public VisualManager(ResultPrecisionManager precision, TextBox originVidInfo_시간, TextBox originVidInfo_분, TextBox originVidInfo_초, TextBox originVidInfo_화면해상도_가로, TextBox originVidInfo_화면해상도_세로, TextBox originVidInfo_초당프레임, TextBox originVidInfo_오디오비트레이트, ComboBox originVidInfo_적용코덱, ComboBox bitrate_최대영상비트레이트, ComboBox bitrate_예상출력영상크기, ComboBox outSizeBasedBitrate_원하는출력영상크기_단위, TextBox outSizeBasedBitrate_원하는출력영상크기, ComboBox outSizeBasedBitrate_예상영상비트레이트, ComboBox convertResolution_변환기준_단위, TextBox convertResolution_변환기준, ComboBox convertResolution_변환예상크기, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
         {
             storage = new Storage();
+            this.precision = precision;
             this.originVidInfo_시간 = originVidInfo_시간;
             this.originVidInfo_분 = originVidInfo_분;
             this.originVidInfo_초 = originVidInfo_초;

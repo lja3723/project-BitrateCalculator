@@ -1,29 +1,39 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
 {
 
     internal class ChildFormManager
     {
-        public void Show_제작자_및_도움(Form parent)
+        private Form parent;
+        private ResultPrecisionManager resultPrecisionManager;
+
+        public ChildFormManager(Form parent, ResultPrecisionManager resultPrecisionManager)
+        {
+            this.parent = parent;
+            this.resultPrecisionManager = resultPrecisionManager;
+        }
+
+        public void Show_제작자_정보()
         {
             if (_Form_제작자_정보.IsCreated) return;
-            CreateChild(parent, new _Form_제작자_정보());
+            CreateChild(new _Form_제작자_정보());
         }
 
-        public void Show_프로그램_정보(Form parent)
+        public void Show_프로그램_정보()
         {
             if (Form_프로그램_정보.IsCreated) return;
-            CreateChild(parent, new Form_프로그램_정보());
+            CreateChild(new Form_프로그램_정보());
         }
 
-        public void Show_소수점_설정(Main_Form parent)
+        public void Show_SetDecimalPoint(Action programRefresher)
         {
             if (_Form_SetDecimalPoint.IsCreated) return;
-            CreateChild(parent, new _Form_SetDecimalPoint(parent));
+            CreateChild(new _Form_SetDecimalPoint(programRefresher, resultPrecisionManager));
         }
 
-        private void CreateChild(Form parent, Form child)
+        private void CreateChild(Form child)
         {
             child.Show(parent);
             int centerX = parent.Location.X + (parent.Size.Width - child.Size.Width) / 2;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bitrate_Calculator.src;
+using System;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Bitrate_Calculator
@@ -11,21 +13,24 @@ namespace Bitrate_Calculator
             get { return isCreated; }
         }
 
-        Main_Form formMain;
+        private Action refreshProgram;
+        private ResultPrecisionManager precision;
 
-        public _Form_SetDecimalPoint(Main_Form formMain)
+        public _Form_SetDecimalPoint(Action programRefresher, ResultPrecisionManager precision)
         {
             isCreated = true;
             InitializeComponent();
-            this.formMain = formMain;
-            numericUpDown_영상_비트레이트_소수점.Value = formMain.GetBitrateDecimalPoint();
-            numericUpDown_용량_소수점.Value = formMain.GetCapacityDecimalPoint();
+            this.refreshProgram = programRefresher;
+            this.precision = precision;
+            numericUpDown_영상_비트레이트_소수점.Value = precision.BitratePrecision;
+            numericUpDown_용량_소수점.Value = precision.CapacityPrecision;
         }
 
         private void button_OK_Click(object sender, EventArgs e)
         {
-            formMain.SetDecimalPoint((int)numericUpDown_영상_비트레이트_소수점.Value, (int)numericUpDown_용량_소수점.Value);
-            formMain.UpdateFormMainState();
+            precision.BitratePrecision = (uint)numericUpDown_영상_비트레이트_소수점.Value;
+            precision.CapacityPrecision = (uint)numericUpDown_용량_소수점.Value;
+            refreshProgram();
             Close();
             isCreated = false;
         }
