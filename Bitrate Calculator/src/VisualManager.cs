@@ -149,7 +149,7 @@ namespace Bitrate_Calculator.src
         }
 
 
-        public decimal ValueLabel최대영상비트레이트
+        public decimal ValueLabel최대영상비트레이트 //TODO: 소수점 반영 표기 필요
         {
 
             get //임시구현
@@ -162,14 +162,14 @@ namespace Bitrate_Calculator.src
                 valuePrint_Bitrate_최대영상비트레이트.Text = Convert.ToString(value); 
             }
         }
-        public decimal ValueLabel예상출력영상크기
+        public decimal ValueLabel예상출력영상크기 //TODO: 소수점 반영 표기 필요
         {
             set
             {
                 valuePrint_Bitrate_예상출력영상크기.Text = Convert.ToString(value);
             }
         }
-        public decimal ValueLabel예상영상비트레이트
+        public decimal ValueLabel예상영상비트레이트 //TODO: 소수점 반영 표기 필요
         {
 
             get //임시구현
@@ -200,25 +200,29 @@ namespace Bitrate_Calculator.src
 
             get //임시구현
             {
+                if (valuePrint_ConvertResolution_변환예상해상도_가로.Text == "MAX") return -1;
                 return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_가로.Text);
             }
             set
             {
-                valuePrint_ConvertResolution_변환예상해상도_가로.Text = Convert.ToString(value);
+                valuePrint_ConvertResolution_변환예상해상도_가로.Text = value <= 변환예상해상도_최대범위 ?
+                    Convert.ToString(value) : "MAX";
             }
         }
         public int ValueLabel변환예상해상도_세로
         {
             get //임시구현
             {
+                if (valuePrint_ConvertResolution_변환예상해상도_세로.Text == "MAX") return -1;
                 return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_세로.Text);
             }
             set
             {
-                valuePrint_ConvertResolution_변환예상해상도_세로.Text = Convert.ToString(value);
+                valuePrint_ConvertResolution_변환예상해상도_세로.Text = value <= 변환예상해상도_최대범위 ?
+                    Convert.ToString(value) : "MAX";
             }
         }
-        public decimal ValueLabel변환예상크기
+        public decimal ValueLabel변환예상크기 //TODO: 소수점 반영 표기 필요
         {
             set
             {
@@ -226,6 +230,7 @@ namespace Bitrate_Calculator.src
             }
         }
 
+        public const int 변환예상해상도_최대범위 = 9999;
 
 
         public VisualManager(TextBox originVidInfo_시간, TextBox originVidInfo_분, TextBox originVidInfo_초, TextBox originVidInfo_화면해상도_가로, TextBox originVidInfo_화면해상도_세로, TextBox originVidInfo_초당프레임, TextBox originVidInfo_오디오비트레이트, ComboBox originVidInfo_적용코덱, ComboBox bitrate_최대영상비트레이트, ComboBox bitrate_예상출력영상크기, ComboBox outSizeBasedBitrate_원하는출력영상크기_단위, TextBox outSizeBasedBitrate_원하는출력영상크기, ComboBox outSizeBasedBitrate_예상영상비트레이트, ComboBox convertResolution_변환기준_단위, TextBox convertResolution_변환기준, ComboBox convertResolution_변환예상크기, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
