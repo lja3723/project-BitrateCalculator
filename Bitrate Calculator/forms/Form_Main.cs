@@ -109,14 +109,24 @@ namespace Bitrate_Calculator
         //bitrate 상태 업데이트
         private void UpdateBitrateState()
         {
+            if (visual.화면해상도_가로 < 0 || visual.화면해상도_세로 < 0 || visual.초당프레임 < 0)
+                return;
+
             visual.ValueLabel최대영상비트레이트 = CalcBitrate(
-                visual.화면해상도_가로,
-                visual.화면해상도_세로,
-                visual.초당프레임,
+                (uint)visual.화면해상도_가로,
+                (uint)visual.화면해상도_세로,
+                (uint)visual.초당프레임,
                 visual.적용코덱,
                 visual.최대영상비트레이트);
 
+            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0 || visual.오디오비트레이트 < 0)
+                return;
+
             visual.ValueLabel예상출력영상크기 = CalcCapacity(
+                (uint)visual.시간,
+                (uint)visual.분,
+                (uint)visual.초,
+                (uint)visual.오디오비트레이트,
                 visual.ValueLabel최대영상비트레이트,
                 visual.예상출력영상크기,
                 visual.최대영상비트레이트);
@@ -125,7 +135,19 @@ namespace Bitrate_Calculator
         //원하는 비트레이트 상태 업데이트
         private void UpdateOutsizeBasedBitrateState()
         {
-            visual.ValueLabel예상영상비트레이트 = CalcOutsizeBasedBitrate(visual.원하는출력영상크기_단위, visual.예상영상비트레이트);
+            //validation: 모두 비어있지 않아야 함
+            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0) return;
+            if (visual.오디오비트레이트 < 0 || visual.원하는출력영상크기 < 0) return;
+
+            visual.ValueLabel예상영상비트레이트 = CalcOutsizeBasedBitrate(
+                (uint)visual.시간,
+                (uint)visual.분,
+                (uint)visual.초,
+                (uint)visual.오디오비트레이트,
+                (uint)visual.원하는출력영상크기,
+                visual.원하는출력영상크기_단위, 
+                visual.예상영상비트레이트
+                );
         }
         #endregion
 
@@ -192,19 +214,28 @@ namespace Bitrate_Calculator
 
 
         //변환 해상도 기준 동영상 용량 계산
-        private void CalcBitrateWithConvertedResolution()
+        private void UpdateBitrateWithConvertedResolution()
         {
             if (visual.ValueLabel변환예상해상도_가로 <= 0 || visual.ValueLabel변환예상해상도_세로 <= 0)
             {
                 visual.ValueLabel변환예상크기 = 0;
                 return;
             }
+            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0 || visual.오디오비트레이트 < 0)
+                return;
+            if (visual.ValueLabel변환예상해상도_가로 < 0 || visual.ValueLabel변환예상해상도_세로 < 0 || visual.초당프레임 < 0)
+                return;
 
             visual.ValueLabel변환예상크기 = CalcCapacity(
+                (uint)visual.시간,
+                (uint)visual.분,
+                (uint)visual.초,
+                (uint)visual.오디오비트레이트,
                 CalcBitrate(
-                    visual.ValueLabel변환예상해상도_가로,
-                    visual.ValueLabel변환예상해상도_세로,
-                    visual.초당프레임, visual.적용코덱,
+                    (uint)visual.ValueLabel변환예상해상도_가로,
+                    (uint)visual.ValueLabel변환예상해상도_세로,
+                    (uint)visual.초당프레임, 
+                    visual.적용코덱,
                     visual.최대영상비트레이트),
                 visual.변환예상크기,
                 visual.최대영상비트레이트);
@@ -212,8 +243,9 @@ namespace Bitrate_Calculator
 
 
         //TextChanged 이벤트
+        //업데이트된 텍스트박스에 맞는 프로그램 새로고침 발생함
         //TODO: 각 컨트롤에 맞는 이벤트 함수로 분리 필요
-        private void ControlTextChanged(object sender, EventArgs e)
+        private void TextBox_TextChanged(object sender, EventArgs e)
         {
             Control control = sender as Control;
             ToolStripMenuItem_모두초기화.Enabled = true;
@@ -282,7 +314,7 @@ namespace Bitrate_Calculator
             if (isOriginVidInfo화면해상도 || isConvertResolutionWritableCtrl || isConvertResolution변환예상해상도Label)
             {
                 if (!isOriginVidInfo화면해상도)
-                    CalcBitrateWithConvertedResolution();
+                    UpdateBitrateWithConvertedResolution();
                 if (!isConvertResolution변환예상해상도Label)
                     ConvertResolution();
                 else
@@ -292,7 +324,6 @@ namespace Bitrate_Calculator
                 }
             }
         }
-
         #endregion
 
 
@@ -306,32 +337,20 @@ namespace Bitrate_Calculator
         }
 
         //영상 용량 계산
-        private decimal CalcCapacity(decimal bitrate, FilesizeUnit filesizeUnit, PersecUnit bitrateUnit)
+        private decimal CalcCapacity(uint hours, uint mins, uint seconds, uint audioBitrate, decimal bitrate, FilesizeUnit filesizeUnit, PersecUnit bitrateUnit)
         {
-            //validation: 모두 비어있지 않아야 함
-            if (visual.시간 == -1 || visual.분 == -1 || visual.초 == -1 || visual.오디오비트레이트 == -1)
-                return 0;
-
-            decimal audioBitrate = visual.오디오비트레이트;
-            long hours = visual.시간;
-            long mins = visual.분;
-            long seconds = visual.초;
-            long totalSeconds = 3600 * hours + 60 * mins + seconds;
-
-            int bitrateUnitOffset = PersecUnitHelper.ToValue(bitrateUnit) / 1024;
+            int bitrateUnitOffset = PersecUnitHelper.ToValue(bitrateUnit) >> 10/*div by 1024*/;
             int fileSizeUnitOffset = FilesizeUnitHelper.ToValue(filesizeUnit);
-            return (audioBitrate + bitrate * bitrateUnitOffset) / (8 * fileSizeUnitOffset) * totalSeconds;
+            long totalSeconds = 3600 * hours + 60 * mins + seconds;
+            
+            return (audioBitrate + bitrate * bitrateUnitOffset) / (fileSizeUnitOffset << 3/*mul by 8*/) * totalSeconds;
         }
 
         //영상 비트레이트 계산
         //fps에는 OriginVidInfo_textBox_초당프레임 들어가기
         //codec에는 OriginVidInfo_comboBox_적용코덱 들어가기
-        private decimal CalcBitrate(int width, int height, int fps, Codecs codec, PersecUnit unit)
+        private decimal CalcBitrate(uint width, uint height, uint fps, Codecs codec, PersecUnit unit)
         {
-            if (width == -1 || height == -1 || fps == -1)
-                return 0;
-
-            //CodecValue를 할당
             decimal CodecValue = CodecsHelper.ToValue(codec);
             decimal unitOffset = PersecUnitHelper.ToValue(unit);
 
@@ -339,27 +358,15 @@ namespace Bitrate_Calculator
         }
 
         //출력 영상 크기 기준 영상 비트레이트 계산
-        private decimal CalcOutsizeBasedBitrate(FilesizeUnit filesizeUnit, PersecUnit bitrateUnit)
+        private decimal CalcOutsizeBasedBitrate(uint hours, uint mins, uint seconds, uint audioBitrate, uint expectedVidSize, FilesizeUnit filesizeUnit, PersecUnit bitrateUnit)
         {
-            //validation: 모두 비어있지 않아야 함
-            if (visual.시간 == -1 || visual.분 == -1 || visual.초 == -1 || visual.오디오비트레이트 == -1 ||
-                visual.원하는출력영상크기 == -1 || visual.원하는출력영상크기 == -1)
-                return 0;
-
-            long hours = visual.시간;
-            long mins = visual.분;
-            long seconds = visual.초;
-            long totalSeconds = 3600*hours + 60*mins + seconds;
-            if (totalSeconds == 0) return 0;
-
-            decimal audioBitrate = visual.오디오비트레이트;
-            decimal expectedVidSize = visual.원하는출력영상크기;
 
             int filesizeUnitOffset = FilesizeUnitHelper.ToValue(filesizeUnit);
-            decimal persecUnitOffset = PersecUnitHelper.ToValue(bitrateUnit) / 1024;
+            int persecUnitOffset = PersecUnitHelper.ToValue(bitrateUnit) >> 10/*div by 1024*/;
+            ulong totalSeconds = 3600 * hours + 60 * mins + seconds;
+            if (totalSeconds == 0) return 0;
 
-            decimal outsizeBasedBitrate = ((expectedVidSize * 8 * filesizeUnitOffset / totalSeconds) - audioBitrate) / persecUnitOffset;     
-
+            decimal outsizeBasedBitrate = (((expectedVidSize << 3/*mul by 8*/) * filesizeUnitOffset / (decimal)totalSeconds) - audioBitrate) / persecUnitOffset;     
             return Math.Max(0, outsizeBasedBitrate);
         }
         #endregion
@@ -473,7 +480,7 @@ namespace Bitrate_Calculator
         //따라서 KeyDown에서 확인해야 함
 
         //Delete 키에 의해 0으로 시작하는 숫자가 되는 것을 방지
-        private void PreventLeadingZeroCausedByDelKey(object sender, KeyEventArgs e)
+        private void TextBox_PreventLeadingZeroByDelKey(object sender, KeyEventArgs e)
         {
             TextBox textBox = sender as TextBox;
 
@@ -483,13 +490,6 @@ namespace Bitrate_Calculator
             if (textBox.Text[1] != '0') return;
             
             CannotPutError(e);
-        }
-
-        //ComboBox의 Delete키 입력 방지
-        private void PreventDelKeyAtComboBox(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-                e.Handled = true;
         }
 
         //텍스트박스에 대한 일반 문자 입력 처리
@@ -536,7 +536,6 @@ namespace Bitrate_Calculator
             if (tmpConvertedStr.Length > textBox.MaxLength)
             {
                 OverMaxLengthError(sender);
-                e.Handled = true;
                 return;
             }
 
@@ -573,9 +572,15 @@ namespace Bitrate_Calculator
             }
         }
 
+        //ComboBox의 Delete키 입력 방지
+        private void ComboBox_PreventDelKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+                e.Handled = true;
+        }
 
-        //콤보박스에 대한 모든 문자 입력 처리
-        private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        //콤보박스 모든 문자 입력 방지
+        private void ComboBox_PreventKeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
@@ -765,7 +770,7 @@ namespace Bitrate_Calculator
             childFormManager.Show_SetDecimalPoint(() => 
             {
                 UpdateBitrateState();
-                CalcBitrateWithConvertedResolution();
+                UpdateBitrateWithConvertedResolution();
                 UpdateOutsizeBasedBitrateState();
             });
         }
