@@ -42,60 +42,60 @@ namespace Bitrate_Calculator.src
         private readonly Label valuePrint_ConvertResolution_변환예상크기;
 
 
-        public int 시간
+        public uint? 시간
         {
             get 
             {
-                if (originVidInfo_시간.Text.Length == 0) return -1; //값이 0이 아닌 아예 null 의미
-                return Convert.ToInt32(originVidInfo_시간.Text); 
+                if (originVidInfo_시간.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_시간.Text); 
             }
         }
-        public int 분
+        public uint? 분
         {
             get
             {
-                if (originVidInfo_분.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_분.Text); 
+                if (originVidInfo_분.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_분.Text); 
             }
         }
-        public int 초
+        public uint? 초
         {
             get
             {
-                if (originVidInfo_초.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_초.Text); 
+                if (originVidInfo_초.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_초.Text); 
             }
         }
-        public int 화면해상도_가로
+        public uint? 화면해상도_가로
         {
             get
             {
-                if (originVidInfo_화면해상도_가로.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_화면해상도_가로.Text);
+                if (originVidInfo_화면해상도_가로.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_화면해상도_가로.Text);
             }
         }
-        public int 화면해상도_세로
+        public uint? 화면해상도_세로
         {
             get
             {
-                if (originVidInfo_화면해상도_세로.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_화면해상도_세로.Text); 
+                if (originVidInfo_화면해상도_세로.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_화면해상도_세로.Text); 
             }
         }
-        public int 초당프레임
+        public uint? 초당프레임
         {
             get
             {
-                if (originVidInfo_초당프레임.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_초당프레임.Text); 
+                if (originVidInfo_초당프레임.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_초당프레임.Text); 
             }
         }
-        public int 오디오비트레이트
+        public uint? 오디오비트레이트
         {
             get
             {
-                if (originVidInfo_오디오비트레이트.Text.Length == 0) return -1;
-                return Convert.ToInt32(originVidInfo_오디오비트레이트.Text); 
+                if (originVidInfo_오디오비트레이트.Text.Length == 0) return null;
+                return Convert.ToUInt32(originVidInfo_오디오비트레이트.Text); 
             }
         }
         public Codecs 적용코덱
@@ -118,12 +118,12 @@ namespace Bitrate_Calculator.src
         {
             get { return FilesizeUnitHelper.ToFilesizeUnit(outSizeBasedBitrate_원하는출력영상크기_단위.Text); }
         }
-        public int 원하는출력영상크기
+        public uint? 원하는출력영상크기
         {
             get 
             {
-                if (outSizeBasedBitrate_원하는출력영상크기.Text.Length == 0) return -1;
-                return Convert.ToInt32(outSizeBasedBitrate_원하는출력영상크기.Text); 
+                if (outSizeBasedBitrate_원하는출력영상크기.Text.Length == 0) return null;
+                return Convert.ToUInt32(outSizeBasedBitrate_원하는출력영상크기.Text); 
             }
         }
         public PersecUnit 예상영상비트레이트
@@ -136,12 +136,12 @@ namespace Bitrate_Calculator.src
         {
             get { return ConvertResolutionBaseHelper.ToConvertResolutionBase(convertResolution_변환기준_단위.Text); }
         }
-        public int 변환기준
+        public uint? 변환기준
         {
             get 
             {
-                if (convertResolution_변환기준.Text.Length == 0) return -1;
-                return Convert.ToInt32(convertResolution_변환기준.Text); 
+                if (convertResolution_변환기준.Text.Length == 0) return null;
+                return Convert.ToUInt32(convertResolution_변환기준.Text); 
             }
         }
         public FilesizeUnit 변환예상크기
@@ -182,27 +182,27 @@ namespace Bitrate_Calculator.src
                 valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat);
             }
         }
-        public int ValueLabel현재해상도_가로
+        public uint? ValueLabel현재해상도_가로
         {
             set
             {
                 valuePrint_ConvertResolution_현재해상도_가로.Text = Convert.ToString(value);
             }
         }
-        public int ValueLabel현재해상도_세로
+        public uint? ValueLabel현재해상도_세로
         {
             set
             {
                 valuePrint_ConvertResolution_현재해상도_세로.Text = Convert.ToString(value);
             }
         }
-        public int ValueLabel변환예상해상도_가로
+        public uint? ValueLabel변환예상해상도_가로
         {
 
             get //임시구현
             {
-                if (valuePrint_ConvertResolution_변환예상해상도_가로.Text == "MAX") return -1;
-                return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_가로.Text);
+                if (valuePrint_ConvertResolution_변환예상해상도_가로.Text == "MAX") return null;
+                return Convert.ToUInt32(valuePrint_ConvertResolution_변환예상해상도_가로.Text);
             }
             set
             {
@@ -210,12 +210,12 @@ namespace Bitrate_Calculator.src
                     Convert.ToString(value) : "MAX";
             }
         }
-        public int ValueLabel변환예상해상도_세로
+        public uint? ValueLabel변환예상해상도_세로
         {
             get //임시구현
             {
-                if (valuePrint_ConvertResolution_변환예상해상도_세로.Text == "MAX") return -1;
-                return Convert.ToInt32(valuePrint_ConvertResolution_변환예상해상도_세로.Text);
+                if (valuePrint_ConvertResolution_변환예상해상도_세로.Text == "MAX") return null;
+                return Convert.ToUInt32(valuePrint_ConvertResolution_변환예상해상도_세로.Text);
             }
             set
             {
@@ -230,7 +230,7 @@ namespace Bitrate_Calculator.src
                 valuePrint_ConvertResolution_변환예상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
             }
         }
-
+            
         public const int 변환예상해상도_최대범위 = 9999;
 
 

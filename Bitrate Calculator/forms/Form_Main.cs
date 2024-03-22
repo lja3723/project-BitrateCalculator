@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Bitrate_Calculator.src;
 
@@ -109,24 +110,24 @@ namespace Bitrate_Calculator
         //bitrate 상태 업데이트
         private void UpdateBitrateState()
         {
-            if (visual.화면해상도_가로 < 0 || visual.화면해상도_세로 < 0 || visual.초당프레임 < 0)
+            if (!visual.화면해상도_가로.HasValue || !visual.화면해상도_세로.HasValue || !visual.초당프레임.HasValue)
                 return;
 
             visual.ValueLabel최대영상비트레이트 = CalcBitrate(
-                (uint)visual.화면해상도_가로,
-                (uint)visual.화면해상도_세로,
-                (uint)visual.초당프레임,
+                visual.화면해상도_가로.Value,
+                visual.화면해상도_세로.Value,
+                visual.초당프레임.Value,
                 visual.적용코덱,
                 visual.최대영상비트레이트);
 
-            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0 || visual.오디오비트레이트 < 0)
+            if (!visual.시간.HasValue || !visual.분.HasValue || !visual.초.HasValue || !visual.오디오비트레이트.HasValue)
                 return;
 
             visual.ValueLabel예상출력영상크기 = CalcCapacity(
-                (uint)visual.시간,
-                (uint)visual.분,
-                (uint)visual.초,
-                (uint)visual.오디오비트레이트,
+                visual.시간.Value,
+                visual.분.Value,
+                visual.초.Value,
+                visual.오디오비트레이트.Value,
                 visual.ValueLabel최대영상비트레이트,
                 visual.예상출력영상크기,
                 visual.최대영상비트레이트);
@@ -136,15 +137,15 @@ namespace Bitrate_Calculator
         private void UpdateOutsizeBasedBitrateState()
         {
             //validation: 모두 비어있지 않아야 함
-            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0) return;
-            if (visual.오디오비트레이트 < 0 || visual.원하는출력영상크기 < 0) return;
+            if (!visual.시간.HasValue || !visual.분.HasValue || !visual.초.HasValue) return;
+            if (!visual.오디오비트레이트.HasValue || !visual.원하는출력영상크기.HasValue) return;
 
             visual.ValueLabel예상영상비트레이트 = CalcOutsizeBasedBitrate(
-                (uint)visual.시간,
-                (uint)visual.분,
-                (uint)visual.초,
-                (uint)visual.오디오비트레이트,
-                (uint)visual.원하는출력영상크기,
+                visual.시간.Value,
+                visual.분.Value,
+                visual.초.Value,
+                visual.오디오비트레이트.Value,
+                visual.원하는출력영상크기.Value,
                 visual.원하는출력영상크기_단위, 
                 visual.예상영상비트레이트
                 );
@@ -159,23 +160,23 @@ namespace Bitrate_Calculator
         private void ConvertResolution()
         {
             //validation: 비어있으면 반환
-            if (visual.변환기준 == -1 || visual.화면해상도_가로 == -1 || visual.화면해상도_세로 == -1)
+            if (!visual.변환기준.HasValue || !visual.화면해상도_가로.HasValue || !visual.화면해상도_세로.HasValue)
             {
                 visual.ValueLabel변환예상해상도_가로 = 0;
                 visual.ValueLabel변환예상해상도_세로 = 0;
                 return;
             }
 
-            long currentWidth = visual.화면해상도_가로;
-            long currentHeight = visual.화면해상도_세로;
+            uint currentWidth = visual.화면해상도_가로.Value;
+            uint currentHeight = visual.화면해상도_세로.Value;
 
             //가로 기준 해상도 변환
             if (visual.변환기준_단위 == ConvertResolutionBase.Horizontal)
             {
                 if (currentWidth == 0) return;
 
-                int newWidth = visual.변환기준;
-                int newHeight = (int)Math.Round(newWidth * currentHeight / (decimal)currentWidth);
+                uint newWidth = visual.변환기준.Value;
+                uint newHeight = (uint)Math.Round(newWidth * currentHeight / (decimal)currentWidth);
 
                 visual.ValueLabel변환예상해상도_가로 = newWidth;
                 visual.ValueLabel변환예상해상도_세로 = newHeight;
@@ -195,8 +196,8 @@ namespace Bitrate_Calculator
             {
                 if (currentHeight == 0) return;
 
-                int newHeight = visual.변환기준;
-                int newWidth = (int)Math.Round(newHeight * currentWidth / (decimal)currentHeight);
+                uint newHeight = visual.변환기준.Value;
+                uint newWidth = (uint)Math.Round(newHeight * currentWidth / (decimal)currentHeight);
 
                 visual.ValueLabel변환예상해상도_가로 = newWidth;
                 visual.ValueLabel변환예상해상도_세로 = newHeight;
@@ -216,25 +217,25 @@ namespace Bitrate_Calculator
         //변환 해상도 기준 동영상 용량 계산
         private void UpdateBitrateWithConvertedResolution()
         {
-            if (visual.ValueLabel변환예상해상도_가로 <= 0 || visual.ValueLabel변환예상해상도_세로 <= 0)
+            if (!visual.ValueLabel변환예상해상도_가로.HasValue || !visual.ValueLabel변환예상해상도_세로.HasValue)
             {
                 visual.ValueLabel변환예상크기 = 0;
                 return;
             }
-            if (visual.시간 < 0 || visual.분 < 0 || visual.초 < 0 || visual.오디오비트레이트 < 0)
+            if (!visual.시간.HasValue || !visual.분.HasValue || !visual.초.HasValue || !visual.오디오비트레이트.HasValue)
                 return;
-            if (visual.ValueLabel변환예상해상도_가로 < 0 || visual.ValueLabel변환예상해상도_세로 < 0 || visual.초당프레임 < 0)
+            if (!visual.ValueLabel변환예상해상도_가로.HasValue || !visual.ValueLabel변환예상해상도_세로.HasValue || !visual.초당프레임.HasValue)
                 return;
 
             visual.ValueLabel변환예상크기 = CalcCapacity(
-                (uint)visual.시간,
-                (uint)visual.분,
-                (uint)visual.초,
-                (uint)visual.오디오비트레이트,
+                visual.시간.Value,
+                visual.분.Value,
+                visual.초.Value,
+                visual.오디오비트레이트.Value,
                 CalcBitrate(
-                    (uint)visual.ValueLabel변환예상해상도_가로,
-                    (uint)visual.ValueLabel변환예상해상도_세로,
-                    (uint)visual.초당프레임, 
+                    visual.ValueLabel변환예상해상도_가로.Value,
+                    visual.ValueLabel변환예상해상도_세로.Value,
+                    visual.초당프레임.Value, 
                     visual.적용코덱,
                     visual.최대영상비트레이트),
                 visual.변환예상크기,
@@ -293,10 +294,10 @@ namespace Bitrate_Calculator
             if (isOriginVidInfo화면해상도)
             {
                 if (control == OriginVidInfo_textBox_화면해상도_가로)
-                    visual.ValueLabel현재해상도_가로 = Math.Max(0, visual.화면해상도_가로);
+                    visual.ValueLabel현재해상도_가로 = Math.Max(0, visual.화면해상도_가로.GetValueOrDefault(0));
 
                 if (control == OriginVidInfo_textBox_화면해상도_세로)
-                    visual.ValueLabel현재해상도_세로 = Math.Max(0, visual.화면해상도_세로);
+                    visual.ValueLabel현재해상도_세로 = Math.Max(0, visual.화면해상도_세로.GetValueOrDefault(0));
             }
 
             //ConvertResolution 컨트롤의 편집 가능한 컨트롤이 변경되었는 지 확인
@@ -651,94 +652,59 @@ namespace Bitrate_Calculator
         private void SelectAll(object sender, EventArgs e)
         {
             if (ActiveControl is TextBox)
-            {
-                TextBox textBox = ActiveControl as TextBox;
-                textBox.SelectionStart = 0;
-                textBox.SelectionLength = textBox.Text.Length;
-            }
+                (ActiveControl as TextBox).SelectAll();
         }
 
         private void CutX(object sender, EventArgs e)
         {
             if (ActiveControl is TextBox)
-            {
-                TextBox textBox = ActiveControl as TextBox;
-                textBox.Cut();
-            }
+                (ActiveControl as TextBox).Cut();
         }
 
         private void CopyC(object sender, EventArgs e)
         {
             if (ActiveControl is TextBox)
-            {
-                TextBox textBox = ActiveControl as TextBox;
-                textBox.Copy();
-            }
+                (ActiveControl as TextBox).Copy();
         }
 
         private void PasteV(object sender, EventArgs e)
         {
-            if (ActiveControl is TextBox)
+            if (!(ActiveControl is TextBox)) return;
+
+            //클립보드 내용이 모두 숫자가 아니면 에러
+            if (!Clipboard.GetText().All(char.IsDigit))
             {
-                TextBox textBox = ActiveControl as TextBox;
+                CannotPutError();
+                return;
+            }
 
-                //클립보드의 내용을 임시로 저장하는 스트링 변수 선언
-                string tmpClipboardStr = Clipboard.GetText();
+            //클립보드의 숫자의 나열을 정확한 자연수의 표현으로 변환한 문자열을 임시로 담는 변수 tmpStr 선언
+            //예) 002011 => 2011
+            string tmpStr = Convert.ToString(Convert.ToInt64(Clipboard.GetText()));
+            TextBox textBox = ActiveControl as TextBox;
 
-                //클립보드의 내용이 모두 숫자인 지 확인하는 플래그 선언
-                bool isClipBoardStrOnlyDigit = true;
-
-                //클립보드 내용이 모두 숫자인 지 확인.
-                for (int i = 0; i < tmpClipboardStr.Length; i++)
+            //현재 선택된 텍스트박스가 분 또는 초일 때 0~59에서 벗어나면 에러
+            if (textBox == OriginVidInfo_textBox_분 || textBox == OriginVidInfo_textBox_초)
+            {
+                if (!IsRanged(tmpStr, 0, 59))
                 {
-                    if (!char.IsDigit(tmpClipboardStr[i]))
-                    {
-                        isClipBoardStrOnlyDigit = false;
-                        break;
-                    }
-                }
-
-                //클립보드가 모두 숫자의 나열로 이루어져 있으면
-                if (isClipBoardStrOnlyDigit)
-                {
-                    //column : 텍스트박스의 키보드 커서 위치 
-                    int column = textBox.SelectionStart;
-
-                    //클립보드의 숫자의 나열을 정확한 자연수의 표현으로 변환한 문자열을
-                    //임시로 담는 변수 tmpStr 선언
-                    //예) 002011 => 2011
-                    string tmpStr = Convert.ToString(Convert.ToInt64(tmpClipboardStr));
-
-                    //만약 현재 선택된 텍스트박스가 분 또는 초일 때 0~59에서 벗어나면
-                    //범위 초과 에러 발생 후 메서드 종료
-                    if (textBox == OriginVidInfo_textBox_분 || textBox == OriginVidInfo_textBox_초)
-                    {
-                        if (!IsRanged(tmpStr, 0, 59))
-                        {
-                            OverRangedError("정수", 0, 59);
-                            return;
-                        }
-                    }
-
-                    //만약 tmpStr길이 + 현재 텍스트박스의 텍스트 길이 > 텍스트박스 최대 길이라면
-                    //문자열 길이 초과 에러 발생 후 메서드 종료
-                    if (tmpStr.Length + textBox.Text.Length > textBox.MaxLength)
-                    {
-                        OverMaxLengthError(textBox);
-                        return;
-                    }
-
-
-                    //클립보드의 내용을 텍스트박스의 텍스트의 현재 column 위치에 삽입
-                    textBox.Text = textBox.Text.Insert(column, tmpStr);
-                    textBox.SelectionStart = column + tmpStr.Length;
-                    textBox.SelectionLength = 0;
-                }
-                else //클립보드에 하나라도 숫자가 아닌 값이 있으면 삽입 불가 에러 발생
-                {
-                    CannotPutError();
+                    OverRangedError("정수", 0, 59);
+                    return;
                 }
             }
+
+            //tmpStr길이 + 현재 텍스트박스의 텍스트 길이 > 텍스트박스 최대 길이인 경우 에러
+            if (tmpStr.Length + textBox.Text.Length > textBox.MaxLength)
+            {
+                OverMaxLengthError(textBox);
+                return;
+            }
+
+            //클립보드의 내용을 텍스트박스의  키보드 커서 위치에 삽입
+            int pos = textBox.SelectionStart;
+            textBox.Text = textBox.Text.Insert(pos, tmpStr);
+            textBox.SelectionStart = pos + tmpStr.Length;
+            textBox.SelectionLength = 0;
         }
 
 
@@ -775,6 +741,8 @@ namespace Bitrate_Calculator
             });
         }
         #endregion
+
+
 
         #region 비트레이트 값 복사
         private void Copy최대영상비트레이트(object sender, EventArgs e)
