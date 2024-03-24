@@ -15,7 +15,7 @@ namespace Bitrate_Calculator.src
 
     public static class CodecsHelper
     {
-        public const Codecs Default = Codecs.H263;
+        public const Codecs Default = Codecs.H264;
 
         public static string ToString(Codecs codecs)
         {

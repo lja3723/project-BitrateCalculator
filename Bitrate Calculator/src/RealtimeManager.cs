@@ -41,9 +41,17 @@
         //해상도 변환 영역 업데이트
         private void UpdateConvertedResolutionArea()
         {
-            label.ConvertedWidth = calc.ConvertedWidth ?? 0;
-            label.ConvertedHeight = calc.ConvertedHeight ?? 0;
-            label.ConvertedVidSize = calc.ConvertedVidSize ?? 0;
+            uint width = calc.ConvertedWidth ?? 0;
+            uint height = calc.ConvertedHeight ?? 0;
+            const uint MaxRange = BitrateCalculator.ConvertedResolutionMaxRange;
+
+            label.ConvertedWidth = width;
+            label.ConvertedHeight = height;
+
+            if (width <= MaxRange && height <= MaxRange)
+                label.ConvertedVidSize = calc.ConvertedVidSize ?? 0;
+            else
+                label.ConvertedVidSize = 0;
         }
         #endregion
 
