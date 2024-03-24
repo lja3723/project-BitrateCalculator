@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
 {
-    internal class StatusStripManager
+    public class StatusStripManager
     {
-        private Timer timer;
-        private ToolStripStatusLabel label;
+        private readonly Timer timer;
+        private readonly ToolStripStatusLabel label;
 
         //statusStrip에 알림이 표시되는 static 시간(ms)
         private const int defaultInterval = 2755;
@@ -34,11 +34,11 @@ namespace Bitrate_Calculator.src
             if (timer.Enabled == true)
                 timer.Stop();
             timer.Interval = msInterval;
-            timer.Tick += new EventHandler(timerTick);
+            timer.Tick += new EventHandler(TimerTick);
             timer.Start();
         }
 
-        private void timerTick(object sender, EventArgs e)
+        private void TimerTick(object sender, EventArgs e)
         {
             label.Text = " ";
             timer.Stop();

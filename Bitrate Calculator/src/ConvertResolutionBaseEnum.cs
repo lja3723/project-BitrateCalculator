@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bitrate_Calculator.src
 {
-    internal enum ConvertResolutionBase
+    public enum ConvertResolutionBase
     {
         Vertical, Horizontal
     }
 
-    internal class ConvertResolutionBaseHelper
+    public class ConvertResolutionBaseHelper
     {
         public const ConvertResolutionBase Default = ConvertResolutionBase.Horizontal;
 

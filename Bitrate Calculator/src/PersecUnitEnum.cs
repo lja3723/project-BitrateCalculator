@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bitrate_Calculator.src
 {
-    internal enum PersecUnit
+    public enum PersecUnit
     {
         Kbps, Mbps
     }
 
-    internal class PersecUnitHelper
+    public class PersecUnitHelper
     {
         public const PersecUnit Default = PersecUnit.Kbps;
 

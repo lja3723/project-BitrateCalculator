@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bitrate_Calculator.src
 {
-    internal enum FilesizeUnit
+    public enum FilesizeUnit
     {
         MB, GB
     }
 
-    internal class FilesizeUnitHelper
+    public class FilesizeUnitHelper
     {
         public const FilesizeUnit Default = FilesizeUnit.MB;
 

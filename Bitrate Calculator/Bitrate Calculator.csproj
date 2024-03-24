@@ -69,7 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\ButtonFunctionAccessor.cs" />
     <Compile Include="src\ConvertResolutionBaseEnum.cs" />
+    <Compile Include="src\LabelDisplayManager.cs" />
     <Compile Include="src\PersecUnitEnum.cs" />
     <Compile Include="src\ChildFormManager.cs" />
     <Compile Include="forms\Form_소수점_설정.cs">
@@ -103,8 +105,8 @@
     <Compile Include="src\ResultPrecisionManager.cs" />
     <Compile Include="src\StatusStripManager.cs" />
     <Compile Include="src\CodecsEnum.cs" />
-    <Compile Include="src\Storage.cs" />
-    <Compile Include="src\VisualManager.cs" />
+    <Compile Include="src\BitrateCalculator.cs" />
+    <Compile Include="src\InfoControlManager.cs" />
     <EmbeddedResource Include="forms\Form_소수점_설정.resx">
       <DependentUpon>Form_소수점_설정.cs</DependentUpon>
     </EmbeddedResource>
