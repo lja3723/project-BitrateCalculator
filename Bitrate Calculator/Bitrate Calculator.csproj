@@ -70,10 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\ButtonFunctionAccessor.cs" />
-    <Compile Include="src\ConvertResolutionBaseEnum.cs" />
-    <Compile Include="src\LabelDisplayManager.cs" />
-    <Compile Include="src\PersecUnitEnum.cs" />
-    <Compile Include="src\ChildFormManager.cs" />
+    <Compile Include="src\enum\ConvertResolutionBaseEnum.cs" />
+    <Compile Include="src\manager\LabelDisplayManager.cs" />
+    <Compile Include="src\enum\PersecUnitEnum.cs" />
+    <Compile Include="src\manager\ChildFormManager.cs" />
     <Compile Include="forms\Form_소수점_설정.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,13 +100,13 @@
     <Compile Include="forms\Form_프로그램_정보.Designer.cs">
       <DependentUpon>Form_프로그램_정보.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\FilesizeUnitEnum.cs" />
-    <Compile Include="src\RealtimeManager.cs" />
-    <Compile Include="src\ResultPrecisionManager.cs" />
-    <Compile Include="src\StatusStripManager.cs" />
-    <Compile Include="src\CodecsEnum.cs" />
+    <Compile Include="src\enum\FilesizeUnitEnum.cs" />
+    <Compile Include="src\manager\RealtimeManager.cs" />
+    <Compile Include="src\manager\ResultPrecisionManager.cs" />
+    <Compile Include="src\manager\StatusStripManager.cs" />
+    <Compile Include="src\enum\CodecsEnum.cs" />
     <Compile Include="src\BitrateCalculator.cs" />
-    <Compile Include="src\InfoControlManager.cs" />
+    <Compile Include="src\manager\InfoControlManager.cs" />
     <EmbeddedResource Include="forms\Form_소수점_설정.resx">
       <DependentUpon>Form_소수점_설정.cs</DependentUpon>
     </EmbeddedResource>
