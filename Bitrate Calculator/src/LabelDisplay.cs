@@ -3,10 +3,12 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
 {
-    //값 출력 목적 라벨을 관리함
-    public class LabelDisplayManager
+    /// <summary>
+    ///     값 출력 목적 라벨을 관리한다.
+    /// </summary>
+    public class LabelDisplay
     {
-        private readonly ResultPrecisionManager precision;
+        private readonly ResultPrecision precision;
 
         private readonly Label valuePrint_Bitrate_최대영상비트레이트;
         private readonly Label valuePrint_Bitrate_예상출력영상크기;
@@ -22,21 +24,21 @@ namespace Bitrate_Calculator.src
         {
             set
             {
-                valuePrint_Bitrate_최대영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat);
+                valuePrint_Bitrate_최대영상비트레이트.Text = value.ToString(precision.BitrateFieldFormat);
             }
         }
         public decimal ExpectedOutputVidSize //예상출력영상크기
         {
             set
             {
-                valuePrint_Bitrate_예상출력영상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
+                valuePrint_Bitrate_예상출력영상크기.Text = value.ToString(precision.CapacityFieldFormat);
             }
         }
         public decimal DesiredOutputBitrate //출력영상크기기준 예상영상비트레이트
         {
             set
             {
-                valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = value.ToString(precision.BitratePrecisionFormat);
+                valuePrint_OutSizeBasedBitrate_예상영상비트레이트.Text = value.ToString(precision.BitrateFieldFormat);
             }
         }
         public uint Width //현재영상 해상도 가로
@@ -73,7 +75,7 @@ namespace Bitrate_Calculator.src
         {
             set
             {
-                valuePrint_ConvertResolution_변환예상크기.Text = value.ToString(precision.CapacityPrecisionFormat);
+                valuePrint_ConvertResolution_변환예상크기.Text = value.ToString(precision.CapacityFieldFormat);
             }
         }
 
@@ -91,7 +93,7 @@ namespace Bitrate_Calculator.src
         }
 
 
-        public LabelDisplayManager(ResultPrecisionManager precision, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
+        public LabelDisplay(ResultPrecision precision, Label valuePrint_Bitrate_최대영상비트레이트, Label valuePrint_Bitrate_예상출력영상크기, Label valuePrint_OutSizeBasedBitrate_예상영상비트레이트, Label valuePrint_ConvertResolution_현재해상도_가로, Label valuePrint_ConvertResolution_현재해상도_세로, Label valuePrint_ConvertResolution_변환예상해상도_가로, Label valuePrint_ConvertResolution_변환예상해상도_세로, Label valuePrint_ConvertResolution_변환예상크기)
         {
             this.precision = precision;
             this.valuePrint_Bitrate_최대영상비트레이트 = valuePrint_Bitrate_최대영상비트레이트;

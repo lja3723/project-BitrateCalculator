@@ -3,7 +3,10 @@ using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
 {
-    public class StatusStripManager
+    /// <summary>
+    ///     프로그램 하단의 상태바를 관리한다.
+    /// </summary>
+    public class StatusBar
     {
         private readonly Timer timer;
         private readonly ToolStripStatusLabel label;
@@ -11,7 +14,7 @@ namespace Bitrate_Calculator.src
         //statusStrip에 알림이 표시되는 static 시간(ms)
         private const int defaultInterval = 2755;
 
-        public StatusStripManager(Timer timer, ToolStripStatusLabel label)
+        public StatusBar(Timer timer, ToolStripStatusLabel label)
         {
             this.timer = timer;
             this.label = label;

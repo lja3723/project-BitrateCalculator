@@ -13,9 +13,9 @@ namespace Bitrate_Calculator
         }
 
         private readonly Action refreshProgram;
-        private readonly ResultPrecisionManager precision;
+        private readonly ResultPrecision precision;
 
-        public Form_소수점_설정(Action programRefresher, ResultPrecisionManager precision)
+        public Form_소수점_설정(Action programRefresher, ResultPrecision precision)
         {
             InitializeComponent();
 
@@ -23,14 +23,14 @@ namespace Bitrate_Calculator
             refreshProgram = programRefresher;
             this.precision = precision;
 
-            numericUpDown_영상_비트레이트_소수점.Value = precision.BitratePrecision;
-            numericUpDown_용량_소수점.Value = precision.CapacityPrecision;
+            numericUpDown_영상_비트레이트_소수점.Value = precision.BitrateField;
+            numericUpDown_용량_소수점.Value = precision.CapacityField;
         }
 
         private void Button_OK_Click(object sender, EventArgs e)
         {
-            precision.BitratePrecision = (uint)numericUpDown_영상_비트레이트_소수점.Value;
-            precision.CapacityPrecision = (uint)numericUpDown_용량_소수점.Value;
+            precision.BitrateField = (uint)numericUpDown_영상_비트레이트_소수점.Value;
+            precision.CapacityField = (uint)numericUpDown_용량_소수점.Value;
 
             refreshProgram();
             isCreated = false;

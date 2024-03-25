@@ -2,7 +2,9 @@
 
 namespace Bitrate_Calculator.src
 {
-    //버튼이 제공하는 기능에 접근하는 행동을 관리함
+    /// <summary>
+    ///     버튼이 기능에 접근할 수 있도록 한다.
+    /// </summary>
     public class ButtonFunctionAccessor
     {
         private readonly ToolStripMenuItem applyConvertResolutionMenu;

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Bitrate_Calculator.src;
+using Bitrate_Calculator.src.manager;
 
 
 /*
@@ -28,12 +29,16 @@ namespace Bitrate_Calculator
     {
         #region 프로그램 Initializing
         private readonly BitrateCalculator calculator;
-        private readonly ResultPrecisionManager precisionManager;
-        private readonly ChildFormManager childFormManager;
-        private readonly StatusStripManager statusManager;
-        private readonly LabelDisplayManager labelManager;
-        private readonly InfoControlManager infoCtrlManager;
-        private readonly RealtimeManager realtimeManager;
+        private readonly ResultPrecision resultPrecision;
+        private readonly ChildForm childForm;
+        private readonly src.StatusBar statusBar;
+        private readonly LabelDisplay labelDisplay;
+
+        private readonly InfoControlReference infoControlReference;
+        private readonly InfoControlReader infoControlReader;
+        private readonly InfoControlAdjuster infoControlAdjuster;
+
+        private readonly MainFormField field;
         private readonly ButtonFunctionAccessor accessor;
 
         public Main_Form()
@@ -41,11 +46,11 @@ namespace Bitrate_Calculator
             InitializeComponent();
 
             calculator = new BitrateCalculator();
-            precisionManager = new ResultPrecisionManager();
-            childFormManager = new ChildFormManager(this, precisionManager);
-            statusManager = new StatusStripManager(Main_timer, ValuePrintLabel_Main_status);
+            resultPrecision = new ResultPrecision();
+            childForm = new ChildForm(this);
+            statusBar = new src.StatusBar(Main_timer, ValuePrintLabel_Main_status);
 
-            infoCtrlManager = new InfoControlManager(
+            infoControlReference = new InfoControlReference(
                 OriginVidInfo_textBox_시간,
                 OriginVidInfo_textBox_분,
                 OriginVidInfo_textBox_초,
@@ -62,9 +67,12 @@ namespace Bitrate_Calculator
                 ConvertResolution_comboBox_변환기준,
                 ConvertResolution_textBox_변환기준,
                 ConvertResolution_comboBox_변환예상크기);
+            infoControlReader = new InfoControlReader(infoControlReference);
+            infoControlAdjuster = new InfoControlAdjuster(infoControlReference);
 
-            labelManager = new LabelDisplayManager(
-                precisionManager,
+
+            labelDisplay = new LabelDisplay(
+                resultPrecision,
                 ValuePrintLabel_Bitrate_최대영상비트레이트,
                 ValuePrintLabel_Bitrate_예상출력영상크기,
                 ValuePrintLabel_OutSizeBasedBitrate_예상영상비트레이트,
@@ -82,9 +90,9 @@ namespace Bitrate_Calculator
                 ToolStripMenuItem_모두초기화,
                 Main_button_모두초기화);
 
-            realtimeManager = new RealtimeManager(calculator, infoCtrlManager, labelManager, accessor, statusManager);
+            field = new MainFormField(calculator, infoControlReader, labelDisplay, accessor, statusBar);
 
-            statusManager.ShowMessage("프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.", 5800);
+            statusBar.ShowMessage("프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.", 5800);
         }
         #endregion
 
@@ -153,36 +161,36 @@ namespace Bitrate_Calculator
         private void CannotPutError(KeyEventArgs e)
         {
             e.Handled = true;
-            statusManager.ShowErrorMessage("입력할 수 없습니다.");
+            statusBar.ShowErrorMessage("입력할 수 없습니다.");
         }
         private void CannotPutError(KeyPressEventArgs e)
         {
             e.Handled = true;
-            statusManager.ShowErrorMessage("입력할 수 없습니다.");
+            statusBar.ShowErrorMessage("입력할 수 없습니다.");
         }
         private void CannotPutError()
         {
-            statusManager.ShowErrorMessage("입력할 수 없습니다.");
+            statusBar.ShowErrorMessage("입력할 수 없습니다.");
         }
 
         //입력값이 숫자가 아닐 때 발생하는 에러
         private void PutIsOnlyDigitError(KeyPressEventArgs e)
         {
             e.Handled = true;
-            statusManager.ShowErrorMessage("숫자만 입력할 수 있습니다.");
+            statusBar.ShowErrorMessage("숫자만 입력할 수 있습니다.");
         }
 
         //입력값의 수치 범위가 초과할 때 발생하는 에러
         private void OverRangedError(string kindOfValue, int min, int max)
         {
-            statusManager.ShowErrorMessage(min + " 이상 " + max + " 이하의 " + kindOfValue + "만 입력할 수 있습니다.");
+            statusBar.ShowErrorMessage(min + " 이상 " + max + " 이하의 " + kindOfValue + "만 입력할 수 있습니다.");
         }
 
         //입력값의 길이 범위가 초과할 때 발생하는 에러
         private void OverMaxLengthError(object sender)
         {
             TextBox textBox = (TextBox)sender;
-            statusManager.ShowErrorMessage("입력 한도는 " + textBox.MaxLength + "자리입니다.");
+            statusBar.ShowErrorMessage("입력 한도는 " + textBox.MaxLength + "자리입니다.");
         }
         #endregion
 
@@ -316,17 +324,17 @@ namespace Bitrate_Calculator
         #region 프로그램 기능
         private void Clear원본영상파일정보(object sender, EventArgs e)
         {
-            infoCtrlManager.ClearOriginVidFields(accessor, statusManager);
+            infoControlAdjuster.ClearOriginVidFields(accessor, statusBar);
         }
 
         private void ClearAll(object sender, EventArgs e)
         {
-            infoCtrlManager.ClearAll(accessor, statusManager, labelManager);
+            infoControlAdjuster.ClearAll(accessor, statusBar, labelDisplay);
         }
 
         private void Apply해상도변환(object sender, EventArgs e)
         {
-            infoCtrlManager.ApplyConvertResolution(accessor, statusManager, calculator);
+            infoControlAdjuster.ApplyConvertResolution(accessor, statusBar, calculator);
         }
 
         private void SelectAll(object sender, EventArgs e)
@@ -400,18 +408,18 @@ namespace Bitrate_Calculator
         #region 자식 폼 관리
         private void CreateChildForm_프로그램정보(object sender, EventArgs e)
         {
-            childFormManager.Show_프로그램_정보();
+            childForm.Show_프로그램_정보();
         }
 
         private void CreateChildForm_제작자(object sender, EventArgs e)
         {
-            childFormManager.Show_제작자_정보();
+            childForm.Show_제작자_정보();
         }
 
         private void CreateChildForm_표시소수점정밀도설정(object sender, EventArgs e)
         {
             //소수점 설정 후 프로그램 새로고침되는 로직 넣기
-            childFormManager.Show_SetDecimalPoint(() => realtimeManager.RefreshProgram());
+            childForm.Show_SetDecimalPoint(resultPrecision, () => field.RefreshLabelDisplayFields());
         }
         #endregion
 
@@ -421,13 +429,13 @@ namespace Bitrate_Calculator
         private void Copy최대영상비트레이트(object sender, EventArgs e)
         {
             Clipboard.SetText(calculator.MaxBitrate.ToString());
-            statusManager.ShowMessage("최대 영상 비트레이트가 복사되었습니다.");
+            statusBar.ShowMessage("최대 영상 비트레이트가 복사되었습니다.");
         }
 
         private void Copy예상영상비트레이트(object sender, EventArgs e)
         {
             Clipboard.SetText(calculator.DesiredOutputBitrate.ToString());
-            statusManager.ShowMessage("예상 영상 비트레이트가 복사되었습니다.");
+            statusBar.ShowMessage("예상 영상 비트레이트가 복사되었습니다.");
         }
         #endregion
 
@@ -436,82 +444,82 @@ namespace Bitrate_Calculator
         #region TextChanged 이벤트
         private void OriginVidInfo_textBox_시간_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateHour();
+            field.UpdateHour();
         }
 
         private void OriginVidInfo_textBox_분_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateMin();
+            field.UpdateMin();
         }
 
         private void OriginVidInfo_textBox_초_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateSec();
+            field.UpdateSec();
         }
 
         private void OriginVidInfo_textBox_화면해상도_가로_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateWidth();
+            field.UpdateWidth();
         }
 
         private void OriginVidInfo_textBox_화면해상도_세로_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateHeight();
+            field.UpdateHeight();
         }
 
         private void OriginVidInfo_textBox_초당프레임_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateFps();
+            field.UpdateFps();
         }
 
         private void OriginVidInfo_textBox_오디오비트레이트_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateAudioBitrate();
+            field.UpdateAudioBitrate();
         }
 
         private void OriginVidInfo_comboBox_적용코덱_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateCodec();
+            field.UpdateCodec();
         }
 
         private void Bitrate_comboBox_최대영상비트레이트_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateMaxBitrateUnit();
+            field.UpdateMaxBitrateUnit();
         }
 
         private void Bitrate_comboBox_예상출력영상크기_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateExpectedOutputVidSizeUnit();
+            field.UpdateExpectedOutputVidSizeUnit();
         }
 
         private void OutSizeBasedBitrate_comboBox_원하는출력영상크기_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateDesiredOutputVidSizeUnit();
+            field.UpdateDesiredOutputVidSizeUnit();
         }
 
         private void OutSizeBasedBitrate_textBox_원하는출력영상크기_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateDesiredOutputVidSize();
+            field.UpdateDesiredOutputVidSize();
         }
 
         private void OutSizeBasedBitrate_comboBox_예상영상비트레이트_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateDesiredOutputBitrateUnit();
+            field.UpdateDesiredOutputBitrateUnit();
         }
 
         private void ConvertResolution_comboBox_변환기준_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateConvertResolutionBase();
+            field.UpdateConvertResolutionBase();
         }
 
         private void ConvertResolution_textBox_변환기준_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateConvertResolutionSize();
+            field.UpdateConvertResolutionSize();
         }
 
         private void ConvertResolution_comboBox_변환예상크기_TextChanged(object sender, EventArgs e)
         {
-            realtimeManager.UpdateConvertedVidSizeUnit();
+            field.UpdateConvertedVidSizeUnit();
         }
         #endregion
     }

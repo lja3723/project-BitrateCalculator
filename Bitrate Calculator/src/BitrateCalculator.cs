@@ -2,6 +2,9 @@
 
 namespace Bitrate_Calculator.src
 {
+    /// <summary>
+    ///     비트레이트를 계산하는 등 프로그램의 핵심 로직을 처리한다.
+    /// </summary>
     public class BitrateCalculator
     {
         #region 원본영상 파일정보 Field

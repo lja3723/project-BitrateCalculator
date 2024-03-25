@@ -71,9 +71,11 @@
   <ItemGroup>
     <Compile Include="src\ButtonFunctionAccessor.cs" />
     <Compile Include="src\enum\ConvertResolutionBaseEnum.cs" />
-    <Compile Include="src\manager\LabelDisplayManager.cs" />
+    <Compile Include="src\InfoControlAdjuster.cs" />
+    <Compile Include="src\InfoControlReference.cs" />
+    <Compile Include="src\LabelDisplay.cs" />
     <Compile Include="src\enum\PersecUnitEnum.cs" />
-    <Compile Include="src\manager\ChildFormManager.cs" />
+    <Compile Include="src\ChildForm.cs" />
     <Compile Include="forms\Form_소수점_설정.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +103,12 @@
       <DependentUpon>Form_프로그램_정보.cs</DependentUpon>
     </Compile>
     <Compile Include="src\enum\FilesizeUnitEnum.cs" />
-    <Compile Include="src\manager\RealtimeManager.cs" />
-    <Compile Include="src\manager\ResultPrecisionManager.cs" />
-    <Compile Include="src\manager\StatusStripManager.cs" />
+    <Compile Include="src\MainFormField.cs" />
+    <Compile Include="src\ResultPrecision.cs" />
+    <Compile Include="src\StatusBar.cs" />
     <Compile Include="src\enum\CodecsEnum.cs" />
     <Compile Include="src\BitrateCalculator.cs" />
-    <Compile Include="src\manager\InfoControlManager.cs" />
+    <Compile Include="src\InfoControlReader.cs" />
     <EmbeddedResource Include="forms\Form_소수점_설정.resx">
       <DependentUpon>Form_소수점_설정.cs</DependentUpon>
     </EmbeddedResource>
