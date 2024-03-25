@@ -1647,7 +1647,6 @@
             this.Name = "Main_Form";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "비트레이트 계산기";
-            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.Layout_Main_tableLayoutPanel.ResumeLayout(false);
             this.Layout_Main_tableLayoutPanel.PerformLayout();
             this.Layout_OutSizeBasedBitrate_groupBox.ResumeLayout(false);

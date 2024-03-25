@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Bitrate_Calculator.src
@@ -191,7 +192,30 @@ namespace Bitrate_Calculator.src
         }
 
         #endregion
+        
+        private void SetTextboxMargin()
+        {
+            //텍스트박스 크기 초기화
+            int textBoxHeight = 27;
+            double textBoxWidth = 9.8;
+            int textBoxWidthMargin = 10;
 
+            foreach (TextBox t in new List<TextBox>() {
+                originVidInfo_시간,
+                originVidInfo_분,
+                originVidInfo_초,
+                originVidInfo_화면해상도_가로,
+                originVidInfo_화면해상도_세로,
+                originVidInfo_초당프레임,
+                originVidInfo_오디오비트레이트,
+                outSizeBasedBitrate_원하는출력영상크기,
+                convertResolution_변환기준
+            })
+            {
+                t.Height = textBoxHeight;
+                t.Width = (int)Math.Round(t.MaxLength * textBoxWidth + textBoxWidthMargin);
+            }
+        }
 
 
         public InfoControlManager(TextBox originVidInfo_시간, TextBox originVidInfo_분, TextBox originVidInfo_초, TextBox originVidInfo_화면해상도_가로, TextBox originVidInfo_화면해상도_세로, TextBox originVidInfo_초당프레임, TextBox originVidInfo_오디오비트레이트, ComboBox originVidInfo_적용코덱, ComboBox bitrate_최대영상비트레이트, ComboBox bitrate_예상출력영상크기, ComboBox outSizeBasedBitrate_원하는출력영상크기_단위, TextBox outSizeBasedBitrate_원하는출력영상크기, ComboBox outSizeBasedBitrate_예상영상비트레이트, ComboBox convertResolution_변환기준_단위, TextBox convertResolution_변환기준, ComboBox convertResolution_변환예상크기)
@@ -212,6 +236,8 @@ namespace Bitrate_Calculator.src
             this.convertResolution_변환기준_단위 = convertResolution_변환기준_단위;
             this.convertResolution_변환기준 = convertResolution_변환기준;
             this.convertResolution_변환예상크기 = convertResolution_변환예상크기;
+
+            SetTextboxMargin();
         }
     }
 }

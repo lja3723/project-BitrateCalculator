@@ -19,7 +19,7 @@ using Bitrate_Calculator.src;
  * OutSizeBasedBitrate : "출력 영상 크기 기준 영상 비트레이트 계산" 부분과 관련된 요소
  * 
  * Layout~          : 레이아웃을 구성하는 요소
- * ValuePrintLabel~ : 값 출력 목적의 라벨
+ * ValuePrintLabel~ : 값 출력 목적의 라벨 
  */
 
 namespace Bitrate_Calculator
@@ -83,34 +83,6 @@ namespace Bitrate_Calculator
                 Main_button_모두초기화);
 
             realtimeManager = new RealtimeManager(calculator, infoCtrlManager, labelManager, accessor, statusManager);
-        }
-
-        private void Main_Form_Load(object sender, EventArgs e)
-        {
-            //텍스트박스 크기 초기화
-            int textBoxHeight = 30;
-            double textBoxWidth = 9.8;
-            double textBoxWidthAdd = 10;
-
-            ConvertResolution_textBox_변환기준.Height = textBoxHeight;
-            OutSizeBasedBitrate_textBox_원하는출력영상크기.Height = textBoxHeight;
-            OriginVidInfo_textBox_초당프레임.Height = textBoxHeight;
-            OriginVidInfo_textBox_분.Height = textBoxHeight;
-            OriginVidInfo_textBox_시간.Height = textBoxHeight;
-            OriginVidInfo_textBox_오디오비트레이트.Height = textBoxHeight;
-            OriginVidInfo_textBox_초.Height = textBoxHeight;
-            OriginVidInfo_textBox_화면해상도_가로.Height = textBoxHeight;
-            OriginVidInfo_textBox_화면해상도_세로.Height = textBoxHeight;
-
-            ConvertResolution_textBox_변환기준.Width = (int)Math.Round(ConvertResolution_textBox_변환기준.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OutSizeBasedBitrate_textBox_원하는출력영상크기.Width = (int)Math.Round(OutSizeBasedBitrate_textBox_원하는출력영상크기.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_초당프레임.Width = (int)Math.Round(OriginVidInfo_textBox_초당프레임.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_분.Width = (int)Math.Round(OriginVidInfo_textBox_분.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_시간.Width = (int)Math.Round(OriginVidInfo_textBox_시간.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_오디오비트레이트.Width = (int)Math.Round(OriginVidInfo_textBox_오디오비트레이트.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_초.Width = (int)Math.Round(OriginVidInfo_textBox_초.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_화면해상도_가로.Width = (int)Math.Round(OriginVidInfo_textBox_화면해상도_가로.MaxLength * textBoxWidth + textBoxWidthAdd);
-            OriginVidInfo_textBox_화면해상도_세로.Width = (int)Math.Round(OriginVidInfo_textBox_화면해상도_세로.MaxLength * textBoxWidth + textBoxWidthAdd);
 
             statusManager.ShowMessage("프로그램을 사용해 주셔서 감사합니다. 이 곳에 알림이 표시됩니다.", 5800);
         }
